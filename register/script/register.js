@@ -76,3 +76,9 @@ function usersubmit() {
     }
 }
 // localStorage.clear();
+
+document.querySelector(".image-wala-part").addEventListener("click", gotmainpage);
+
+function gotmainpage() {
+    window.location.href = "../index.html";
+}
