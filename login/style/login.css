@@ -10,6 +10,24 @@ body {
     background-color: #f2f2f2;
 }
 
+
+/*  */
+
+.header-section {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    padding: 5px;
+    padding-left: 17px;
+}
+
+.image-wala-part {
+    width: 200px;
+}
+
+
+/*  */
+
 .tag h1 {
     margin-bottom: 22px;
     font-size: 30px;
