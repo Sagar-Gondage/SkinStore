@@ -42,6 +42,12 @@ function loginfunc() {
             dangerpassword.style.display = "none";
         }
     });
+}
 
 
+
+document.querySelector(".image-wala-part").addEventListener("click", gotmainpage);
+
+function gotmainpage() {
+    window.location.href = "../index.html";
 }
