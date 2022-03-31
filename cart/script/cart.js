@@ -303,5 +303,5 @@ function gophirse() {
 document.querySelector("#reshopping").addEventListener("click", reshopping);
 
 function reshopping() {
-    window.location.href = "../database/database.html";
+    window.location.href = "../index.html";
 }
