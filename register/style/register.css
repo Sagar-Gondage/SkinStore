@@ -17,6 +17,18 @@ body {
     padding: 2px;
 }
 
+.header-section {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    padding: 5px;
+    padding-left: 17px;
+}
+
+.image-wala-part {
+    width: 250px;
+}
+
 
 /* empty alert  */
 
