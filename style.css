@@ -619,7 +619,7 @@ html {
 .hover-down-box {
     display: none;
     position: absolute;
-    background-color: rgb(215, 206, 206);
+    background: rgb(223, 217, 217);
     width: 350px;
     z-index: 1;
     right: 0.1px;
