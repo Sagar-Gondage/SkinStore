@@ -320,3 +320,14 @@ document.querySelector("#secondFirst").addEventListener("click", gotagainmainpag
 function gotagainmainpage() {
     window.location.href = "../index.html";
 }
+
+//empty itemscondition
+var lengthogitemsinbag = databaseitemaddbag.length;
+var hiddenbagsystem = document.querySelector(".cart-info");
+var emptydatashow = document.querySelector("#if_cart_empty_show");
+if (lengthogitemsinbag == 0) {
+    hiddenbagsystem.style.display = "none";
+} else {
+    hiddenbagsystem.style.display = "block";
+    emptydatashow.style.display = "none";
+}
