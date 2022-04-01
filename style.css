@@ -605,13 +605,20 @@ html {
 
 /* another by arun */
 
-.account {
+.account,
+#check-cart-part {
     position: relative;
     display: inline-block;
     padding: 12px;
 }
 
-.account:hover {
+#symbol {
+    /* background: red; */
+    margin-left: 2px;
+}
+
+.account:hover,
+#check-cart-part:hover {
     background: rgb(223, 217, 217);
     padding: 12px
 }
@@ -620,11 +627,16 @@ html {
     display: none;
     position: absolute;
     background: rgb(223, 217, 217);
+    /* background: #fff; */
     width: 350px;
     z-index: 1;
     right: 0.1px;
     height: 150px;
     padding: 8px;
+}
+
+.dfsd {
+    background: #fff;
 }
 
 .hover-down-box a {
@@ -644,7 +656,8 @@ html {
     color: #111;
 }
 
-.account a:hover {
+.account a:hover,
+#check-cart-part a:hover {
     background-color: rgb(16, 179, 211);
 }
 
@@ -652,6 +665,11 @@ html {
     background-color: rgb(226, 229, 230);
 }
 
-.account:hover .hover-down-box {
+.account:hover .hover-down-box,
+#check-cart-part:hover .hover-down-box {
     display: block;
+}
+
+.empty-things {
+    padding-top: 25px;
 }
