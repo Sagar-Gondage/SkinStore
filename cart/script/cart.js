@@ -366,7 +366,7 @@ function gottomainpages() {
     window.location.href = "../index.html";
 
 }
-//user show details         page
+//user show details         
 
 var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser"));
 gettingcurrentuser.map(function(el) {
