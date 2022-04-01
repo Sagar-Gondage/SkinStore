@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        
+        .container>div {
+            border: 2px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+</body>
+
+</html>
+
+<script>
+    var freeitems = [{
+        img_url: "https://s1.thcdn.com/productimg/70/70/11835646-5364602521660403.jpg",
+        name: "La Roche - Posay Toleriane Double Repair Facial Moisturizer 3 ml",
+        type: "FREE",
+        price: 22
+    }, {
+        img_url: "https://s1.thcdn.com//productimg/70/70/12810753-5014862239182846.jpg",
+        name: "Medik8 Micellar Mousse 150ml",
+        type: "FREE",
+        price: 32
+    }, {
+        img_url: "https://s1.thcdn.com//productimg/70/70/13524399-1684935333822609.jpg",
+        name: "Sulwhasoo Concentrated Ginseng Renewing Cream Soft 1ml (12 value)",
+        type: "FREE",
+        price: 52
+
+    }, {
+        img_url: "https://s1.thcdn.com/productimg/70/70/12226098-6324710028130814.jpg",
+        name: "Vichy Mineral 89 Eyes 1 ml(Free Gift)",
+        type: "FREE",
+        price: 32
+    }, {
+        img_url: "https://s1.thcdn.com//productimg/70/70/12063515-6754866760034079.png",
+        name: "SkinCeuticals Hyaluronic Acid Intensifier 2 ml",
+        type: "FREE",
+        price: 72
+    }];
+
+
+    freeitems.map(function(el) {
+        var box = document.createElement("div");
+        var img = document.createElement("img");
+        img.src = el.img_url;
+        var name = document.createElement("p");
+        name.innerText = el.name;
+        var price = document.createElement("p");
+        price.innerText = el.price;
+        var btn = document.createElement("button");
+        btn.innerText = "add bag";
+        btn.addEventListener("click", function() {
+            givintstro(el);
+        });
+        box.append(img, name, price, btn);
+
+
+        document.querySelector(".container").append(box);
+    });
+    var arr = JSON.parse(localStorage.getItem("cartadddatabase")) || [];
+
+    function givintstro(el) {
+        arr.push(el);
+        localStorage.setItem("cartadddatabase", JSON.stringify(arr));
+	window.location.reload();
+    }
+    // localStorage.clear();
+</script>

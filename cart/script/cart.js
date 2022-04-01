@@ -310,10 +310,11 @@ document.querySelector("#check-cart-part").addEventListener("click", carthreflin
 function carthreflink() {
     window.location.href = "";
 }
-// var database = JSON.parse(localStorage.getItem("cartadddatabase"));
-// var lengthofbagitems = database.length;
+// cartadddatabase
+var database = JSON.parse(localStorage.getItem("cartadddatabase"));
+var lengthofbagitems = database.length;
 
-// document.querySelector("#add-count-items").innerText = lengthofbagitems;
+document.querySelector("#add-count-items").innerText = lengthofbagitems;
 
 document.querySelector("#secondFirst").addEventListener("click", gotagainmainpage);
 
@@ -344,9 +345,11 @@ dataemptydatabase.forEach(function(el) {
 
     document.querySelector("#append_img_box_here").append(box);
 });
-var lengthogitemsinbag = databaseitemaddbag.length;
+
+var lengthogitemsinbag = database.length;
 var hiddenbagsystem = document.querySelector(".cart-info");
 var emptydatashow = document.querySelector("#if_cart_empty_show");
+
 if (lengthogitemsinbag == 0) {
     hiddenbagsystem.style.display = "none";
 } else {
