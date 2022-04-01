@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login page</title>
-    <link rel="stylesheet" href="./style/login.css">
-
+    <title>About you | skinstore </title>
+    <link rel="stylesheet" href="./style/register.css">
+    <script src="https://kit.fontawesome.com/38f8edb008.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/38f8edb008.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Palanquin+Dark&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -94,55 +94,85 @@
               </svg>
         </div>
     </div>
-    <section class="login-info">
+    <section class="register-info">
         <form action="">
-            <div class="login-container">
+            <div class="register-container">
+                <h1>About You</h1>
                 <div class="tag">
-                    <h1>Existing Customers</h1>
+                    <h1>Sign Up With</h1>
                 </div>
-                <div class="empty notexist">&#9888 The email address or password you entered were invalid.</div>
+                <div class="btn-face-google">
+                    <div class="face">
+                        <a href=""><i class="fa-brands fa-facebook-square"></i> Facebook
+                        </a>
+                    </div>
+                    <div class="google">
+                        <a href=""><i class="fa-brands fa-google"></i> Google
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="label-input-tag">
+                    <p>Or create an email account</p>
+                </div>
+                <div class="name-input">
+                    <label for="name">*Full Name</label>
+                    <input type="text" id="name">
+                    <div class="empty name">&#9888 Full Name is a required field</div>
+
+                </div>
                 <div class="email-input">
                     <label for="email">*Email address</label>
                     <input type="email" id="email">
                     <div class="empty email">&#9888 Email address is a required field</div>
                 </div>
-
+                <div class="email-confirm">
+                    <label for="email">*Confirm Email address</label>
+                    <input type="email" id="confirm-email">
+                    <div class="empty remail">&#9888 Email address must match</div>
+                </div>
                 <div class="password-input">
                     <label for="password">*Password</label>
                     <input type="password" id="password">
-                    <div class="empty password">&#9888 Password is a required field</div>
+                    <div class="empty password">&#9888 Full Password is a required field</div>
                 </div>
-                <div class="forgotted">
-                    <a href="">Forgotten your password?</a>
+                <div class="password-confirm">
+                    <label for="password">*Confirm Password</label>
+                    <input type="password" id="confirm-password">
+                    <div class="empty repassword">&#9888 Password must match</div>
                 </div>
+                <div class="mobile-input">
+                    <label for="mobile">Cell Phone Number <span>(Optional)</span></label>
+                    <input type="number" id="mobile" maxlength="4">
+                </div>
+                <div class="commitement">
+                    <p>We will use this number to send occasional promotional messages.</p>
+                </div>
+                <div class="referral-code">
+                    <label for="referral">Referral Code <span>(Optional)</span></label>
+
+                    <input type="text" id="referral">
+                    <div class="commitement second">
+                        <p>* Your referrals discount is automatically applied at cart</p>
+                        <div class="empty referral">&#9888 Referral Code is invalid, please try again.</div>
+                        <div class="success arun"> &#10003; 65% discount is automatically applied at.</div>
+                        <div class="success masai"> &#10003; 30% discount is automatically applied at.</div>
+                    </div>
+                </div>
+
                 <div class="btn-submit">
                     <input type="submit" value="SIGN IN">
                 </div>
-                <div class="para-onther-op-login">
-                    <p>Or, Continue with</p>
-                    <div class="btn-face-google">
-                        <div class="face">
-                            <a href=""><i class="fa-brands fa-facebook-square"></i> Facebook</a>
-                        </div>
-                        <div class="google">
-                            <a href=""><i class="fa-brands fa-google"></i> Google</a>
-                        </div>
-                    </div>
+                <div class="term-condition privacy policy">
+                    <p>By proceeding, you are confirming that you agree to our
+                        <a href="">Terms and Conditions</a> and
+                        <a href="">Privacy Policy.</a>
+                    </p>
                 </div>
-
-
-            </div>
-            <div class="new-customers">
-                <div class="text-new-user">
-                    <p>New Customers</p>
-                    <div class="btn-register">
-                        <input type="button" value="Register" id="redirectRegister">
-                    </div>
-                </div>
-            </div>
         </form>
     </section>
-    <script src="./script/login.js"></script>
+
+    <script src="./script/register.js"></script>
 </body>
 
 </html>

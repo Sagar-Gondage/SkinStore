@@ -5,14 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login page</title>
-    <link rel="stylesheet" href="./style/login.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
+    <title>Document</title>
     <script src="https://kit.fontawesome.com/38f8edb008.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="paymentdel.html"> -->
 </head>
 
 <body>
@@ -94,55 +90,157 @@
               </svg>
         </div>
     </div>
-    <section class="login-info">
-        <form action="">
-            <div class="login-container">
-                <div class="tag">
-                    <h1>Existing Customers</h1>
+    <!-- <section class="conditinal-container">
+        <div class="mininize-all-things">
+            <h1>Login or sign up</h1>
+        </div>
+    </section> -->
+    <section class="checkout-as-a-guest">
+        <div class="minimize-container-as-want">
+            <h1>Checkout as a guest</h1>
+            <span>Complete your order without signing up, or sign up after payment.</span>
+            <div class="email-address">
+                <h1>1. Email and delivery address</h1>
+                <div class="emainaddress-input">
+                    <label for="">*Email address</label><br>
+                    <input type="email"><br>
+                    <label for="">We'll send the purchase receipt to this email.</label>
                 </div>
-                <div class="empty notexist">&#9888 The email address or password you entered were invalid.</div>
-                <div class="email-input">
-                    <label for="email">*Email address</label>
-                    <input type="email" id="email">
-                    <div class="empty email">&#9888 Email address is a required field</div>
+                <div class="country">
+                    <label for="">*Country/Region</label><br>
+                    <select name="" id="selectcountry">
+                      <option value="">Please select</option>
+                      <option value="india">India</option>
+                      <option value="usa">United States</option>
+                      <option value="matla">Malta</option>
+                    </select>
                 </div>
-
-                <div class="password-input">
-                    <label for="password">*Password</label>
-                    <input type="password" id="password">
-                    <div class="empty password">&#9888 Password is a required field</div>
+                <div class="name-section">
+                    <label for="">*Full Name</label><br>
+                    <input type="name">
                 </div>
-                <div class="forgotted">
-                    <a href="">Forgotten your password?</a>
+                <div class="zip-code">
+                    <label for="">*Zip Code/Postcode</label><br>
+                    <input type="number" maxlength="4">
                 </div>
-                <div class="btn-submit">
-                    <input type="submit" value="SIGN IN">
+                <div class="company-name">
+                    <label for="">Company Name</label><br>
+                    <input type="text">
                 </div>
-                <div class="para-onther-op-login">
-                    <p>Or, Continue with</p>
-                    <div class="btn-face-google">
-                        <div class="face">
-                            <a href=""><i class="fa-brands fa-facebook-square"></i> Facebook</a>
-                        </div>
-                        <div class="google">
-                            <a href=""><i class="fa-brands fa-google"></i> Google</a>
-                        </div>
-                    </div>
+                <div class="address">
+                    <label for="">*Address</label><br>
+                    <input type="text">
                 </div>
-
-
+                <div class="apartment">
+                    <label for="">*Apartment/Suite number</label><br>
+                    <input type="text">
+                </div>
+                <div class="contect-number">
+                    <label for="">Contact Number</label><br>
+                    <input type="number">
+                </div>
+                <div class="some-comment">
+                    <a href="">Why do we need your number?</a>
+                </div>
             </div>
-            <div class="new-customers">
-                <div class="text-new-user">
-                    <p>New Customers</p>
-                    <div class="btn-register">
-                        <input type="button" value="Register" id="redirectRegister">
-                    </div>
-                </div>
-            </div>
-        </form>
+        </div>
+        <section class="select delivery option">Please enter your address so we can calculate your delivery options.</section>
     </section>
-    <script src="./script/login.js"></script>
+
+    <section class="payment mode checkout-as-a-guest">
+        <div class="align-items-center">
+            <div class="payable-amount">
+                <h1>Total Amount : <span id="show_total_current_amount"></span></h1>
+            </div>
+            <div class="prcess-step-payment-wala-part">
+                <div class="card-wala-thing">Step 1: Payment<i class="fa-solid fa-clock"><span id="timer-payment-duration">Expired</span></i></div>
+                <div class="sucess-full-payment-wala-thing">Process : Delivery <i class="fa-solid fa-truck"></i></div>
+                <div class="delivery-done-wala-thing">Shipping Done : </div>
+            </div>
+            <form action="">
+                <div class="card-payment">
+                    <h2>Payment to card</h2>
+                    <div class="card-number">
+                        <label for="ccn">Credit Card Number:</label>
+                        <input type="tel" pattern="\d*" maxlength="16" placeholder="xxxx xxxx xxxx xxxx" id="card">
+                    </div>
+                    <div class="cvv">
+                        <label for="ccn">CVV</label>
+                        <input type="tel" pattern="\d*" maxlength="4" size="4">
+                    </div>
+                    <div class="pin-number">
+                        <label for="ccn">ATM pin</label>
+                        <input type="password" pattern="\d*" minlength="4" maxlength="6" size="6">
+                    </div>
+                    <div class="btn-process">
+                        <input type="submit" value="Process" id="deliverypage">
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+    </section>
+    <!-- <section class="dfddjdf checkout-as-a-guest">
+        <div class="btn-process">
+            <a id="deliverypage">SUBMIT MY ORDER</a>
+        </div>
+    </section> -->
 </body>
 
 </html>
+
+<script>
+    document.querySelector("#timer-payment-duration").innerHTML = 4 + ":" + 00;
+    startTimer();
+
+
+    function startTimer() {
+        var presentTime = document.querySelector("#timer-payment-duration").innerHTML;
+        var timeArray = presentTime.split(/[:]+/);
+        var m = timeArray[0];
+        var s = checkSecond((timeArray[1] - 1));
+        if (s == 59) {
+            m = m - 1
+        }
+        if (m < 0) {
+            return
+        }
+
+        if (m == 0 && s == 0) {
+            var cshjs = document.querySelector("#timer-payment-duration").innerHTML = "Expire";
+            m.style.display = "none";
+            n.style.display = "none";
+        } else {
+            document.querySelector("#timer-payment-duration").innerHTML = m + ":" + s;
+        }
+
+        setTimeout(startTimer, 1000);
+
+    }
+
+    function checkSecond(sec) {
+        if (sec < 10 && sec >= 0) {
+            sec = "0" + sec
+        }; // add zero in front of numbers < 10
+        if (sec < 0) {
+            sec = "59"
+        };
+        return sec;
+    }
+    document.querySelector("form").addEventListener("submit", data);
+
+    function data() {
+        event.preventDefault();
+        var card = document.querySelector("#deliverypage").value;
+        if (card == "") {
+            alert("fill the card details");
+        } else {
+            window.location.href = "paymentdel.html";
+        }
+    }
+    document.querySelector(".image-wala-part").addEventListener("click", gotmainpage);
+
+    function gotmainpage() {
+        window.location.href = "../index.html";
+    }
+</script>

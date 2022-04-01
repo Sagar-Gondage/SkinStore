@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.payable-amount {
+    margin-bottom: 25px;
+}
+
+#timer-payment-duration,
+.fa-solid {
+    margin-left: 15px;
+    font-size: 17px;
+}
+
+.prcess-step-payment-wala-part {
+    display: flex;
+    gap: 32px;
+}
+
+.sucess-full-payment-wala-thing,
+.delivery-done-wala-thing {
+    opacity: .5;
+}
+
+.card-payment h2,
+.card-number,
+.btn-process {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.cvv,
+.pin-number {
+    padding-bottom: 12px;
+}
+
+.card-number label,
+.pin-number label,
+.cvv label {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.card-number input {
+    width: 35%;
+    height: 25px;
+    font-size: 17px
+}
+
+.btn-process input {
+    border: none;
+    padding: 8px 65px 8px 65px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn-process input:hover {
+    background-color: rgb(162, 157, 157);
+}
+
+
+/* header */
+
+.header-section {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    padding: 5px;
+    padding-left: 17px;
+}
+
+.image-wala-part {
+    width: 250px;
+}
+
+.image-wala-part {
+    cursor: pointer;
+}
+
+.fjdsjs3 {
+    cursor: pointer;
+}
+
+
+/* payment new style */
+
+.minimize-container-as-want span {
+    /* padding-top: 25px;
+    padding-bottom: 25px; */
+    line-height: 2.2;
+}
+
+.checkout-as-a-guest {
+    background: #fff;
+    height: auto;
+    width: 600px;
+    margin: auto;
+    margin-top: 122px;
+    border-top: 5px solid;
+    padding: 25px;
+}
+
+.email-address h1 {
+    line-height: 2;
+}
+
+.checkout-as-a-guest input,
+select {
+    width: 100%;
+    height: 35px;
+    font-size: 22px;
+    margin-bottom: 32px;
+}
+
+.emainaddress-input label:last-child {
+    padding-bottom: 35px;
+}
+
+.checkout-as-a-guest label {
+    /* background-color: red; */
+    margin-top: 15px;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+.header-section {
+    position: fixed;
+    top: 0;
+    padding-left: 28em;
+}
+
+.align-items-center {
+    /* border: 2px solid; */
+}
+
+.dfddjdf {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+    padding: 15px;
+}
+
+.btn-process a {
+    text-decoration: none;
+    padding: 17px 200px 17px 200px;
+    background: #111;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn-process a:hover {
+    background: #28bdb7;
+    color: #111;
+}
