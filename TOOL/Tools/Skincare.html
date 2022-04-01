@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .head {
+      font-size: 14px;
+      height: 50px;
+      width: 70%;
+      line-height: 19.6px;
+      font-weight: 300;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .head{
+        
+  white-space:normal;
+  overflow:hidden;
+  text-overflow:inherit;
+
+    }
+    hr {
+      margin-top: 40px;
+    }
+    #top {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1px;
+      margin-top: 50px;
+    }
+    #top select {
+      height: 35px;
+      width: 180px;
+      margin-right: 30px;
+    }
+    /* #top div{
+       height: 35px;
+       width: 180px;
+       margin-right: 30px;
+    } */
+    .search input[type="text"] {
+      float: right;
+      padding: 6px;
+      border: 1 px solid black;
+      width: 180px;
+      margin-right: 50px;
+      margin-left: 40px;
+      font-size: 17px;
+    }
+    #container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+    /* div{
+        height: 100px;
+    } */
+    #bord {
+      height: 60px;
+      width: auto;
+      border: 1px solid red;
+    }
+    .btn {
+      border: 0px;
+      background-color: #333333;
+      text-align: center;
+      padding: 5px 105px;
+      color: white;
+      font-size: 130%;
+      height: 42px;
+    }
+    .btn:hover {
+      border: 0px;
+      background-color: #28bdb7;
+    }
+    /* #img:hover{
+        
+    } */
+    h4 {
+      font-size: 14px;
+      line-height: 19.6px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      text-decoration: none solid;
+    }
+  </style>
+  <body>
+    <h1>Skincare Tools & Devices</h1>
+    <div class="head">
+        Sometimes, our skin needs more than just the regular
+         cleanse, tone and moisturize. In today's world, there are now an
+          array of tools in the form of cleansing devices, toners and systems which can provide a more thorough targeted skincare regime to provide the most perfect skin. From popular brands such as Michael Todd Beauty and NuFACE,
+         we retail some of the worlds most favorite and trusted tools.
+
+    </div>
+
+    <hr />
+    <div id="top">
+      <div>
+        <select>
+          <option>Sort By</option>
+          <option>price:low to high</option>
+          <option>price:high to low</option>
+        </select>
+      </div>
+      <!-- <div>
+        <select>
+        Brand
+    </select>
+    </div> -->
+      <div class="search">
+        <input type="text" placeholder="Brand" />
+      </div>
+
+      <div>
+        <select>
+          <option>Skincare Tools
+        </select>
+      </div>
+      <div>
+        <select>
+          <option>Cosmetics Tools & Accessories</option>
+        </select>
+      </div>
+
+      <div>
+        <select>
+          <option>
+
+            Bodycare Tools</option>
+        </select>
+      </div>
+      <div>
+        <select>
+          <option>
+
+            Savings</option>
+        </select>
+      </div>
+    </div>
+    <hr />
+    <div id="container"></div>
+  </body>
+</html>
+
+<script>
+  var flatiron = [
+    {
+      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13156809-1574915281422679.jpg",
+      name: "TriPollar STOP Vx ",
+      info: "15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+      price: "$649.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11288881-1144871571568377.jpg",
+      name: "NuFACE Mini Facial Toning Device",
+      info: "SHOP ALL NUFACE",
+      price: "$209.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11986270-7564871574685569.jpg",
+      name: "NuFACE FIX Line Smoothing Device and Serum",
+      info: "SHOP ALL NUFACE",
+      price: "$149.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/12514351-2084911702182088.jpg",
+      name: "MZ Skin Light Therapy Golden Facial Treatment Device",
+      info: "15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+      price: "$578.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12085488-4444871573567157.jpg",
+      name: "Beauty ORA Electric Roller Replacement Needle Heads Set (3 piece)",
+      info: " 15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+      price: "$79.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12966067-9644911703190808.jpg",
+      name: "MZ Skin Gua Sha  ",
+      info: "15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+      price: "$60.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12708864-2064813249557915.jpg",
+      name: "PRIORI Skincare UnveiLED Mask",
+      info: "15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+      price: "$429.00",
+    },
+    { img:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/11288898-2044866329672154.jpg",
+      name: "NuFACE Trinity + Trinity ELE Attachment Set (Worth $474)",
+      info: "SHOP ALL NUFACE",
+      price: "$449.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12194387-1294872095890587.jpg",
+      name: "FOREO LUNA™ 3 for Sensitive Skin",
+      info: "Select your Gift",
+      price: "$199.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12715732-1014813469445501.jpg",
+      name: "Jenny Patinkin Uplifting Gua Sha Heart",
+      info: "Jenny Patinkin Gift",
+      price: "$34",
+    },
+    {
+      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12527030-2374762155979947.jpg",
+      name: "Spa Sciences MIO Diamond Microdermabrasion And Pore Extraction Skin Resurfacing System (Various Shades)",
+      info: "15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+      price: "$29.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12049210-4934736874715017.jpg",
+      name: "PMD Clean Berry ",
+      info: "Select your Gift",
+      price: "$99.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12531850-4234764793695699.jpg",
+      name: "Michael Todd Beauty Sonicsmooth Sonic Dermaplaning and Exfoliation System (Various Shades)",
+      info: "15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+      price: "$119.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/11572690-2354841985170754.jpg",
+      name: "The Perfect V - VV Intensive Cream 50ml hgavk vgh fsx",
+      info: "15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+      price: "$48.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/12060159-1594659506714895.jpg",
+      name: "Molton Brown Black Peppercorn Body Wash 300ml ",
+      info: "Molton Brown Gift",
+      price: "$19.00",
+    },
+    {
+      img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/11287351-1944880824050675.jpg",
+      name: "Dr. Hauschka Moor Lavender Calming Body Oil ",
+      info: "15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+      price: "$29.00",
+    },
+  ];
+  flatiron.map(function (ele) {
+    var box = document.createElement("div");
+    var image = document.createElement("img");
+    image.src = ele.img;
+    image.style.height = "auto";
+    image.style.width = "297px";
+    var h4 = document.createElement("p");
+    h4.textContent = ele.name;
+    var bord = document.createElement("div");
+    bord.setAttribute("id", "bord");
+    var p = document.createElement("p");
+    p.textContent = ele.info;
+    p.style.fontSize = "14.5px";
+    bord.append(p);
+
+    var price = document.createElement("h2");
+    price.textContent = ele.price;
+
+    var quick = document.createElement("button");
+    quick.textContent = "Quick Buy";
+    quick.setAttribute("class", "btn");
+    quick.addEventListener("click",function(){
+        quickBuy(ele)
+    })
+
+    box.append(image, h4, bord, price, quick);
+
+    document.querySelector("#container").append(box);
+  });
+  function quickBuy(ele){
+    console.log(ele)
+  }
+</script>

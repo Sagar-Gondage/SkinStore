@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:30px
+    }
+    /* div{
+        height: 100px;
+    } */
+    #bord{
+        height:60px;
+        width:auto;
+        border: 1px solid red;
+    }
+    .btn{
+        border: 0px;
+        background-color: #333333;
+        text-align: center;
+        padding: 5px 105px;
+        color: white;
+        font-size: 130%;
+    }
+    .btn:hover{
+        border: 0px;
+        background-color: #28BDB7;
+    }
+    /* #img:hover{
+        
+    } */
+</style>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+   var flatiron=[{
+    //    img2:"https://static.thcdn.com/images/small/webp//productimg/130/130/12465205-2374789662598518.jpg",
+       img:"https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12465205-1034789665312525.jpg",
+       name:"T3 Lucea 1 Professional Straightening &Styling Flat Iron",
+       info:"15% off with code S$15-Sunday Riley C.E.O.Vitamin C Rich Hydration Cream (worth $22)",
+       price:"$149.99"
+   },
+   {
+       img:"https://static.thcdn.com/images/small/webp//productimg/130/130/12465204-3214866383223801.jpg",
+       name:"T3 Lucea lID 1 Smart Straightening &Styling Flat Iron with Touch Screen",
+       info:"15% off with code S$15-Sunday Riley C.E.O.Vitamin C Rich Hydration Cream (worth $22)",
+       price:"$249.00"
+   },
+   {
+       img:"https://static.thcdn.com/images/small/webp//productimg/130/130/12744947-3694823054467761.jpg",
+       name:"ghd Platinum+ Styler - White",
+       info:"Select your Gift",
+       price:"$279.00"
+   },
+   {
+       img:"https://static.thcdn.com/images/small/webp//productimg/130/130/11159563-1504866127177953.jpg",
+       name:"T3 Whirl Trio Convertible Styling Wand(Worth $385)",
+       info:"15% off with code S$15-Sunday Riley C.E.O.Vitamin C Rich Hydration Cream (worth $22)",
+       price:"$325.00"
+   },
+   {
+       img:"https://static.thcdn.com/images/small/webp//productimg/130/130/13222914-1514914881828709.jpg",
+       name:"T3 Lucea Hair StraightenerGraphite/Dark Chrome",
+       info:"15% off with code S$15-Sunday Riley C.E.O.Vitamin C Rich Hydration Cream (worth $22)",
+       price:"$150.00"
+   },
+   {
+       img:"https://static.thcdn.com/images/small/webp/productimg/130/130/11373853-5174532512937046.jpg",
+       name:"CHI Air Quest Cordless 1 Inch Flat Ironwith Zipper Thermal Pouch - Pure Pink",
+       info:"15% off with code S$15-Sunday Riley C.E.O.Vitamin C Rich Hydration Cream (worth $22)",
+       price:"$99.99"
+   },
+   {
+       img:"https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12713074-7954814892737418.jpg",
+       name:"CHI Lava Ceramic Hairstyling Iron-Red/Black",
+       info:"Select your Gift",
+       price:"$99.99"
+   },
+   {
+       img:"https://static.thcdn.com/images/small/webp//productimg/130/130/11466617-1024871527948998.jpg",
+       name:"T3 SinglePass X 1.5 Styling Iron",
+       info:"Select your Gift",
+       price:"$235.00"
+   },
+   {
+       img:"https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11373851-8994439462228778.jpg",
+       name:"CHI Air Expert Tourmaline Ceramic 1.5 Inch Flat Iron - Onyx Black",
+       info:"Select your Gift",
+       price:"$99.99"
+   },
+   {
+       img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/13026981-7514858351037805.jpg",
+       name:"Bio:lonic Gold Pro Flat Iron 1",
+       info:"Select your Gift",
+       price:"$120.00"
+   },
+   {
+       img:"https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12744951-1894823055566157.jpg",
+       name:"ghd Mini Styler",
+       info:"Select your Gift",
+       price:"$209.00"
+   },
+   {
+       img:"https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11286900-3514439449776213.jpg",
+       name:"CHI Air Texture Tourmaline Ceramic Styler",
+       info:"15% off with code S$15-Sunday Riley C.E.O.Vitamin C Rich Hydration Cream (worth $22)",
+       price:"$59.99"
+   },
+   
+]
+    flatiron.map(function(ele){
+        var box=document.createElement("div")
+        var image=document.createElement("img")
+        image.src=ele.img;
+        image.style.height="200px"
+        image.style.width="297px"
+        var h4=document.createElement("h3")
+        h4.textContent=ele.name;
+        var bord=document.createElement("div");
+        bord.setAttribute("id","bord")
+        var p=document.createElement("p")
+        p.textContent=ele.info
+        p.style.fontSize="14.5px"
+        bord.append(p)
+
+        var price=document.createElement("h2")
+        price.textContent=ele.price
+
+        var quick=document.createElement("button")
+        quick.textContent="Quick Buy"
+        quick.setAttribute("class","btn")
+        
+
+        box.append(image,h4,bord,price,quick)
+
+        document.querySelector("#container").append(box)
+
+    })
+</script>
