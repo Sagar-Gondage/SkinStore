@@ -405,3 +405,40 @@ function logoutcurrentuser() {
     });
 
 }
+
+
+// cart conditional
+
+if (lengthofbagitems > 0) {
+    document.querySelector(".empty-things").style.display = "none";
+}
+if (lengthofbagitems == 0) {
+    document.querySelector(".total-of-items").style.display = "none";
+    document.querySelector(".btn-view-cart").style.display = "none";
+    document.querySelector(".price-of-items-total").style.display = "none";
+}
+document.querySelector(".total-of-items").innerText = `${lengthofbagitems} items in your cart`;
+var subtotal = database.reduce(function(sum, el, i, arr) {
+    sum += el.price;
+    return sum;
+}, 0);
+document.querySelector(".price-of-items-total").innerText = `$${subtotal}`;
+
+database.map(function(el, i, arr) {
+    var box = document.createElement("div");
+    var img = document.createElement("img");
+    img.src = el.img_url;
+    var para = document.createElement("p");
+    para.innerText = el.name;
+    var price = document.createElement("p");
+    price.innerText = `$${el.price}`;
+    var Qty = document.createElement("p");
+    Qty.innerText = `Quantity : 1`;
+
+    box.append(img, para, price, Qty)
+    document.querySelector(".scroll-able-items-container").append(box);
+});
+
+if (database == 0) {
+    document.querySelector(".scroll-able-items-container").style.display = "none";
+} else { document.querySelector(".scroll-able-items-container").style.display = "block"; }

@@ -712,3 +712,44 @@ html {
 #logoutuser {
     display: none;
 }
+
+
+/* car section */
+
+.giving-items-some-flexing-for-management {
+    display: flex;
+    justify-content: space-between;
+}
+
+.items-availble-then-show {
+    background-color: rgb(230, 224, 224);
+}
+
+.giving-some-style-as-you-wnat {
+    padding: 12px;
+}
+
+.btn-view-cart {
+    margin-top: 12px;
+}
+
+.btn-view-cart button {
+    padding: 8px 12px 8px 12px;
+    background-color: #111;
+    color: #fff;
+    border: none
+}
+
+.btn-view-cart button:hover {
+    background-color: #28bdb7;
+    color: #111;
+}
+
+.scroll-able-items-container {
+    overflow-y: scroll;
+    height: auto !important;
+    padding: 12px;
+    max-height: 480px;
+    background: #fff;
+    display: none;
+}
