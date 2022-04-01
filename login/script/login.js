@@ -5,6 +5,7 @@ function timemachine() {
     window.location.href = "../register/register.html";
 }
 var loginuserdetails = document.querySelector("form").addEventListener("submit", loginfunc);
+var currentuser = [];
 
 function loginfunc() {
     event.preventDefault();
@@ -18,6 +19,8 @@ function loginfunc() {
         if (el.email == useremail && el.password == userpassword) {
             alert("login sucessfull press ok to shopping")
             window.location.href = "../index.html";
+            currentuser.push(el);
+            localStorage.setItem("currentuser", JSON.stringify(currentuser));
 
         }
         if (el.email != useremail && el.password != userpassword) {

@@ -692,3 +692,19 @@ html {
 #secondFirst {
     cursor: pointer;
 }
+
+.login-then-show-name {
+    display: none;
+    background: red;
+}
+
+
+/* user details show  */
+
+#style-class-improve {
+    padding: 0;
+    display: flex;
+    border: none;
+    font-size: 25px;
+    background: #d9d7d7;
+}
