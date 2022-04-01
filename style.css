@@ -708,3 +708,7 @@ html {
     font-size: 25px;
     background: #d9d7d7;
 }
+
+#logoutuser {
+    display: none;
+}
