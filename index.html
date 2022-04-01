@@ -139,6 +139,7 @@
                     <div class="cart" id="check-cart-part">
                         <span id="symbol"><i class="fa-solid fa-cart-arrow-down"></i></span>
                         <span>Cart</span>
+                        <div id="add-count-items"></div>
                         <div class="hover-down-box dfsd">
                             <div class="empty-things">
                                 There are currently no items in your cart.
@@ -535,11 +536,15 @@
     };
 
 
-
+    //arun
 
     document.querySelector("#check-cart-part").addEventListener("click", carthreflink);
 
     function carthreflink() {
         window.location.href = "./cart/cart.html";
     }
+    var database = JSON.parse(localStorage.getItem("cartadddatabase"));
+    var lengthofbagitems = database.length;
+    // console.log(lengthofbagitems);
+    document.querySelector("#add-count-items").innerText = lengthofbagitems;
 </script>
