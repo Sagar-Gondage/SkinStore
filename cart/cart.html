@@ -133,11 +133,17 @@
                         <span id="symbol"><i class="fa-regular fa-user"></i></span>
                         <span>Account</span>
                         <div class="hover-down-box">
-                            <a href="./login/login.html">Login</a>
-                            <a href="./register/register.html">Register</a>
+                            <div class="conditional-thin-if-not-login">
+                                <a href="../login/login.html">Login</a>
+                                <a href="../register/register.html">Register</a>
+                            </div>
+                            <div class="login-then-show-name-div">
+                                <a class="login-then-show-name" id="style-class-improve">
+                                    <a id="logoutuser">Logout</a>
+                                </a>
+                            </div>
                         </div>
                     </div>
-
 
                 </div>
                 <div id="secondFourth">
@@ -442,6 +448,7 @@
         </div>
     </div>
     <script src="./script/cart.js"></script>
+    <script src="../common script/common.js"></script>
 </body>
 
 </html>

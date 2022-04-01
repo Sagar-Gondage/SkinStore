@@ -344,6 +344,8 @@ dataemptydatabase.forEach(function(el) {
 
     document.querySelector("#append_img_box_here").append(box);
 });
+
+
 var lengthogitemsinbag = databaseitemaddbag.length;
 var hiddenbagsystem = document.querySelector(".cart-info");
 var emptydatashow = document.querySelector("#if_cart_empty_show");
@@ -352,4 +354,26 @@ if (lengthogitemsinbag == 0) {
 } else {
     hiddenbagsystem.style.display = "block";
     emptydatashow.style.display = "none";
+}
+
+
+
+document.querySelector("#logoutuser").addEventListener("click", logoutcurrentuser);
+
+function logoutcurrentuser() {
+    gettingcurrentuser.map(function(el, i) {
+        gettingcurrentuser.splice(i, 10000);
+        window.location.reload();
+        localStorage.setItem("currentuser", JSON.stringify(gettingcurrentuser));
+    });
+
+}
+
+// secondFirst
+
+
+document.querySelector("#secondFirst").addEventListener("click", gotmainpage);
+
+function gotmainpage() {
+    window.location.href = "../index.html";
 }

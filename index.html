@@ -521,6 +521,11 @@
             </div>
         </div>
     </div>
+
+
+
+
+    <script src="./common script/common.js"></script>
 </body>
 
 </html>
@@ -549,39 +554,5 @@
 
     function carthreflink() {
         window.location.href = "./cart/cart.html";
-    }
-    // var database = JSON.parse(localStorage.getItem("cartadddatabase"));
-    // var lengthofbagitems = database.length;
-    // // console.log(lengthofbagitems);
-    // document.querySelector("#add-count-items").innerText = lengthofbagitems;
-    //user details shows
-    var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser"));
-    gettingcurrentuser.map(function(el) {
-        if (el.name == null) {
-            document.querySelector(".login-then-show-name").style.display = "none";
-            document.querySelector(".conditional-thin-if-not-login").style.display = "block";
-            document.querySelector("#logoutuser").style.display = "none";
-
-        } else {
-            document.querySelector(".login-then-show-name").innerText = `Welcome ${el.name}`;
-            document.querySelector(".conditional-thin-if-not-login").style.display = "none";
-            document.querySelector("#logoutuser").style.display = "block";
-            console.log(el.name);
-        }
-    });
-
-    //logout feature
-    // #logoutuser
-
-    // logoutuser
-    document.querySelector("#logoutuser").addEventListener("click", logoutcurrentuser);
-
-    function logoutcurrentuser() {
-        gettingcurrentuser.map(function(el, i) {
-            gettingcurrentuser.splice(i, 10000);
-            window.location.reload();
-            localStorage.setItem("currentuser", JSON.stringify(gettingcurrentuser));
-        });
-
     }
 </script>

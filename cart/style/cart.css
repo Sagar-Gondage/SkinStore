@@ -418,6 +418,10 @@ th {
     background-color: #28bdb7;
 }
 
+#logoutuser {
+    display: none;
+}
+
 
 /* 
 320px — 480px: Mobile devices.
