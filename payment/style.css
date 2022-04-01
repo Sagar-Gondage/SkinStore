@@ -89,3 +89,79 @@
 .fjdsjs3 {
     cursor: pointer;
 }
+
+
+/* payment new style */
+
+.minimize-container-as-want span {
+    /* padding-top: 25px;
+    padding-bottom: 25px; */
+    line-height: 2.2;
+}
+
+.checkout-as-a-guest {
+    background: #fff;
+    height: auto;
+    width: 600px;
+    margin: auto;
+    margin-top: 122px;
+    border-top: 5px solid;
+    padding: 25px;
+}
+
+.email-address h1 {
+    line-height: 2;
+}
+
+.checkout-as-a-guest input,
+select {
+    width: 100%;
+    height: 35px;
+    font-size: 22px;
+    margin-bottom: 32px;
+}
+
+.emainaddress-input label:last-child {
+    padding-bottom: 35px;
+}
+
+.checkout-as-a-guest label {
+    /* background-color: red; */
+    margin-top: 15px;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+.header-section {
+    position: fixed;
+    top: 0;
+    padding-left: 28em;
+}
+
+.align-items-center {
+    /* border: 2px solid; */
+}
+
+.dfddjdf {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+    padding: 15px;
+}
+
+.btn-process a {
+    text-decoration: none;
+    padding: 17px 200px 17px 200px;
+    background: #111;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn-process a:hover {
+    background: #28bdb7;
+    color: #111;
+}
