@@ -19,6 +19,10 @@
     font-size: 25px;
 }
 
+#coupcart {
+    height: 46px;
+}
+
 .cart-btn button {
     text-decoration: none;
     background-color: #111;
@@ -384,6 +388,34 @@ th {
 
 .gift-free-select-items>div:active {
     border: 2px solid;
+}
+
+#if_cart_empty_show {
+    padding: 42px;
+    margin-top: 25px
+}
+
+.minizise_as_you_want h1 {
+    font-size: 35px;
+    line-height: 1.5;
+}
+
+#text-color {
+    font-size: 42px;
+}
+
+#btn-decoration button {
+    border: none;
+    padding: 15px 25px 15px 25px;
+    font-size: 17px;
+    background-color: #111;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+#btn-decoration button:hover {
+    color: #111;
+    background-color: #28bdb7;
 }
 
 

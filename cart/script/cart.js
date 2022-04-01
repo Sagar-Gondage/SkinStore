@@ -320,3 +320,36 @@ document.querySelector("#secondFirst").addEventListener("click", gotagainmainpag
 function gotagainmainpage() {
     window.location.href = "../index.html";
 }
+
+//empty itemscondition
+
+var dataemptydatabase = [
+    { image: "https://s1.thcdn.com/widgets/121-us/53/Skincare-041053.jpg", name: "Skin Care" },
+    { image: "https://s1.thcdn.com/widgets/121-us/30/580x580-125830.jpg", name: "Hair Care" },
+    { image: "https://s1.thcdn.com/widgets/121-us/17/original-NF_PROD_SpringPromo22-Mini_Hero_01-102717.jpg", name: "Tools" },
+    { image: "https://s1.thcdn.com/widgets/121-us/16/Makeup-041316.jpg", name: "Makeup" },
+    { image: "https://s1.thcdn.com/widgets/121-us/32/Body-041332.jpg", name: "Bath & Body" },
+    { image: "https://s1.thcdn.com/widgets/121-us/49/Wellness-041349.png", name: "wellness" }
+
+];
+
+// append_img_box_here
+dataemptydatabase.forEach(function(el) {
+    var box = document.createElement("div");
+    var img = document.createElement("img");
+    img.src = el.image;
+    var name = document.createElement("p");
+    name.innerText = el.name;
+    box.append(img, name);
+
+    document.querySelector("#append_img_box_here").append(box);
+});
+var lengthogitemsinbag = databaseitemaddbag.length;
+var hiddenbagsystem = document.querySelector(".cart-info");
+var emptydatashow = document.querySelector("#if_cart_empty_show");
+if (lengthogitemsinbag == 0) {
+    hiddenbagsystem.style.display = "none";
+} else {
+    hiddenbagsystem.style.display = "block";
+    emptydatashow.style.display = "none";
+}
