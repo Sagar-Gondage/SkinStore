@@ -310,10 +310,10 @@ document.querySelector("#check-cart-part").addEventListener("click", carthreflin
 function carthreflink() {
     window.location.href = "";
 }
-var database = JSON.parse(localStorage.getItem("cartadddatabase"));
-var lengthofbagitems = database.length;
-// console.log(lengthofbagitems);
-document.querySelector("#add-count-items").innerText = lengthofbagitems;
+// var database = JSON.parse(localStorage.getItem("cartadddatabase"));
+// var lengthofbagitems = database.length;
+
+// document.querySelector("#add-count-items").innerText = lengthofbagitems;
 
 document.querySelector("#secondFirst").addEventListener("click", gotagainmainpage);
 
@@ -354,22 +354,49 @@ if (lengthogitemsinbag == 0) {
     emptydatashow.style.display = "none";
 }
 
+<<<<<<< HEAD
+=======
+document.querySelector("#secondFirst").addEventListener("click", gotmainpage);
+document.querySelector("#givingbackhomepage").addEventListener("click", gottomainpages);
+
+function gotmainpage() {
+    window.location.href = "../index.html";
+
+}
+
+function gottomainpages() {
+    window.location.href = "../index.html";
+
+}
+//user show detail        
+
+>>>>>>> 667b03be78d09a6adc0286ee612750f6b93b2174
 var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser"));
 gettingcurrentuser.map(function(el) {
     if (el.name == null) {
         document.querySelector(".login-then-show-name").style.display = "none";
         document.querySelector(".conditional-thin-if-not-login").style.display = "block";
+<<<<<<< HEAD
         document.querySelector("#logoutuser").style.display = "none";
+=======
+>>>>>>> 667b03be78d09a6adc0286ee612750f6b93b2174
 
     } else {
         document.querySelector(".login-then-show-name").innerText = `Welcome ${el.name}`;
         document.querySelector(".conditional-thin-if-not-login").style.display = "none";
+<<<<<<< HEAD
         document.querySelector("#logoutuser").style.display = "block";
+=======
+>>>>>>> 667b03be78d09a6adc0286ee612750f6b93b2174
         console.log(el.name);
     }
 });
 
 
+<<<<<<< HEAD
+=======
+// logoutuser
+>>>>>>> 667b03be78d09a6adc0286ee612750f6b93b2174
 document.querySelector("#logoutuser").addEventListener("click", logoutcurrentuser);
 
 function logoutcurrentuser() {
