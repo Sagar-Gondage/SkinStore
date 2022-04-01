@@ -151,7 +151,7 @@ html {
     margin-left: 30px;
 }
 
-#thirdInneer div {
+#thirdInneer>div {
     /* border: 1px solid black; */
     height: 100%;
     /* align-items: center; */
@@ -161,11 +161,82 @@ html {
     padding-right: 15px;
 }
 
-#thirdInneer div:hover {
+#thirdInneer>div:hover {
     cursor: pointer;
     background-color: #333;
     color: white;
 }
+
+
+
+
+/* Build a Routine Drop Down starts here*/
+.BAR{
+    position: relative;
+}
+
+
+.drop {
+    display: none;
+}
+
+
+.outside {
+    background-color: white;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    right: -280%;
+    border: 1px solid black;
+    padding-top: 15px;
+}
+
+.inside {
+    border-top: 1px solid rgb(46, 51, 55);
+    width: 250px;
+    margin: 10px;
+}
+
+.inside div {
+    padding: 10px;
+}
+
+
+.inside a {
+    text-decoration: none;
+}
+
+.inside div:hover {
+    background-color: rgb(240, 238, 238);
+}
+
+.inside div:nth-child(1) {
+    margin: 10px 0px;
+    font-size: 17px;
+    font-weight: 550;
+}
+
+.BAR:hover .drop {
+    display: block;
+}
+
+
+/* Build a Routine Drop Down starts here*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Fourth Div starts */
@@ -215,11 +286,6 @@ html {
 
 /* Middle Part start here */
 
-#navBar {
-    /* position: fixed; */
-    /* width: 100%; */
-    /* z-index: 100; */
-}
 
 .slider-box {
     width: 100%;
