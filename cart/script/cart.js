@@ -310,10 +310,10 @@ document.querySelector("#check-cart-part").addEventListener("click", carthreflin
 function carthreflink() {
     window.location.href = "";
 }
-// var database = JSON.parse(localStorage.getItem("cartadddatabase"));
-// var lengthofbagitems = database.length;
+var database = JSON.parse(localStorage.getItem("cartadddatabase"));
+var lengthofbagitems = database.length;
 
-// document.querySelector("#add-count-items").innerText = lengthofbagitems;
+document.querySelector("#add-count-items").innerText = lengthofbagitems;
 
 document.querySelector("#secondFirst").addEventListener("click", gotagainmainpage);
 
