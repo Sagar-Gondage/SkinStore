@@ -318,5 +318,5 @@ document.querySelector("#add-count-items").innerText = lengthofbagitems;
 document.querySelector("#secondFirst").addEventListener("click", gotagainmainpage);
 
 function gotagainmainpage() {
-    window.location.href = "../index.html"
+    window.location.href = "../index.html";
 }

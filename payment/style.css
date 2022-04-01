@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.payable-amount {
+    margin-bottom: 25px;
+}
+
+#timer-payment-duration,
+.fa-solid {
+    margin-left: 15px;
+    font-size: 17px;
+}
+
+.prcess-step-payment-wala-part {
+    display: flex;
+    gap: 32px;
+}
+
+.sucess-full-payment-wala-thing,
+.delivery-done-wala-thing {
+    opacity: .5;
+}
+
+.card-payment h2,
+.card-number,
+.btn-process {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.cvv,
+.pin-number {
+    padding-bottom: 12px;
+}
+
+.card-number label,
+.pin-number label,
+.cvv label {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.card-number input {
+    width: 35%;
+    height: 25px;
+    font-size: 17px
+}
+
+.btn-process input {
+    border: none;
+    padding: 8px 65px 8px 65px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn-process input:hover {
+    background-color: rgb(162, 157, 157);
+}
+
+
+/* header */
+
+.header-section {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    padding: 5px;
+    padding-left: 17px;
+}
+
+.image-wala-part {
+    width: 250px;
+}
+
+.image-wala-part {
+    cursor: pointer;
+}
+
+.fjdsjs3 {
+    cursor: pointer;
+}
