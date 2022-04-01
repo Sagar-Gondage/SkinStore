@@ -673,3 +673,18 @@ html {
 .empty-things {
     padding-top: 25px;
 }
+
+#check-cart-part {
+    position: relative;
+}
+
+#add-count-items {
+    position: absolute;
+    top: -8px;
+    left: 1.5em;
+    background: #111;
+    color: #fff;
+    width: 19px;
+    border-radius: 55%;
+    text-align: center;
+}
