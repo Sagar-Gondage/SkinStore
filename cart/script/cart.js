@@ -310,10 +310,10 @@ document.querySelector("#check-cart-part").addEventListener("click", carthreflin
 function carthreflink() {
     window.location.href = "";
 }
-var database = JSON.parse(localStorage.getItem("cartadddatabase"));
-var lengthofbagitems = database.length;
-// console.log(lengthofbagitems);
-document.querySelector("#add-count-items").innerText = lengthofbagitems;
+// var database = JSON.parse(localStorage.getItem("cartadddatabase"));
+// var lengthofbagitems = database.length;
+
+// document.querySelector("#add-count-items").innerText = lengthofbagitems;
 
 document.querySelector("#secondFirst").addEventListener("click", gotagainmainpage);
 
@@ -352,4 +352,44 @@ if (lengthogitemsinbag == 0) {
 } else {
     hiddenbagsystem.style.display = "block";
     emptydatashow.style.display = "none";
+}
+
+document.querySelector("#secondFirst").addEventListener("click", gotmainpage);
+document.querySelector("#givingbackhomepage").addEventListener("click", gottomainpages);
+
+function gotmainpage() {
+    window.location.href = "../index.html";
+
+}
+
+function gottomainpages() {
+    window.location.href = "../index.html";
+
+}
+//user show details         page
+
+var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser"));
+gettingcurrentuser.map(function(el) {
+    if (el.name == null) {
+        document.querySelector(".login-then-show-name").style.display = "none";
+        document.querySelector(".conditional-thin-if-not-login").style.display = "block";
+
+    } else {
+        document.querySelector(".login-then-show-name").innerText = `Welcome ${el.name}`;
+        document.querySelector(".conditional-thin-if-not-login").style.display = "none";
+        console.log(el.name);
+    }
+});
+
+
+// logoutuser
+document.querySelector("#logoutuser").addEventListener("click", logoutcurrentuser);
+
+function logoutcurrentuser() {
+    gettingcurrentuser.map(function(el, i) {
+        gettingcurrentuser.splice(i, 10000);
+        window.location.reload();
+        localStorage.setItem("currentuser", JSON.stringify(gettingcurrentuser));
+    });
+
 }

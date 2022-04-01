@@ -418,6 +418,38 @@ th {
     background-color: #28bdb7;
 }
 
+#append_img_box_here img {
+    width: 405px;
+    height: 305px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#append_img_box_here img:hover {
+    transform: scale(1.2);
+}
+
+#append_img_box_here {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 75px;
+    margin-top: 25px;
+}
+
+#append_img_box_here>div {
+    margin: auto;
+    width: 405px;
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+}
+
+#append_img_box_here>div p {
+    position: absolute;
+    font-size: 25px;
+}
+
 
 /* 
 320px — 480px: Mobile devices.

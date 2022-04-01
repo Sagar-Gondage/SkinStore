@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="">
 
 
 </head>
@@ -133,8 +134,15 @@
                         <span id="symbol"><i class="fa-regular fa-user"></i></span>
                         <span>Account</span>
                         <div class="hover-down-box">
-                            <a href="./login/login.html">Login</a>
-                            <a href="./register/register.html">Register</a>
+                            <div class="conditional-thin-if-not-login">
+                                <a href="../login/login.html">Login</a>
+                                <a href="../register/register.html">Register</a>
+                            </div>
+                            <div class="login-then-show-name-div">
+                                <a class="login-then-show-name" id="style-class-improve">
+                                    <a id="logoutuser">Logout</a>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -288,7 +296,7 @@
             <h1>Your Cart</h1>
             <hr>
             <center id="text-color">There are currently no items in your cart.</center>
-            <center id="btn-decoration"><button>CONTINUE SHOPPING</button></center>
+            <center id="btn-decoration"><button id="givingbackhomepage">CONTINUE SHOPPING</button></center>
             <div id="append_img_box_here"></div>
         </div>
     </section>
