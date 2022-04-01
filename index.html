@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./new style luci/style.css">
     <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -128,17 +129,22 @@
                         <span>Account</span>
                         <div class="hover-down-box">
                             <a href="./login/login.html">Login</a>
-                            <a href="">Register</a>
+                            <a href="./register/register.html">Register</a>
                         </div>
                     </div>
 
 
                 </div>
                 <div id="secondFourth">
-                    <div class="cart">
-                        <span id="symbol"><i class="fa-solid fa-cart-arrow-down"></i
-              ></span>
+                    <div class="cart" id="check-cart-part">
+                        <span id="symbol"><i class="fa-solid fa-cart-arrow-down"></i></span>
                         <span>Cart</span>
+                        <div class="hover-down-box dfsd">
+                            <div class="empty-things">
+                                There are currently no items in your cart.
+                            </div>
+
+                        </div>
                     </div>
                 </div>
                 <!-- </div> -->
@@ -527,4 +533,13 @@
         btn2.classList.add("active");
         btn1.classList.remove("active");
     };
+
+
+
+
+    document.querySelector("#check-cart-part").addEventListener("click", carthreflink);
+
+    function carthreflink() {
+        window.location.href = "./cart/cart.html";
+    }
 </script>
