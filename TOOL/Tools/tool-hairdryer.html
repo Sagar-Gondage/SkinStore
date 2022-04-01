@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:30px
+    }
+    
+    #bord{
+        height:60px;
+        width:auto;
+        border: 1px solid red;
+    }
+    .btn{
+        border: 0px;
+        background-color: #333333;
+        text-align: center;
+        padding: 5px 105px;
+        color: white;
+        font-size: 130%;
+        
+    }
+    .btn:hover{
+        border: 0px;
+        background-color: #28BDB7;
+    }
+</style>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+    var hairdyr=[
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/11637462-1364871527661703.jpg",
+            name:"T3 Cura Hair Dryer",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$245"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12744960-8904823058327903.jpg",
+            name:"ghd Helios Professional Hair Dryer-Plum",
+            info:"Select your Gift ",
+            price:"$279"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12744962-1874823058989205.jpg",
+            name:"ghd Air Dryer",
+            info:"Select your Gift",
+            price:"$199"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12744963-7644823059228389.jpg",
+            name:"ghd Flight Travel Hairdryer",
+            info:"Select your Gift",
+            price:"$99"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/12905629-8894871527957908.jpg",
+            name:"T3 Cura Luxe Professional lonic HairDryer with Auto Pause Sensor 1 piece",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$295"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/13222916-3644914880619826.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$180"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12782517-2254830274939389.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$149.99"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/13026973-1304862154985659.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$295.00"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/13026978-2094862156119545.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$199"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12744983-2204823061871026.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$30.00"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12713069-1364814892101409.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$109.99"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/12299810-6264708783465827.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$18.00"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12782518-1514830275191245.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$25.00"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11637466-1204556135143164.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$30.00"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12744958-1964823057595642.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$279.00"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11637465-2094557708565446.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$30.00"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/13554655-9284930175275896.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$25.00"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12744961-7434823058669756.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$279.00"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/11356713-2044924428730158.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$25.00"
+        },
+        {
+            img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/13222913-8844914878387433.jpg",
+            name:"T3 AireBrush Duo",
+            info:"15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+            price:"$150.00"
+        }
+     
+        // 
+       
+        ]
+
+    hairdyr.map(function(ele){
+        var box=document.createElement("div")
+        var image=document.createElement("img")
+        image.src=ele.img;
+        var h4=document.createElement("h4")
+        h4.textContent=ele.name;
+        var bord=document.createElement("div");
+        bord.setAttribute("id","bord")
+        var p=document.createElement("p")
+        p.textContent=ele.info
+        bord.append(p)
+
+        var price=document.createElement("h2")
+        price.textContent=ele.price
+
+        var quick=document.createElement("button")
+        quick.textContent="Quick Buy"
+        quick.setAttribute("class","btn")
+        quick.addEventListener("click",function(){
+        quickBuy(ele)
+        })
+        
+
+        box.append(image,h4,bord,price,quick)
+
+        document.querySelector("#container").append(box)
+
+    })
+    function quickBuy(ele){
+        console.log(ele)
+    }
+</script>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #top{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        gap: 1px;
+    }
+    #top select{
+       height: 35px;
+       width: 180px;
+       margin-right: 30px;
+    }
+    /* #top div{
+       height: 35px;
+       width: 180px;
+       margin-right: 30px;
+    } */
+    .search input[type=text] {
+  float: right;
+  padding: 6px;
+  border: 1 px solid black;
+ width: 180px;
+  margin-right: 50px;
+  margin-left: 40px;
+  font-size: 17px;
+}
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:30px
+    }
+    /* div{
+        height: 100px;
+    } */
+    #bord{
+        height:60px;
+        width:auto;
+        border: 1px solid red;
+    }
+    .btn{
+        border: 0px;
+        background-color: #333333;
+        text-align: center;
+        padding: 5px 105px;
+        color: white;
+        font-size: 130%;
+    }
+    .btn:hover{
+        border: 0px;
+        background-color: #28BDB7;
+    }
+    /* #img:hover{
+        
+    } */
+</style>
+<body>
+    <h1>Our Beauty Tools Devices</h1>
+    <h5>View our selection of the very latest beauty devices across skin and hair care including your favorite brands Beauty Blender, T3, FOREO & Clarisonic.
+
+
+    </h5>
+    <div id="top">
+    <div>
+        <select>
+            <option>
+                Sort By
+            </option>
+            <option>
+                price:low to high
+            </option>
+            <option>
+                price:high to low
+            </option>
+        </select>
+    </div>
+    <!-- <div>
+        <select>
+        Brand
+    </select>
+    </div> -->
+    <div class="search">
+        
+        <input type="text" placeholder="Brand">
+      </div>
+    <div>
+        <select>
+            <option>
+        Skincare Tools
+    </option>
+    </select>
+    </div>
+    <div>
+        <select>
+            <option>
+        Electrical Hair Tools
+    </option>
+    </select>
+    </div>
+    <div>
+        <select>
+            <option>
+                Cosmetics Tools &
+                Accessories
+    </option>
+    </select>
+    </div>
+    
+    <div>
+        <select>
+            <option>
+                Cosmetics BrushType
+    </option>
+    </select>
+    </div>
+</div>
+
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+   var flatiron=[{
+
+       img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/13432965-1024903973866227.jpg",
+       name:"TriPollar xU Beauty Skin Care Bundle(Worth $785.00)",
+       info:"$48 U Beauty Gift",
+       price:"$665.00"
+   },
+   {
+
+img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/13412103-6344902419095965.jpg",
+name:"Trophy Skin UltradermMD",
+info:"15% off with code SS15- Sunday Riley C.E.O VitaminC Rich Hydration Cream (worth $22)",
+price:"$349.00"
+},
+{
+
+img:"https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11664844-1614664917995612.jpg",
+name:"ReFa CARAT Face Skincare Tool",
+info:"15% off with code $$15-Sunday Riley C.E.O Vitamin C Rich Hydration Cream (worth $22)",
+price:"$220.00"
+},
+{
+
+img:"https://static.thcdn.com/images/small/webp//productimg/130/130/12966067-9644911703190808.jpg",
+name:"MZ Skin Gua Sha",
+info:"15% off with code SS15 Sunday Riley C.E.O.VitaminC Rich Hydration Cream (worth $22)",
+price:"$60.00"
+},
+{
+
+img:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/11288881-1144871571568377.jpg",
+name:"NuFACE Mini Facial Toning Device",
+info:"SHOP ALL NUFACE",
+price:"$209.00"
+},
+{
+
+img:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/13414756-1164909344045267.jpg",
+name:"NION Beauty Opus 2 Go Disposable Compact Face Cleansing Device",
+info:"159% off with code S$ 15 Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+price:"$29.00"
+},
+{
+
+img:"https://static.thcdn.com/images/small/webp//productimg/130/130/13280908-8024900284917718.jpg",
+name:"ghd Unplugged Cordless Styler - Black",
+info:"$48 U Beauty Gift",
+price:"$299.00"
+},
+{
+
+img:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/12785323-1004915281199635.jpg",
+name:"TriPollar STOP X ROSE Ombre",
+info:"$48 U Beauty Gift",
+price:"$449.00"
+},
+{
+
+img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/13432965-1024903973866227.jpg",
+name:"TriPollar xU Beauty Skin Care Bundle(Worth $785.00)",
+info:"$48 U Beauty Gift",
+price:"$665.00"
+},
+{
+
+img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/13432965-1024903973866227.jpg",
+name:"TriPollar xU Beauty Skin Care Bundle(Worth $785.00)",
+info:"$48 U Beauty Gift",
+price:"$665.00"
+},
+{
+
+img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/13412103-6344902419095965.jpg",
+name:"Trophy Skin UltradermMD",
+info:"15%% off with code $$ 15-Sunday Riley C.EOVitamin C Rich Hydration Cream (worth $22)",
+price:"$349.00"
+},
+{
+
+img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/13432968-3654903973932062.jpg",
+name:"TriPollar Geneo and Rose Gold Ombre Exclusive Bundle (Worth $660.00)",
+info:"15%% off with code $$ 15-Sunday Riley C.EOVitamin C Rich Hydration Cream (worth $22)",
+price:"$525.00"
+},
+   
+]
+    flatiron.map(function(ele){
+        var box=document.createElement("div")
+        var image=document.createElement("img")
+        image.src=ele.img;
+        image.style.height="auto"
+        image.style.width="297px"
+        var h4=document.createElement("h3")
+        h4.textContent=ele.name;
+        var bord=document.createElement("div");
+        bord.setAttribute("id","bord")
+        var p=document.createElement("p")
+        p.textContent=ele.info
+        p.style.fontSize="14.5px"
+        bord.append(p)
+
+        var price=document.createElement("h2")
+        price.textContent=ele.price
+
+        var quick=document.createElement("button")
+        quick.textContent="Quick Buy"
+        quick.setAttribute("class","btn")
+        
+
+        box.append(image,h4,bord,price,quick)
+
+        document.querySelector("#container").append(box)
+
+    })
+</script>
