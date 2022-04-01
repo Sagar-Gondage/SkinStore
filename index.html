@@ -151,7 +151,18 @@
                             <div class="empty-things">
                                 There are currently no items in your cart.
                             </div>
-
+                            <div class="items-availble-then-show">
+                                <div class="giving-some-style-as-you-wnat">
+                                    <div class="giving-items-some-flexing-for-management">
+                                        <div class="total-of-items"></div>
+                                        <div class="price-of-items-total"></div>
+                                    </div>
+                                    <div class="btn-view-cart">
+                                        <button>VIEW CART</button>
+                                    </div>
+                                </div>
+                                <div class="scroll-able-items-container"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -550,9 +561,9 @@
     function carthreflink() {
         window.location.href = "./cart/cart.html";
     }
-    // var database = JSON.parse(localStorage.getItem("cartadddatabase"));
-    // var lengthofbagitems = database.length;
-    // document.querySelector("#add-count-items").innerText = lengthofbagitems;
+    var database = JSON.parse(localStorage.getItem("cartadddatabase"));
+    var lengthofbagitems = database.length;
+    document.querySelector("#add-count-items").innerText = lengthofbagitems;
     // user details shows
     var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser"));
     gettingcurrentuser.map(function(el) {
@@ -578,5 +589,44 @@
             localStorage.setItem("currentuser", JSON.stringify(gettingcurrentuser));
         });
 
+    }
+
+    /////
+
+    if (lengthofbagitems > 0) {
+        document.querySelector(".empty-things").style.display = "none";
+    }
+    if (lengthofbagitems == 0) {
+        document.querySelector(".total-of-items").style.display = "none";
+        document.querySelector(".btn-view-cart").style.display = "none";
+        document.querySelector(".price-of-items-total").style.display = "none";
+    }
+    document.querySelector(".total-of-items").innerText = `${lengthofbagitems} items in your cart`;
+    var subtotal = database.reduce(function(sum, el, i, arr) {
+        sum += el.price;
+        return sum;
+    }, 0);
+    document.querySelector(".price-of-items-total").innerText = `$${subtotal}`;
+
+    database.map(function(el, i, arr) {
+        var box = document.createElement("div");
+        var img = document.createElement("img");
+        img.src = el.img_url;
+        var para = document.createElement("p");
+        para.innerText = el.name;
+        var price = document.createElement("p");
+        price.innerText = `$${el.price}`;
+        var Qty = document.createElement("p");
+        Qty.innerText = `Quantity : 1`;
+
+        box.append(img, para, price, Qty)
+        document.querySelector(".scroll-able-items-container").append(box);
+    });
+
+
+    if (database == 0) {
+        document.querySelector(".scroll-able-items-container").style.display = "none";
+    } else {
+        document.querySelector(".scroll-able-items-container").style.display = "block";
     }
 </script>
