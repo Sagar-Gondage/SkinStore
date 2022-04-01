@@ -73,6 +73,7 @@ function usersubmit() {
     } else {
         registereduser.push(obj);
         localStorage.setItem("registereduser", JSON.stringify(registereduser));
+        window.location.href = "../login/login.html";
     }
 }
 // localStorage.clear();
