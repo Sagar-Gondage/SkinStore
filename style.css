@@ -694,7 +694,7 @@ html {
 }
 
 .login-then-show-name {
-    display: none;
+    /* display: none; */
     background: red;
 }
 
