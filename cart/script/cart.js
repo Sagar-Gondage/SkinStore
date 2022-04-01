@@ -305,3 +305,12 @@ document.querySelector("#reshopping").addEventListener("click", reshopping);
 function reshopping() {
     window.location.href = "../index.html";
 }
+document.querySelector("#check-cart-part").addEventListener("click", carthreflink);
+
+function carthreflink() {
+    window.location.href = "./cart/cart.html";
+}
+var database = JSON.parse(localStorage.getItem("cartadddatabase"));
+var lengthofbagitems = database.length;
+// console.log(lengthofbagitems);
+document.querySelector("#add-count-items").innerText = lengthofbagitems;
