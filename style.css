@@ -179,7 +179,11 @@ html {
 .outsideSkin,
 .outsideHair,
 .outsideMakeup,
-.outsideTools {
+.outsideTools,
+.outsideBath,
+.outsideSelf,
+.outsideFragrance,
+.outsideNew {
   background-color: white;
   display: flex;
   position: absolute;
@@ -239,6 +243,22 @@ html {
 
 .outsideTools {
     left: -550%
+}
+
+.outsideBath {
+    left : -550%;
+}
+
+.outsideSelf {
+    left : -600%
+}
+
+.outsideFragrance {
+    left: -630%;
+}
+
+.outsideNew {
+    left: -830%;
 }
 
 /* Fourth Div starts */
