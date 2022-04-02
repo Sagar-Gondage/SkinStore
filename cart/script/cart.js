@@ -260,7 +260,7 @@ function gettotalamout(subtotalamount, el) {
     // var djvdd = el.price + subtotalamount
     // el.price += subtotalamount;
 
-    // gettotalamout
+
     //when price increase database
     //when price decrease 
     var finalamoutwillbe = totalspecialsuntotal + el.price;
