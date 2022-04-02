@@ -37,6 +37,10 @@
     color: #111;
 }
 
+#apeend-details-product td img {
+    width: 80px;
+}
+
 .some-offer {
     background-color: #e5ecf0;
     color: rgb(31, 117, 187);

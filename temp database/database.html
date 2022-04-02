@@ -16,6 +16,10 @@
         .container>div {
             border: 2px solid;
         }
+        
+        .container>div img {
+            width: 80px;
+        }
     </style>
 </head>
 
@@ -52,6 +56,11 @@
         name: "SkinCeuticals Hyaluronic Acid Intensifier 2 ml",
         type: "FREE",
         price: 72
+    }, {
+        img_url: "https://s1.thcdn.com/widgets/121-us/30/580x580-125830.jpg",
+        name: "SkinCeuticals Hyaluronic Acid Intensifier 2 ml",
+        type: "FREE",
+        price: 72
     }];
 
 
@@ -78,7 +87,7 @@
     function givintstro(el) {
         arr.push(el);
         localStorage.setItem("cartadddatabase", JSON.stringify(arr));
-	window.location.reload();
+        window.location.reload();
     }
     // localStorage.clear();
 </script>

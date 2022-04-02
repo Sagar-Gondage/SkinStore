@@ -479,3 +479,10 @@ database.map(function(el, i, arr) {
     box.append(img, para, price, Qty)
     document.querySelector(".scroll-able-items-container").append(box);
 });
+
+document.querySelector("#brand-link").addEventListener("click", brandLink);
+
+function brandLink() {
+    window.location.href = "../brands/brands.html";
+    console.log("asdf")
+}
