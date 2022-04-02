@@ -479,10 +479,44 @@ database.map(function(el, i, arr) {
     box.append(img, para, price, Qty)
     document.querySelector(".scroll-able-items-container").append(box);
 });
-
+// linking all pages
 document.querySelector("#brand-link").addEventListener("click", brandLink);
+document.querySelector("#link-anni").addEventListener("click", linkanni);
+document.querySelector("#link-sale").addEventListener("click", salelink);
+document.querySelector("#adivcelink").addEventListener("click", adivcelink);
+document.querySelector("#newlink").addEventListener("click", newlink);
+document.querySelector("#fragrance").addEventListener("click", fragrance);
+document.querySelector("#skincare").addEventListener("click", skincare);
+document.querySelector("#bodyandbath").addEventListener("click", bodyandbath);
 
 function brandLink() {
     window.location.href = "../brands/brands.html";
-    console.log("asdf")
+}
+
+function linkanni() {
+    window.location.href = "../brands/anniversary.html";
+}
+
+function salelink() {
+    window.location.href = "../brands/sale.html";
+}
+
+function adivcelink() {
+    window.location.href = "../fragrance/Advice.html";
+}
+
+function newlink() {
+    window.location.href = "../fragrance/New.html";
+}
+
+function fragrance() {
+    window.location.href = "../fragrance/Fragrance.html";
+}
+
+function skincare() {
+    window.location.href = "../fragrance/SKINCARE.html";
+}
+
+function bodyandbath() {
+    window.location.href = "../fragrance/body.html";
 }
