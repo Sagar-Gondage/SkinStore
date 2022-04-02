@@ -331,7 +331,7 @@ html {
   position: sticky;
   top: 0;
   background-color: white;
-  border-bottom: .5px solid grey;
+  border-bottom: 0.5px solid grey;
 }
 
 #first {
@@ -351,7 +351,6 @@ html {
 #firstSub div {
   margin: 0px 16px;
 }
-
 
 /* Second Div Starts */
 
@@ -413,7 +412,7 @@ html {
   justify-content: center;
 }
 
-.account>span {
+.account > span {
   /* width: 100%; */
   margin-left: 10px;
   cursor: pointer;
@@ -433,7 +432,6 @@ html {
 #border {
   border: 0.5px solid black;
 }
-
 
 /* Third Div starts */
 
@@ -460,7 +458,7 @@ html {
   margin-left: 30px;
 }
 
-#thirdInneer div {
+#thirdInneer > div {
   /* border: 1px solid black; */
   height: 100%;
   /* align-items: center; */
@@ -470,12 +468,87 @@ html {
   padding-right: 15px;
 }
 
-#thirdInneer div:hover {
+#thirdInneer > div:hover {
   cursor: pointer;
   background-color: #333;
   color: white;
 }
 
+/* Build a Routine Drop Down starts here*/
+
+.BAR {
+  position: relative;
+}
+
+.drop {
+  display: none;
+}
+
+.outside,
+.outsideSkin,
+.outsideHair,
+.outsideMakeup,
+.outsideTools {
+  background-color: white;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  border: 1px solid black;
+  padding-top: 15px;
+}
+
+.inside {
+  border-top: 1px solid rgb(46, 51, 55);
+  width: 250px;
+  margin: 10px;
+}
+
+.inside div {
+  padding: 5px;
+}
+
+.inside>div>a {
+  text-decoration: none;
+  color: black;
+}
+
+.inside div:first-child>a {
+    font-weight: 550;
+  }
+
+.inside div:hover {
+  background-color: rgb(240, 238, 238);
+}
+
+.inside div:nth-child(1) {
+  margin: 10px 0px;
+}
+
+.BAR:hover .drop {
+  display: block;
+}
+
+/* pos for other drop Downs */
+.outside {
+    right: -280%;
+}
+
+.outsideSkin {
+  right: -825%;
+}
+
+.outsideHair {
+  right: -1295%;
+}
+
+.outsideMakeup {
+    right: -600%;
+}
+
+.outsideTools {
+    left: -550%
+}
 
 /* Fourth Div starts */
 
@@ -521,14 +594,7 @@ html {
   color: black;
 }
 
-
 /* Middle Part start here */
-
-/* #navBar { */
-  /* position: fixed; */
-  /* width: 100%; */
-  /* z-index: 100; */
-/* } */
 
 .slider-box {
   width: 100%;
@@ -621,6 +687,7 @@ html {
 
 .shopNow:hover {
   background-color: #28bdb7;
+  cursor: pointer;
 }
 
 .companyLogo {
@@ -672,8 +739,8 @@ html {
   margin: 5px 0px;
 }
 
-.trendingOffer>div *,
-.overTheBlogDetails>div * {
+.trendingOffer > div *,
+.overTheBlogDetails > div * {
   /* border: 1px solid black; */
   text-align: center;
 }
@@ -698,8 +765,8 @@ html {
 
 #shopNow:hover {
   background-color: #def5f4;
+  cursor: pointer;
 }
-
 
 /* Adv */
 
@@ -707,6 +774,7 @@ html {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 50px;
+  cursor: pointer;
   /* border: 1px solid blue; */
 }
 
@@ -714,7 +782,6 @@ html {
   width: 100%;
   /* height: 100%; */
 }
-
 
 /* Footer Starts here */
 
@@ -795,13 +862,13 @@ html {
   gap: 20px;
 }
 
-#connect>div:nth-child(1) {
+#connect > div:nth-child(1) {
   margin-top: 20px;
   height: 35px;
   font-weight: 550;
 }
 
-#connect>div:nth-child(2) {
+#connect > div:nth-child(2) {
   height: auto;
   margin-top: -10px;
 }
@@ -816,21 +883,20 @@ html {
   /* border: 1px solid #999999; */
 }
 
-
 /* #secondSubFoot > div {
-border: 1px solid black; 
-border-top: 1px solid #000;
-width: 25%;
+  border: 1px solid black; 
+  border-top: 1px solid #000;
+  width: 25%;
 } */
 
-#secondSubFoot>#help {
+#secondSubFoot > #help {
   border-top: 1px solid #999999;
   width: 60%;
 }
 
-#secondSubFoot>#about,
-#secondSubFoot>#legal,
-#secondSubFoot>#contactUs {
+#secondSubFoot > #about,
+#secondSubFoot > #legal,
+#secondSubFoot > #contactUs {
   border-top: 1px solid #999999;
   width: 17%;
 }
@@ -852,10 +918,10 @@ width: 25%;
   /* gap: 20px; */
 }
 
-.aboutDetails>div,
-.helpDetails>div,
-.legalDetails>div,
-.contactUsDetails>div {
+.aboutDetails > div,
+.helpDetails > div,
+.legalDetails > div,
+.contactUsDetails > div {
   padding-top: 5px;
   height: 38px;
   /* border: 1px solid black; */
@@ -871,13 +937,13 @@ width: 25%;
   display: flex;
 }
 
-#thirdSubFoot>div {
+#thirdSubFoot > div {
   /* display: flex; */
   /* border: 1px solid black; */
   width: 50%;
 }
 
-#thirdSubFoot>div:nth-child(1)>div:nth-child(1) {
+#thirdSubFoot > div:nth-child(1) > div:nth-child(1) {
   /* display: flex; */
   /* border: 1px solid black; */
   /* width: 50%; */
@@ -901,16 +967,14 @@ width: 25%;
   gap: 5px;
 }
 
-
 /* .payments div {
-/* border: 1px solid black; 
+  /* border: 1px solid black; 
 } */
 
 .payments div img {
   width: 90%;
   height: 70%;
 }
-
 
 /* another by arun */
 
@@ -929,7 +993,9 @@ width: 25%;
 .account:hover,
 #check-cart-part:hover {
   background: rgb(223, 217, 217);
-  padding: 12px
+  padding: 12px;
+    background: rgb(223, 217, 217);
+    padding: 15px;
 }
 
 .hover-down-box {
@@ -1003,10 +1069,9 @@ width: 25%;
 }
 
 .login-then-show-name {
-  display: none;
+  /* display: none; */
   background: red;
 }
-
 
 /* user details show  */
 
@@ -1017,4 +1082,53 @@ width: 25%;
   font-size: 25px;
   background: #d9d7d7;
 }
-/* header css end here */
+
+#logoutuser {
+  display: none;
+}
+
+/* car section */
+
+/* cart section */
+
+.giving-items-some-flexing-for-management {
+  display: flex;
+  justify-content: space-between;
+}
+
+.items-availble-then-show {
+  background-color: rgb(230, 224, 224);
+}
+
+.giving-some-style-as-you-wnat {
+  padding: 12px;
+}
+
+.btn-view-cart {
+  margin-top: 12px;
+}
+
+.btn-view-cart button {
+  padding: 8px 12px 8px 12px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+    padding: 8px 12px 8px 12px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+}
+
+.btn-view-cart button:hover {
+  background-color: #28bdb7;
+  color: #111;
+}
+
+.scroll-able-items-container {
+  overflow-y: scroll;
+  height: auto !important;
+  padding: 12px;
+  max-height: 480px;
+  background: #fff;
+  display: none;
+}
