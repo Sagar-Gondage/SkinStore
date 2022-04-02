@@ -225,7 +225,6 @@ freeitems2.forEach(function(el) {
 });
 
 
-// total show on subtotal amount
 var cartadditemtotalprice = 0;
 for (var i = 0; i < arr.length; i++) {
     cartadditemtotalprice += arr[i];
