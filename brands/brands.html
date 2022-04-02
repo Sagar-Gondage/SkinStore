@@ -192,8 +192,8 @@
     <div id="third">
         <div id="thirdInneer">
             <div id="brand-link">Brands</div>
-            <div>Anniversary Edit</div>
-            <div>Sale</div>
+            <div class="anniversaryLink">Anniversary Edit</div>
+            <div id="productSale">Sale</div>
             <div class="BAR">
                 Build a Routine
                 <div class="drop">
@@ -617,6 +617,8 @@
         15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22) @ $130 | Shop now
     </div>
 
+    <!-- HEADER ENDS HERE -->
+
 
     <div id="bag">
     <h1 class="c1">Brands</h1>
@@ -655,11 +657,11 @@
         <h1 class="box0">A</h1>
         <div class="box1" >
             <span><a href="./anniversary.html">Asep</a></span>
-            <span><a href="">Algenist</a></span>
-            <span><a href="">Alterna</a></span>
-            <span><a href="">Anna Sui</a></span>
-            <span><a href="">Aromatherapy Associates</a></span>
-            <span><a href="">Avant Skincare</a></span>
+            <span><a href="./anniversary.html">Algenist</a></span>
+            <span><a href="./anniversary.html">Alterna</a></span>
+            <span><a href="./anniversary.html">Anna Sui</a></span>
+            <span><a href="./anniversary.html">Aromatherapy Associates</a></span>
+            <span><a href="./anniversary.html">Avant Skincare</a></span>
         </div>
 
         <div class="box2">
@@ -1384,7 +1386,7 @@
             <div id="pay">
                 <div id="paySecure">Pay securely with</div>
                 <div class="payments">
-                    <img src="./img/pay.png" alt="" />
+                    <img src="../img/pay.png" alt="" />
                 </div>
             </div>
         </div>
@@ -1501,6 +1503,9 @@ document.querySelector("#brand-link").addEventListener("click", brandLink);
 function brandLink() {
     window.location.href = "./brands/brands.html";
 }
+
+
+
 
 database.map(function(el, i, arr) {
     var box = document.createElement("div");

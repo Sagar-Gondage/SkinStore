@@ -197,7 +197,7 @@
         <div id="thirdInneer">
             <div id="brand-link">Brands</div>
             <div class="anniversaryLink">Anniversary Edit</div>
-            <div>Sale</div>
+            <div id="productSale">Sale</div>
             <div class="BAR">
                 Build a Routine
                 <div class="drop">
@@ -946,7 +946,8 @@
             </div>
         </div>
     </div>
-
+ <!-- <link rel="stylesheet" href="./brands/sale.html"> -->
+ 
     <!-- Footer Ends Here -->
 </body>
 
@@ -1012,13 +1013,25 @@
 
         // page link Starts here
 
+        document.querySelector("#brand-link").addEventListener("click", brandLink);
+
+      function brandLink() {
+        window.location.href = "./brands/brands.html";
+    }
+
+
         document.querySelector(".anniversaryLink").addEventListener("click", anniversaryLink);
 
         function anniversaryLink() {
-            window.location = "./brands/anniversary.html"
+            window.location.href = "./brands/anniversary.html"
         }
         
         
+    document.querySelector("#productSale").addEventListener("click", productSale);
+
+    function productSale() {
+    window.location.href = "./brands/sale.html";
+    }
 
     //arun
 
@@ -1096,11 +1109,7 @@
             "block";
     }
 
-    document.querySelector("#brand-link").addEventListener("click", brandLink);
-
-    function brandLink() {
-        window.location.href = "./brands/brands.html";
-    }
+   
 
     database.map(function(el, i, arr) {
         var box = document.createElement("div");
