@@ -9,7 +9,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,700;0,900;1,100;1,300;1,400&family=Poppins:wght@200;300;400&display=swap');
         
-        </style>
+    </style>
         <link rel="stylesheet" href="../cart/cart.html">
         
 </head>
@@ -447,8 +447,100 @@ crossorigin="anonymous"
 ></script>
 <script>
   // ../cart/cart.html
-  document.querySelector("#check-cart-part").addEventListener("click",sjhddf);
-  function sjhddf(){
-    window.location.href="../cart/cart.html";
-  }
+ 
+
+  document.querySelector("#check-cart-part").addEventListener("click", carthreflink);
+
+function carthreflink() {
+    window.location.href = "../cart/cart.html";
+}
+var database = JSON.parse(localStorage.getItem("cartadddatabase")) || [];
+var lengthofbagitems;
+if (database == null) {
+    lengthofbagitems = 0;
+} else {
+    lengthofbagitems = database.length;
+}
+
+document.querySelector("#add-count-items").innerText = lengthofbagitems;
+if (lengthofbagitems == 0) {
+    document.querySelector(".scroll-able-items-container").style.display = "none";
+} else {
+    document.querySelector(".scroll-able-items-container").style.display = "block";
+}
+// user details shows
+var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser")) || [];
+gettingcurrentuser.map(function(el) {
+    if (el.name == null) {
+        document.querySelector(".login-then-show-name").style.display = "none";
+        document.querySelector(".conditional-thin-if-not-login").style.display =
+            "block";
+        document.querySelector("#logoutuser").style.display = "none";
+    } else {
+        document.querySelector(
+            ".login-then-show-name"
+        ).innerText = `Welcome ${el.name}`;
+        document.querySelector(".conditional-thin-if-not-login").style.display =
+            "none";
+        document.querySelector("#logoutuser").style.display = "block";
+        console.log(el.name);
+    }
+});
+
+document.querySelector("#logoutuser").addEventListener("click", logoutcurrentuser);
+
+function logoutcurrentuser() {
+    gettingcurrentuser.map(function(el, i) {
+        gettingcurrentuser.splice(i, 10000);
+        window.location.reload();
+        localStorage.setItem("currentuser", JSON.stringify(gettingcurrentuser));
+    });
+}
+
+
+
+if (lengthofbagitems > 0) {
+    document.querySelector(".empty-things").style.display = "none";
+}
+if (lengthofbagitems == 0) {
+    document.querySelector(".total-of-items").style.display = "none";
+    document.querySelector(".btn-view-cart").style.display = "none";
+    document.querySelector(".price-of-items-total").style.display = "none";
+}
+document.querySelector(".total-of-items").innerText = `${lengthofbagitems} items in your cart`;
+var subtotal = database.reduce(function(sum, el, i, arr) {
+    sum += el.price;
+    return sum;
+}, 0);
+
+document.querySelector(".price-of-items-total").innerText = `$${subtotal}`;
+
+if (database == 0) {
+    document.querySelector(".scroll-able-items-container").style.display =
+        "none";
+} else {
+    document.querySelector(".scroll-able-items-container").style.display =
+        "block";
+}
+
+document.querySelector("#brand-link").addEventListener("click", brandLink);
+
+function brandLink() {
+    window.location.href = "./brands/brands.html";
+}
+
+database.map(function(el, i, arr) {
+    var box = document.createElement("div");
+    var img = document.createElement("img");
+    img.src = el.img_url;
+    var para = document.createElement("p");
+    para.innerText = el.name;
+    var price = document.createElement("p");
+    price.innerText = `$${el.price}`;
+    var Qty = document.createElement("p");
+    Qty.innerText = `Quantity : 1`;
+
+    box.append(img, para, price, Qty);
+    document.querySelector(".scroll-able-items-container").append(box);
+});
 </script>
