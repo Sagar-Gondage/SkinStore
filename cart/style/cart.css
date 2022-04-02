@@ -86,6 +86,11 @@
     width: 100%;
 }
 
+.scroll-able-items-container>div img {
+    width: 80px;
+    background: red;
+}
+
 th:first-child {
     width: 120px;
 }
