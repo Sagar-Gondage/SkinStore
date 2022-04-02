@@ -196,7 +196,7 @@
     <div id="third">
         <div id="thirdInneer">
             <div id="brand-link">Brands</div>
-            <div>Anniversary Edit</div>
+            <div class="anniversaryLink"> Anniversary Edit</div>
             <div>Sale</div>
             <div class="BAR">
                 Build a Routine
@@ -1005,6 +1005,13 @@
         // linking of social Media Ends
         
         
+        // page link Starts here
+
+        document.querySelector(".anniversaryLink").addEventListener("click", anniversaryLink);
+
+        function anniversaryLink() {
+            window.location = "./brands/anniversary.html"
+        }
         
         
 

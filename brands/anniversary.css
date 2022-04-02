@@ -112,18 +112,18 @@ height:50%;
   position: relative;
   overflow: hidden;
   padding: 20px;
-  width:48%;
+  width:40%;
+  border:1px solid black;
   margin-top: -750px;
   margin-left: 60%;
   padding-right: 20px;
-  
 }
 
 .product-container {
   padding: 0 10vw;
   display: flex;
   overflow-x: auto;
-  /* width:100%; */
+  width:70%;
   scroll-behavior: smooth;
 }
 
@@ -133,8 +133,8 @@ height:50%;
 
 .product-card {
   flex: 0 0 auto;
-  width: 250px;
-  height: 450px;
+  width: 600px;
+  height: 650px;
   margin-right: 40px;
 }
 
@@ -148,20 +148,20 @@ height:50%;
 
 .product-thumb {
   width: 100%;
-  height: 100%;
+  height: 85%;
   object-fit: cover;
   padding-bottom: 8px;
 }
 
 .product-info {
   width: 100%;
-  height: 100%;
+  height: 60px;
  margin-top: -60px;
  padding-bottom: 8px;
 }
 
 .product-brand {
-  /* width:100%; */
+  width:100%;
   padding-bottom: 8px;
 }
 .tnt{
@@ -200,17 +200,16 @@ height:50%;
 .pre-btn {
   left: 0;
   transform: rotate(180deg);
-  padding-left: 90px;
 }
 
 .nxt-btn {
   right: 0;
-  padding-right:250px;
+  padding-right:80px;
 }
 
 .pre-btn img,
 .nxt-btn img {
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .pre-btn:hover img,
