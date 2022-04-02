@@ -177,13 +177,14 @@ html {
 
 .outside,
 .outsideSkin,
-.outsideHair {
+.outsideHair,
+.outsideMakeup,
+.outsideTools {
   background-color: white;
   display: flex;
   position: absolute;
   z-index: 1;
   top: 50px;
-  right: -280%;
   border: 1px solid black;
   padding-top: 15px;
 }
@@ -198,7 +199,7 @@ html {
   padding: 5px;
 }
 
-.inside a {
+.inside>div>a {
   text-decoration: none;
   color: black;
 }
@@ -220,6 +221,9 @@ html {
 }
 
 /* pos for other drop Downs */
+.outside {
+    right: -280%;
+}
 
 .outsideSkin {
   right: -825%;
@@ -227,6 +231,14 @@ html {
 
 .outsideHair {
   right: -1295%;
+}
+
+.outsideMakeup {
+    right: -600%;
+}
+
+.outsideTools {
+    left: -550%
 }
 
 /* Fourth Div starts */
@@ -366,6 +378,7 @@ html {
 
 .shopNow:hover {
   background-color: #28bdb7;
+  cursor: pointer;
 }
 
 .companyLogo {
@@ -443,6 +456,7 @@ html {
 
 #shopNow:hover {
   background-color: #def5f4;
+  cursor: pointer;
 }
 
 /* Adv */
@@ -451,6 +465,7 @@ html {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 50px;
+  cursor: pointer;
   /* border: 1px solid blue; */
 }
 
