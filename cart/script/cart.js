@@ -263,7 +263,7 @@ function gettotalamout(subtotalamount, el) {
     //when price increase database
     //when price decrease 
     var finalamoutwillbe = totalspecialsuntotal + el.price;
-    console.log(finalamoutwillbe)
+    // console.log(finalamoutwillbe)
 
     // console.log(totalspecialsuntotal)
     var showthegiftsection = document.querySelector(".free-item-eligible");
@@ -343,8 +343,17 @@ function carthreflink() {
     window.location.href = "";
 }
 // cartadddatabase
-var database = JSON.parse(localStorage.getItem("cartadddatabase"));
-var lengthofbagitems = database.length;
+var database = JSON.parse(localStorage.getItem("cartadddatabase")) || [];
+var lengthofbagitems;
+if (database == null) {
+    lengthofbagitems = 0;
+} else {
+    lengthofbagitems = database.length;
+}
+
+if (lengthofbagitems == 0) {
+    document.querySelector(".scroll-able-items-container").style.display = "none";
+} else { document.querySelector(".scroll-able-items-container").style.display = "block"; }
 
 document.querySelector("#add-count-items").innerText = lengthofbagitems;
 
@@ -470,7 +479,3 @@ database.map(function(el, i, arr) {
     box.append(img, para, price, Qty)
     document.querySelector(".scroll-able-items-container").append(box);
 });
-
-if (database == 0) {
-    document.querySelector(".scroll-able-items-container").style.display = "none";
-} else { document.querySelector(".scroll-able-items-container").style.display = "block"; }
