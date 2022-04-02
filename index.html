@@ -793,7 +793,7 @@
     var lengthofbagitems = database.length;
     document.querySelector("#add-count-items").innerText = lengthofbagitems;
     // user details shows
-    var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser"));
+    var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser")) || [];
     gettingcurrentuser.map(function(el) {
         if (el.name == null) {
             document.querySelector(".login-then-show-name").style.display = "none";
