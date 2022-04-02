@@ -4,8 +4,8 @@ var saleData = [
       img_url: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11219032-2074897166624079.jpg",
       name: "Chantecaille Bio Lifting Mask - 50ml",
       info: "Save 25%",
-      actualprice :"165.00",
-      price: "123.75",
+      actualprice :165.00,
+      price: 123.75,
     },
     
     {
@@ -262,64 +262,64 @@ displayData(saleData)
 //  var data2 = JSON.parse(localStorage.getItem("localdata"))
 //  var displaydata = data2.slice(0,12)
 //    run(data)
-//    function  displayData(saleData){
-//   document.querySelector(".mainproduct").innerHTML=""
-//     saleData.map(function(el){
-//         var div = document.createElement("div")
-//         div.setAttribute("class","product");
-//         var img = document.createElement("img")
-//         img.src=el.image
-//         var h2 = document.createElement("h2")
-//         h2.innerText=el.name
-//         var p = document.createElement("p")
-//         p.innerText=el.info
-//         var span = document.createElement("h3")
-//         span.innerText="$"+el.actualprice
-//         var dam = document.createElement("span")
-//         dam.innerText="$"+el.price
-//         var button = document.createElement("button")
-//          button.innerText="Quick Buy"
+   function  displayData(saleData){
+  document.querySelector(".mainproduct").innerHTML=""
+    saleData.map(function(el){
+        var div = document.createElement("div")
+        div.setAttribute("class","product");
+        var img = document.createElement("img")
+        img.src=el.img_url
+        var h2 = document.createElement("h2")
+        h2.innerText=el.name
+        var p = document.createElement("p")
+        p.innerText=el.info
+        var span = document.createElement("h3")
+        span.innerText="$"+el.actualprice
+        var dam = document.createElement("span")
+        dam.innerText="$"+el.price
+        var button = document.createElement("button")
+         button.innerText="Quick Buy"
 
-//          button.addEventListener("click", function() {
-//           givintstro(el);
-//       });
-//         div.append(img,h2,p,span,dam,button)
-//         document.querySelector(".mainproduct").append(div)
+         button.addEventListener("click", function() {
+          givintstro(el);
+      });
+        div.append(img,h2,p,span,dam,button)
+        document.querySelector(".mainproduct").append(div)
   
-//     })
-//    }
- 
-//    function givintstro(el) {
-//     arr.push(el);
-//     localStorage.setItem("cartadddatabase", JSON.stringify(arr));
-// window.location.reload();
-// }
-
-saleData.map(function(el) {
-var box = document.createElement("div");
-var img = document.createElement("img");
-img.src = el.img_url;
-var name = document.createElement("p");
-name.innerText = el.name;
-var price = document.createElement("p");
-price.innerText = el.price;
-var btn = document.createElement("button");
-btn.innerText = "add bag";
-btn.addEventListener("click", function() {
-    givintstro(el);
-});
-box.append(img, name, price, btn);
-
-
-document.querySelector(".container").append(box);
-});
-var arr = JSON.parse(localStorage.getItem("cartadddatabase")) || [];
-
-function givintstro(el) {
-arr.push(el);
-localStorage.setItem("cartadddatabase", JSON.stringify(arr));
+    })
+   }
+     var arr=JSON.parse(localStorage.getItem("cartadddatabase"))||[]
+   function givintstro(el) {
+    arr.push(el);
+    localStorage.setItem("cartadddatabase", JSON.stringify(arr));
 window.location.reload();
 }
-// localStorage.clear();
+
+// saleData.map(function(el) {
+// var box = document.createElement("div");
+// var img = document.createElement("img");
+// img.src = el.img_url;
+// var name = document.createElement("p");
+// name.innerText = el.name;
+// var price = document.createElement("p");
+// price.innerText = el.price;
+// var btn = document.createElement("button");
+// btn.innerText = "add bag";
+// btn.addEventListener("click", function() {
+//     givintstro(el);
+// });
+// box.append(img, name, price, btn);
+
+
+// document.querySelector(".container").append(box);
+// });
+// var arr = JSON.parse(localStorage.getItem("cartadddatabase")) || [];
+
+// function givintstro(el) {
+// arr.push(el);
+// localStorage.setItem("cartadddatabase", JSON.stringify(arr));
+// window.location.reload();
+// }
+// // localStorage.clear();
 
 
