@@ -488,6 +488,7 @@ document.querySelector("#newlink").addEventListener("click", newlink);
 document.querySelector("#fragrance").addEventListener("click", fragrance);
 document.querySelector("#skincare").addEventListener("click", skincare);
 document.querySelector("#bodyandbath").addEventListener("click", bodyandbath);
+document.querySelector("#hairlink").addEventListener("click", hairlink);
 
 function brandLink() {
     window.location.href = "../brands/brands.html";
@@ -519,4 +520,8 @@ function skincare() {
 
 function bodyandbath() {
     window.location.href = "../fragrance/body.html";
+}
+
+function hairlink() {
+    window.location.href = "../fragrance/Hair.html";
 }
