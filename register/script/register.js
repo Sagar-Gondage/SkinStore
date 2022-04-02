@@ -68,12 +68,12 @@ function usersubmit() {
 
 
     // window.location.href = "../login/login.html";
-    if (name == "" && email == "") {
-        console.log("sdfg")
-    } else {
+    if (name != "" && email != "" && password != "") {
         registereduser.push(obj);
         localStorage.setItem("registereduser", JSON.stringify(registereduser));
         window.location.href = "../login/login.html";
+    } else {
+
     }
 }
 // localStorage.clear();
