@@ -233,8 +233,7 @@ for (var i = 0; i < arr.length; i++) {
 
 
 function gettotalamout(subtotalamount, el) {
-    // var djvdd = el.price + subtotalamount
-    // el.price += subtotalamount;
+
 
     var showthegiftsection = document.querySelector(".free-item-eligible");
     var qualifited = document.querySelector(".hiddenShow");
