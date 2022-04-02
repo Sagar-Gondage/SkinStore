@@ -137,6 +137,8 @@ var data = [
   
  
  ]
+
+//  aa
 // localStorage.setItem("localdata" , JSON.stringify(data))
 // // sorting by price start here
 
