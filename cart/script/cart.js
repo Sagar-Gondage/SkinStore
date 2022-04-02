@@ -232,11 +232,44 @@ for (var i = 0; i < arr.length; i++) {
 }
 
 
+var totalspecialsuntotal = databaseitemaddbag.reduce(function(sum, el, i, arr) {
+    sum += el.price;
+    return sum;
+}, 0);
+var showthegiftsection = document.querySelector(".free-item-eligible");
+var qualifited = document.querySelector(".hiddenShow");
+if (totalspecialsuntotal >= 130) {
+    // document.querySelector("#free-product-add").addEventListener("click", addfreeitems);
+    showthegiftsection.style.display = "block";
+    qualifited.style.display = "block";
+    document.querySelector("#free-product-add").addEventListener("click", addfreeitems);
+} else {
+    showthegiftsection.style.display = "none";
+    qualifited.style.display = "none";
+}
+var databasdfs = JSON.parse(localStorage.getItem("cartadddatabase")) || [];
+
+function addfreeitems() {
+    console.log(databasdfs.push(el))
+    window.location.reload();
+    localStorage.setItem("cartadddatabase", JSON.stringify(databasdfs));
+
+}
+
 function gettotalamout(subtotalamount, el) {
 
 
+
+    //when price increase database
+    //when price decrease 
+    var finalamoutwillbe = totalspecialsuntotal + el.price;
+    console.log(finalamoutwillbe)
+
+    // console.log(totalspecialsuntotal)
     var showthegiftsection = document.querySelector(".free-item-eligible");
     var qualifited = document.querySelector(".hiddenShow");
+
+    // console.log(addingitems)
     if (subtotalamount >= 130) {
         // document.querySelector("#free-product-add").addEventListener("click", addfreeitems);
         showthegiftsection.style.display = "block";
