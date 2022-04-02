@@ -238,7 +238,7 @@ function gettotalamout(subtotalamount, el) {
     var showthegiftsection = document.querySelector(".free-item-eligible");
     var qualifited = document.querySelector(".hiddenShow");
     if (subtotalamount >= 130) {
-        // document.querySelector("#free-product-add").addEventListener("click", addfreeitems);
+
         showthegiftsection.style.display = "block";
         qualifited.style.display = "block";
         document.querySelector("#free-product-add").addEventListener("click", addfreeitems);
