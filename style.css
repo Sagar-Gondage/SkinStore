@@ -620,7 +620,7 @@ html {
 .account:hover,
 #check-cart-part:hover {
     background: rgb(223, 217, 217);
-    padding: 12px
+    padding: 15px;
 }
 
 .hover-down-box {
@@ -714,7 +714,7 @@ html {
 }
 
 
-/* car section */
+/* cart section */
 
 .giving-items-some-flexing-for-management {
     display: flex;
@@ -737,7 +737,7 @@ html {
     padding: 8px 12px 8px 12px;
     background-color: #111;
     color: #fff;
-    border: none
+    border: none;
 }
 
 .btn-view-cart button:hover {
