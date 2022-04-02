@@ -792,3 +792,8 @@
  }
  /* header css end here */
  
+
+ .new>div>span:hover {
+     background-color: rgb(235, 235, 235);
+ }
+

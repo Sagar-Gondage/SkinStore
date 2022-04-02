@@ -116,7 +116,7 @@ databaseitemaddbag.map(function(el, i) {
     var td2 = document.createElement("td");
     td2.innerText = el.name;
     var td3 = document.createElement("td");
-    td3.innerText = el.price;
+    td3.innerText = Number(el.price);
     var td4 = document.createElement("td");
 
     var boxQty = document.createElement("div");
@@ -164,7 +164,7 @@ databaseitemaddbag.map(function(el, i) {
         } else {
             counter--;
             paraforitems.innerText = counter;
-            subtotalamount = el.price * Number(counter);
+            subtotalamount = Number(el.price) * Number(counter);
             td5.innerText = subtotalamount;
             gettotalamout(subtotalamount, el);
 
@@ -179,7 +179,7 @@ databaseitemaddbag.map(function(el, i) {
         } else {
             counter++;
             paraforitems.innerText = counter;
-            subtotalamount = el.price * Number(counter);
+            subtotalamount = Number(el.price) * Number(counter);
             td5.innerText = subtotalamount;
             gettotalamout(subtotalamount, el);
 
@@ -233,7 +233,7 @@ for (var i = 0; i < arr.length; i++) {
 
 
 var totalspecialsuntotal = databaseitemaddbag.reduce(function(sum, el, i, arr) {
-    sum += el.price;
+    sum += Number(el.price);
     return sum;
 }, 0);
 var showthegiftsection = document.querySelector(".free-item-eligible");
@@ -460,7 +460,7 @@ if (lengthofbagitems == 0) {
 }
 document.querySelector(".total-of-items").innerText = `${lengthofbagitems} items in your cart`;
 var subtotal = database.reduce(function(sum, el, i, arr) {
-    sum += el.price;
+    sum += Number(el.price);
     return sum;
 }, 0);
 document.querySelector(".price-of-items-total").innerText = `$${subtotal}`;
@@ -479,10 +479,49 @@ database.map(function(el, i, arr) {
     box.append(img, para, price, Qty)
     document.querySelector(".scroll-able-items-container").append(box);
 });
-
+// linking all pages
 document.querySelector("#brand-link").addEventListener("click", brandLink);
+document.querySelector("#link-anni").addEventListener("click", linkanni);
+document.querySelector("#link-sale").addEventListener("click", salelink);
+document.querySelector("#adivcelink").addEventListener("click", adivcelink);
+document.querySelector("#newlink").addEventListener("click", newlink);
+document.querySelector("#fragrance").addEventListener("click", fragrance);
+document.querySelector("#skincare").addEventListener("click", skincare);
+document.querySelector("#bodyandbath").addEventListener("click", bodyandbath);
+document.querySelector("#hairlink").addEventListener("click", hairlink);
 
 function brandLink() {
     window.location.href = "../brands/brands.html";
-    console.log("asdf")
+}
+
+function linkanni() {
+    window.location.href = "../brands/anniversary.html";
+}
+
+function salelink() {
+    window.location.href = "../brands/sale.html";
+}
+
+function adivcelink() {
+    window.location.href = "../fragrance/Advice.html";
+}
+
+function newlink() {
+    window.location.href = "../fragrance/New.html";
+}
+
+function fragrance() {
+    window.location.href = "../fragrance/Fragrance.html";
+}
+
+function skincare() {
+    window.location.href = "../fragrance/SKINCARE.html";
+}
+
+function bodyandbath() {
+    window.location.href = "../fragrance/body.html";
+}
+
+function hairlink() {
+    window.location.href = "../fragrance/Hair.html";
 }
