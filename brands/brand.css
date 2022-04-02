@@ -7,18 +7,19 @@
      grid-template-columns: repeat(26,1fr);
      grid-template-rows:auto;
      grid-gap:6px;
+     /* border: 1px solid; */
      align-items: center;
-     margin-left:140px;
-     width:70%;
+     margin-left:85px;
+     width:90%;
      height:70px;
  }
  
  #container>div{
-     height:50px;
-     width:55px;
+     height:40px;
+     width:45px;
      border:1px solid black ;
      text-align: center;
-     padding-top: 14px;
+     padding-top: 8px;
  }
  #container :hover{
      background-color: rgb(26, 24, 24);
