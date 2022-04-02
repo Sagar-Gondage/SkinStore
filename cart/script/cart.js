@@ -116,7 +116,7 @@ databaseitemaddbag.map(function(el, i) {
     var td2 = document.createElement("td");
     td2.innerText = el.name;
     var td3 = document.createElement("td");
-    td3.innerText = el.price;
+    td3.innerText = Number(el.price);
     var td4 = document.createElement("td");
 
     var boxQty = document.createElement("div");
@@ -164,7 +164,7 @@ databaseitemaddbag.map(function(el, i) {
         } else {
             counter--;
             paraforitems.innerText = counter;
-            subtotalamount = el.price * Number(counter);
+            subtotalamount = Number(el.price) * Number(counter);
             td5.innerText = subtotalamount;
             gettotalamout(subtotalamount, el);
 
@@ -179,7 +179,7 @@ databaseitemaddbag.map(function(el, i) {
         } else {
             counter++;
             paraforitems.innerText = counter;
-            subtotalamount = el.price * Number(counter);
+            subtotalamount = Number(el.price) * Number(counter);
             td5.innerText = subtotalamount;
             gettotalamout(subtotalamount, el);
 
@@ -233,7 +233,7 @@ for (var i = 0; i < arr.length; i++) {
 
 
 var totalspecialsuntotal = databaseitemaddbag.reduce(function(sum, el, i, arr) {
-    sum += el.price;
+    sum += Number(el.price);
     return sum;
 }, 0);
 var showthegiftsection = document.querySelector(".free-item-eligible");
@@ -460,7 +460,7 @@ if (lengthofbagitems == 0) {
 }
 document.querySelector(".total-of-items").innerText = `${lengthofbagitems} items in your cart`;
 var subtotal = database.reduce(function(sum, el, i, arr) {
-    sum += el.price;
+    sum += Number(el.price);
     return sum;
 }, 0);
 document.querySelector(".price-of-items-total").innerText = `$${subtotal}`;
