@@ -86,6 +86,10 @@
     width: 100%;
 }
 
+.scroll-able-items-container>div img {
+    width: 80px;
+}
+
 th:first-child {
     width: 120px;
 }
