@@ -950,7 +950,6 @@
 </html>
 
 <script>
-
     document.querySelector(".goToHomepage").addEventListener("click", goToHomepage);
 
     function goToHomepage() {
@@ -1071,7 +1070,7 @@
     }
     document.querySelector(".total-of-items").innerText = `${lengthofbagitems} items in your cart`;
     var subtotal = database.reduce(function(sum, el, i, arr) {
-        sum += el.price;
+        sum += Number(el.price);
         return sum;
     }, 0);
 
@@ -1098,7 +1097,7 @@
         var para = document.createElement("p");
         para.innerText = el.name;
         var price = document.createElement("p");
-        price.innerText = `$${el.price}`;
+        price.innerText = `$${Number(el.price)}`;
         var Qty = document.createElement("p");
         Qty.innerText = `Quantity : 1`;
 
