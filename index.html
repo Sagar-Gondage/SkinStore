@@ -196,7 +196,7 @@
     <div id="third">
         <div id="thirdInneer">
             <div id="brand-link">Brands</div>
-            <div>Anniversary Edit</div>
+            <div class="anniversaryLink">Anniversary Edit</div>
             <div>Sale</div>
             <div class="BAR">
                 Build a Routine
@@ -796,6 +796,7 @@
 
     <!-- footer start here -->
 
+
     <div id="footer">
         <div id="firstFoot">
             <div id="firstSubFoot">
@@ -945,6 +946,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer Ends Here -->
 </body>
 
 </html>
@@ -1003,6 +1006,17 @@
         }
 
         // linking of social Media Ends
+
+
+
+
+        // page link Starts here
+
+        document.querySelector(".anniversaryLink").addEventListener("click", anniversaryLink);
+
+        function anniversaryLink() {
+            window.location = "./brands/anniversary.html"
+        }
         
         
         
