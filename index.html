@@ -782,16 +782,25 @@
 
     //arun
 
-    document
-        .querySelector("#check-cart-part")
-        .addEventListener("click", carthreflink);
+    document.querySelector("#check-cart-part").addEventListener("click", carthreflink);
 
     function carthreflink() {
         window.location.href = "./cart/cart.html";
     }
-    var database = JSON.parse(localStorage.getItem("cartadddatabase"));
-    var lengthofbagitems = database.length;
+    var database = JSON.parse(localStorage.getItem("cartadddatabase")) || [];
+    var lengthofbagitems;
+    if (database == null) {
+        lengthofbagitems = 0;
+    } else {
+        lengthofbagitems = database.length;
+    }
+
     document.querySelector("#add-count-items").innerText = lengthofbagitems;
+    if (lengthofbagitems == 0) {
+        document.querySelector(".scroll-able-items-container").style.display = "none";
+    } else {
+        document.querySelector(".scroll-able-items-container").style.display = "block";
+    }
     // user details shows
     var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser")) || [];
     gettingcurrentuser.map(function(el) {
@@ -811,9 +820,7 @@
         }
     });
 
-    document
-        .querySelector("#logoutuser")
-        .addEventListener("click", logoutcurrentuser);
+    document.querySelector("#logoutuser").addEventListener("click", logoutcurrentuser);
 
     function logoutcurrentuser() {
         gettingcurrentuser.map(function(el, i) {
@@ -833,13 +840,12 @@
         document.querySelector(".btn-view-cart").style.display = "none";
         document.querySelector(".price-of-items-total").style.display = "none";
     }
-    document.querySelector(
-        ".total-of-items"
-    ).innerText = `${lengthofbagitems} items in your cart`;
+    document.querySelector(".total-of-items").innerText = `${lengthofbagitems} items in your cart`;
     var subtotal = database.reduce(function(sum, el, i, arr) {
         sum += el.price;
         return sum;
     }, 0);
+
     document.querySelector(".price-of-items-total").innerText = `$${subtotal}`;
 
     database.map(function(el, i, arr) {
@@ -856,12 +862,4 @@
         box.append(img, para, price, Qty);
         document.querySelector(".scroll-able-items-container").append(box);
     });
-
-    if (database == 0) {
-        document.querySelector(".scroll-able-items-container").style.display =
-            "none";
-    } else {
-        document.querySelector(".scroll-able-items-container").style.display =
-            "block";
-    }
 </script>
