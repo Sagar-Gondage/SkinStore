@@ -1,5 +1,5 @@
 var redirectregister = document.querySelector("#redirectRegister").addEventListener("click", timemachine);
-var collectregistereddata = JSON.parse(localStorage.getItem("registereduser"));
+var collectregistereddata = JSON.parse(localStorage.getItem("registereduser")) || [];
 
 function timemachine() {
     window.location.href = "../register/register.html";
