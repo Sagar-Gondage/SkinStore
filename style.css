@@ -580,6 +580,7 @@ html {
 #socialMedia {
     display: flex;
     gap: 20px;
+    cursor: pointer;
 }
 
 #connect>div:nth-child(1) {
