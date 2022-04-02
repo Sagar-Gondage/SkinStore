@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="brand.css">
+    <!-- <link rel="stylesheet" href="../"> -->
 </head>
 <body>
 
@@ -19,7 +20,7 @@
     </div>
     <div class="sticky">
         <div id="navBar">
-            <div id="second">
+            <div id="second" class="goToHomepage">
                 <div id="secondFirst">
                     <svg class="headerLogo" viewBox="0 0 280 79">
               <defs>
@@ -213,7 +214,7 @@
         <div>J</div>
         <div>K</div>
         <div>L</div>
-        <div>M</div>
+        <div> <a href="#comingFromM">M</a></div>
         <div>N</div>
         <div>O</div>
         <div>P</div>
@@ -513,9 +514,9 @@
         </div>
     </div>
 
-    <div class="container2 new">
+    <div class="container2 new" id="comingFromM">
         <h1 class="box0">L</h1>
-        <div class="box1" >
+        <div class="box1" id="backColorAplhaNames">
             <span><a href="">L'Occitane</a></span>
             <span><a href="">Lauren B. Beauty</a></span>
             <span><a href="">Lipstick Queen</a></span>
@@ -535,7 +536,7 @@
         </div>
     </div>
 
-    <div class="container2">
+    <div class="container2"  >
         <h1 class="box0">M</h1>
         <div class="box1" >
             <span><a href="">Mama Mio</a></span>
@@ -975,6 +976,14 @@
     <!-- footer end here -->
 </body>
 </html>
+
+<script>
+    document.querySelector(".goToHomepage").addEventListener("click", goToHomepage);
+
+function goToHomepage() {
+    window.location.href="../index.html"
+}
+</script>
 
 
 

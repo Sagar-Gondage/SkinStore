@@ -792,3 +792,16 @@
  }
  /* header css end here */
  
+
+ .new>div>span:hover {
+     background-color: rgb(235, 235, 235);
+ }
+
+ .container2>div span {
+     /* color:; */
+     /* padding-top: -10px; */
+     /* margin-bottom: 5px; */
+     /* padding-bottom: 5px; */
+     /* font-size: 30px; */
+     /* vertical-align: middle; */
+ }
