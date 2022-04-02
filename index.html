@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./new style luci/style.css" />
     <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./brands/brands.html"> -->
 </head>
 
 <body>
@@ -193,7 +194,7 @@
     <!-- <div id="border"></div> -->
     <div id="third">
         <div id="thirdInneer">
-            <div>Brands</div>
+            <div id="brand-link">Brands</div>
             <div>Anniversary Edit</div>
             <div>Sale</div>
             <div class="BAR">
@@ -1039,7 +1040,7 @@
             "block";
     }
 
-    document.querySelector(".brandLink").addEventListener("click", brandLink);
+    document.querySelector("#brand-link").addEventListener("click", brandLink);
 
     function brandLink() {
         window.location.href = "./brands/brands.html";
