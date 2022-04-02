@@ -37,6 +37,10 @@
     color: #111;
 }
 
+#apeend-details-product td img {
+    width: 80px;
+}
+
 .some-offer {
     background-color: #e5ecf0;
     color: rgb(31, 117, 187);
@@ -80,6 +84,10 @@
 .table-info-details-flex-section {
     margin-top: 25px;
     width: 100%;
+}
+
+.scroll-able-items-container>div img {
+    width: 80px;
 }
 
 th:first-child {

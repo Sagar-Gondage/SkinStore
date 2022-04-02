@@ -1,10 +1,11 @@
 var redirectregister = document.querySelector("#redirectRegister").addEventListener("click", timemachine);
-var collectregistereddata = JSON.parse(localStorage.getItem("registereduser")) || [];
+var collectregistereddata = JSON.parse(localStorage.getItem("registereduser"));
 
 function timemachine() {
     window.location.href = "../register/register.html";
 }
-// 
+
+
 var loginuserdetails = document.querySelector("form").addEventListener("submit", loginfunc);
 var currentuser = [];
 
@@ -15,7 +16,7 @@ function loginfunc() {
     var dangeremail = document.querySelector(".email");
     var dangerpassword = document.querySelector(".password");
     var dangernotexist = document.querySelector(".notexist");
-    collectregistereddata.map(function(el) {
+    collectregistereddata.map(function(el, i, arr) {
 
         if (el.email == useremail && el.password == userpassword) {
             alert("login sucessfull press ok to shopping")
@@ -25,7 +26,6 @@ function loginfunc() {
 
         }
         if (el.email == useremail && el.password == userpassword) {
-
             dangernotexist.style.display = "none";
         } else {
             dangernotexist.style.display = "block";
