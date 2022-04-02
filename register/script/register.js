@@ -68,12 +68,13 @@ function usersubmit() {
 
 
     // window.location.href = "../login/login.html";
-    if (name == "" && email == "") {
-        console.log("sdfg")
-    } else {
+    if (name != "" && email != "" && password != "" && re_email != "" && re_password != "") {
         registereduser.push(obj);
         localStorage.setItem("registereduser", JSON.stringify(registereduser));
         window.location.href = "../login/login.html";
+        alert("Account sucessfull created.");
+    } else {
+        alert("Please fill all required fields.");
     }
 }
 // localStorage.clear();

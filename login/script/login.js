@@ -24,9 +24,9 @@ function loginfunc() {
             localStorage.setItem("currentuser", JSON.stringify(currentuser));
 
         }
-        if (el.email != useremail && el.password != userpassword) {
-            dangernotexist.style.display = "block";
+        if (el.email == useremail && el.password == userpassword) {
 
+            dangernotexist.style.display = "none";
         } else {
             dangernotexist.style.display = "block";
 

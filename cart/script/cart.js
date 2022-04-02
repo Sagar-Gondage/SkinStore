@@ -405,7 +405,7 @@ function gottomainpages() {
 //user show detail        
 
 
-var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser"));
+var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser")) || [];
 gettingcurrentuser.map(function(el) {
     if (el.name == null) {
         document.querySelector(".login-then-show-name").style.display = "none";
