@@ -4,8 +4,8 @@ var saleData = [
       img_url: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11219032-2074897166624079.jpg",
       name: "Chantecaille Bio Lifting Mask - 50ml",
       info: "Save 25%",
-      actualprice :165.00,
-      price: 123.75,
+      actualprice :"165.00",
+      price: "123.75",
     },
     
     {
