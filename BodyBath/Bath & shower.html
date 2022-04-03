@@ -1,792 +1,775 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script
-    src="https://kit.fontawesome.com/24c494a6b6.js"
-    crossorigin="anonymous"
-  ></script>
-  </head>
-  <style>
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+</head>
+<style>
     /* header css start here */
+    
     html {
-    font-size: 100%;
-    box-sizing: border-box;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Lato-Light", "Helvetica", "Arial, sans-serif";
-    font-weight: 300;
-    line-height: 1.4;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-.sticky {
-    z-index: 100;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    border-bottom: 0.5px solid grey;
-}
-
-#first {
-    display: flex;
-    justify-content: flex-end;
-    background-color: #f2f2f2;
-    height: 34px;
-}
-
-#firstSub {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-}
-
-#firstSub div {
-    margin: 0px 16px;
-}
-
-
-/* Second Div Starts */
-
-#second {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 118px;
-    /* border-bottom: 3px solid black; */
-    /* margin: 10px; */
-    /* position: sticky; */
-    /* top: 0; */
-}
-
-#secondFirst {
-    width: 17.9%;
-    height: auto;
-    display: flex;
-    padding: 20px;
-    padding-left: 5px;
-}
-
-#secondSecond {
-    display: flex;
-    width: 57.93%;
-    /* border: 1px solid black; */
-    justify-content: center;
-}
-
-#searchBoxSub {
-    display: flex;
-    width: 55.6%;
-    height: 40px;
-    /* border: 1px solid black; */
-    border-color: rgb(153, 153, 153);
-    box-sizing: border-box;
-    /* width: auto; */
-}
-
-#input {
-    width: 100%;
-    box-sizing: border-box;
-    padding-left: 15px;
-    border-right: 0px;
-}
-
-.searchGlass {
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-    padding: 1px 6px;
-    border-left: 0px;
-}
-
-#secondThird {
-    width: 12.3%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.account>span {
-    /* width: 100%; */
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-#secondFourth {
-    width: 9.53%;
-    display: flex;
-    justify-content: end;
-}
-
-.cart span {
-    margin-left: -15px;
-    margin-right: 20px;
-}
-
-#border {
-    border: 0.5px solid black;
-}
-
-
-/* Third Div starts */
-
-#third {
-    display: flex;
-    /* border: 1px solid black; */
-    height: auto;
-    align-items: center;
-    /* align-items: center */
-    /* position: sticky; */
-    /* top: 108; */
-}
-
-#thirdInneer {
-    /* margin: 10px; */
-    /* padding: 10px; */
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* gap: 25px; */
-    /* font-size: 16px; */
-    /* border: 1px solid blue; */
-    margin-left: 30px;
-}
-
-#thirdInneer>div {
-    /* border: 1px solid black; */
-    height: 100%;
-    /* align-items: center; */
-    /* vertical-align: baseline; */
-    padding-top: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-#thirdInneer>div:hover {
-    cursor: pointer;
-    background-color: #333;
-    color: white;
-}
-
-
-/* Build a Routine Drop Down starts here*/
-
-.BAR {
-    position: relative;
-}
-
-.drop {
-    display: none;
-}
-
-.outside,
-.outsideSkin,
-.outsideHair,
-.outsideMakeup,
-.outsideTools,
-.outsideBath,
-.outsideSelf,
-.outsideFragrance,
-.outsideNew {
-    background-color: white;
-    display: flex;
-    position: absolute;
-    z-index: 1;
-    top: 50px;
-    border: 1px solid black;
-    padding-top: 15px;
-}
-
-.inside {
-    border-top: 1px solid rgb(46, 51, 55);
-    width: 250px;
-    margin: 10px;
-}
-
-.inside div {
-    padding: 5px;
-}
-
-.inside>div>a {
-    text-decoration: none;
-    color: black;
-}
-
-.inside div:first-child>a {
-    font-weight: 550;
-}
-
-.inside div:hover {
-    background-color: rgb(240, 238, 238);
-}
-
-.inside div:nth-child(1) {
-    margin: 10px 0px;
-}
-
-.BAR:hover .drop {
-    display: block;
-}
-
-
-/* pos for other drop Downs */
-
-.outside {
-    right: -280%;
-}
-
-.outsideSkin {
-    right: -825%;
-}
-
-.outsideHair {
-    right: -1295%;
-}
-
-.outsideMakeup {
-    right: -600%;
-}
-
-.outsideTools {
-    left: -550%
-}
-
-.outsideBath {
-    left: -550%;
-}
-
-.outsideSelf {
-    left: -600%
-}
-
-.outsideFragrance {
-    left: -630%;
-}
-
-.outsideNew {
-    left: -830%;
-}
-
-
-/* Fourth Div starts */
-
-#fourth {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: #f2f2f2;
-}
-
-#fourthSub {
-    /* width: 80%; */
-    width: auto;
-    /* border: 1px solid black; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    height: 56px;
-    margin-bottom: 10px;
-}
-
-#fourthSub div span {
-    margin: 10px;
-}
-
-.offer {
-    /* width: 50%; */
-    /* height: 45px; */
-    font-size: 21px;
-    font-weight: 700;
-    margin-top: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    text-align: center;
-    background-color: #333;
-    color: white;
-}
-
-.offer:hover {
-    background-color: white;
-    color: black;
-}
-
-
-
-
-
-#footer {
-    width: 100%;
-    height: 650px;
-    border-top: 1px solid #999999;
-}
-
-#firstFoot {
-    height: 21%;
-    width: 100%;
-    /* border: 1px solid black; */
-}
-
-#firstSubFoot,
-#secondSubFoot,
-#thirdSubFoot {
-    display: flex;
-    /* border: 1px solid blue; */
-    height: 100%;
-    width: 95%;
-    margin: auto;
-    gap: 50px;
-}
-
-#signup {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 50%;
-    /* border: 1px solid green; */
-    height: 100%;
-    /* justify-content: center; */
-}
-
-#signup div:nth-child(1),
-#signup div:nth-child(2) {
-    /* border: 1px solid black; */
-    height: 80px;
-}
-
-#signup div:nth-child(1) {
-    /* border: 1px solid black; */
-    height: 80px;
-    margin-top: 20px;
-    font-weight: 550;
-}
-
-#signup div:nth-child(2) {
-    /* border: 1px solid black; */
-    width: 90px;
-    height: 80px;
-    font-size: 18px;
-    padding-left: 6px;
-    padding-top: 8px;
-    background-color: #333;
-    color: white;
-    margin-bottom: 20px;
-}
-
-#signup div:nth-child(2):hover {
-    background-color: rgb(152, 234, 240);
-    color: black;
-}
-
-#connect {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    /* border: 1px solid green; */
-    height: 100%;
-    gap: 20px;
-}
-
-#socialMedia {
-    display: flex;
-    gap: 20px;
-    cursor: pointer;
-}
-
-#connect>div:nth-child(1) {
-    margin-top: 20px;
-    height: 35px;
-    font-weight: 550;
-}
-
-#connect>div:nth-child(2) {
-    height: auto;
-    margin-top: -10px;
-}
-
-.eastendFooter_fill_hover:hover {
-    color: black;
-}
-
-#secondFoot {
-    height: 385px;
-    width: 100%;
-    /* border: 1px solid #999999; */
-}
-
-
-/* #secondSubFoot > div {
+        font-size: 100%;
+        box-sizing: border-box;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "Lato-Light", "Helvetica", "Arial, sans-serif";
+        font-weight: 300;
+        line-height: 1.4;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+    
+    .sticky {
+        z-index: 100;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        border-bottom: 0.5px solid grey;
+    }
+    
+    #first {
+        display: flex;
+        justify-content: flex-end;
+        background-color: #f2f2f2;
+        height: 34px;
+    }
+    
+    #firstSub {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+    }
+    
+    #firstSub div {
+        margin: 0px 16px;
+    }
+    /* Second Div Starts */
+    
+    #second {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 118px;
+        /* border-bottom: 3px solid black; */
+        /* margin: 10px; */
+        /* position: sticky; */
+        /* top: 0; */
+    }
+    
+    #secondFirst {
+        width: 17.9%;
+        height: auto;
+        display: flex;
+        padding: 20px;
+        padding-left: 5px;
+    }
+    
+    #secondSecond {
+        display: flex;
+        width: 57.93%;
+        /* border: 1px solid black; */
+        justify-content: center;
+    }
+    
+    #searchBoxSub {
+        display: flex;
+        width: 55.6%;
+        height: 40px;
+        /* border: 1px solid black; */
+        border-color: rgb(153, 153, 153);
+        box-sizing: border-box;
+        /* width: auto; */
+    }
+    
+    #input {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 15px;
+        border-right: 0px;
+    }
+    
+    .searchGlass {
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        padding: 1px 6px;
+        border-left: 0px;
+    }
+    
+    #secondThird {
+        width: 12.3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .account>span {
+        /* width: 100%; */
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    
+    #secondFourth {
+        width: 9.53%;
+        display: flex;
+        justify-content: end;
+    }
+    
+    .cart span {
+        margin-left: -15px;
+        margin-right: 20px;
+    }
+    
+    #border {
+        border: 0.5px solid black;
+    }
+    /* Third Div starts */
+    
+    #third {
+        display: flex;
+        /* border: 1px solid black; */
+        height: auto;
+        align-items: center;
+        /* align-items: center */
+        /* position: sticky; */
+        /* top: 108; */
+    }
+    
+    #thirdInneer {
+        /* margin: 10px; */
+        /* padding: 10px; */
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* gap: 25px; */
+        /* font-size: 16px; */
+        /* border: 1px solid blue; */
+        margin-left: 30px;
+    }
+    
+    #thirdInneer>div {
+        /* border: 1px solid black; */
+        height: 100%;
+        /* align-items: center; */
+        /* vertical-align: baseline; */
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    #thirdInneer>div:hover {
+        cursor: pointer;
+        background-color: #333;
+        color: white;
+    }
+    /* Build a Routine Drop Down starts here*/
+    
+    .BAR {
+        position: relative;
+    }
+    
+    .drop {
+        display: none;
+    }
+    
+    .outside,
+    .outsideSkin,
+    .outsideHair,
+    .outsideMakeup,
+    .outsideTools,
+    .outsideBath,
+    .outsideSelf,
+    .outsideFragrance,
+    .outsideNew {
+        background-color: white;
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        border: 1px solid black;
+        padding-top: 15px;
+    }
+    
+    .inside {
+        border-top: 1px solid rgb(46, 51, 55);
+        width: 250px;
+        margin: 10px;
+    }
+    
+    .inside div {
+        padding: 5px;
+    }
+    
+    .inside>div>a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .inside div:first-child>a {
+        font-weight: 550;
+    }
+    
+    .inside div:hover {
+        background-color: rgb(240, 238, 238);
+    }
+    
+    .inside div:nth-child(1) {
+        margin: 10px 0px;
+    }
+    
+    .BAR:hover .drop {
+        display: block;
+    }
+    /* pos for other drop Downs */
+    
+    .outside {
+        right: -280%;
+    }
+    
+    .outsideSkin {
+        right: -825%;
+    }
+    
+    .outsideHair {
+        right: -1295%;
+    }
+    
+    .outsideMakeup {
+        right: -600%;
+    }
+    
+    .outsideTools {
+        left: -550%
+    }
+    
+    .outsideBath {
+        left: -550%;
+    }
+    
+    .outsideSelf {
+        left: -600%
+    }
+    
+    .outsideFragrance {
+        left: -630%;
+    }
+    
+    .outsideNew {
+        left: -830%;
+    }
+    /* Fourth Div starts */
+    
+    #fourth {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: #f2f2f2;
+    }
+    
+    #fourthSub {
+        /* width: 80%; */
+        width: auto;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        height: 56px;
+        margin-bottom: 10px;
+    }
+    
+    #fourthSub div span {
+        margin: 10px;
+    }
+    
+    .offer {
+        /* width: 50%; */
+        /* height: 45px; */
+        font-size: 21px;
+        font-weight: 700;
+        margin-top: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        text-align: center;
+        background-color: #333;
+        color: white;
+    }
+    
+    .offer:hover {
+        background-color: white;
+        color: black;
+    }
+    
+    #footer {
+        width: 100%;
+        height: 650px;
+        border-top: 1px solid #999999;
+    }
+    
+    #firstFoot {
+        height: 21%;
+        width: 100%;
+        /* border: 1px solid black; */
+    }
+    
+    #firstSubFoot,
+    #secondSubFoot,
+    #thirdSubFoot {
+        display: flex;
+        /* border: 1px solid blue; */
+        height: 100%;
+        width: 95%;
+        margin: auto;
+        gap: 50px;
+    }
+    
+    #signup {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 50%;
+        /* border: 1px solid green; */
+        height: 100%;
+        /* justify-content: center; */
+    }
+    
+    #signup div:nth-child(1),
+    #signup div:nth-child(2) {
+        /* border: 1px solid black; */
+        height: 80px;
+    }
+    
+    #signup div:nth-child(1) {
+        /* border: 1px solid black; */
+        height: 80px;
+        margin-top: 20px;
+        font-weight: 550;
+    }
+    
+    #signup div:nth-child(2) {
+        /* border: 1px solid black; */
+        width: 90px;
+        height: 80px;
+        font-size: 18px;
+        padding-left: 6px;
+        padding-top: 8px;
+        background-color: #333;
+        color: white;
+        margin-bottom: 20px;
+    }
+    
+    #signup div:nth-child(2):hover {
+        background-color: rgb(152, 234, 240);
+        color: black;
+    }
+    
+    #connect {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        /* border: 1px solid green; */
+        height: 100%;
+        gap: 20px;
+    }
+    
+    #socialMedia {
+        display: flex;
+        gap: 20px;
+        cursor: pointer;
+    }
+    
+    #connect>div:nth-child(1) {
+        margin-top: 20px;
+        height: 35px;
+        font-weight: 550;
+    }
+    
+    #connect>div:nth-child(2) {
+        height: auto;
+        margin-top: -10px;
+    }
+    
+    .eastendFooter_fill_hover:hover {
+        color: black;
+    }
+    
+    #secondFoot {
+        height: 385px;
+        width: 100%;
+        /* border: 1px solid #999999; */
+    }
+    /* #secondSubFoot > div {
   border: 1px solid black; 
   border-top: 1px solid #000;
   width: 25%;
 } */
-
-#secondSubFoot>#help {
-    border-top: 1px solid #999999;
-    width: 60%;
-}
-
-#secondSubFoot>#about,
-#secondSubFoot>#legal,
-#secondSubFoot>#contactUs {
-    border-top: 1px solid #999999;
-    width: 17%;
-}
-
-.helpTitle,
-.aboutTitle,
-.legalTitle,
-.contactUsTitle {
-    font-weight: 550;
-    margin-top: 10px;
-}
-
-.aboutDetails,
-.helpDetails,
-.legalDetails,
-.contactUsDetails {
-    display: grid;
-    margin-top: 15px;
-    /* gap: 20px; */
-}
-
-.aboutDetails>div,
-.helpDetails>div,
-.legalDetails>div,
-.contactUsDetails>div {
-    padding-top: 5px;
-    height: 38px;
-    /* border: 1px solid black; */
-}
-
-#thirdFoot {
-    height: 27%;
-    width: 100%;
-    border-top: 1px solid #999999;
-}
-
-#thirdSubFoot {
-    display: flex;
-}
-
-#thirdSubFoot>div {
-    /* display: flex; */
-    /* border: 1px solid black; */
-    width: 50%;
-}
-
-#thirdSubFoot>div:nth-child(1)>div:nth-child(1) {
-    /* display: flex; */
-    /* border: 1px solid black; */
-    /* width: 50%; */
-    font-size: 36px;
-    font-weight: 750;
-    word-spacing: 20px;
-    letter-spacing: 5px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-#paySecure {
-    margin-top: 15px;
-}
-
-.payments {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    /* height: 80px; */
-    gap: 5px;
-}
-
-
-/* .payments div {
+    
+    #secondSubFoot>#help {
+        border-top: 1px solid #999999;
+        width: 60%;
+    }
+    
+    #secondSubFoot>#about,
+    #secondSubFoot>#legal,
+    #secondSubFoot>#contactUs {
+        border-top: 1px solid #999999;
+        width: 17%;
+    }
+    
+    .helpTitle,
+    .aboutTitle,
+    .legalTitle,
+    .contactUsTitle {
+        font-weight: 550;
+        margin-top: 10px;
+    }
+    
+    .aboutDetails,
+    .helpDetails,
+    .legalDetails,
+    .contactUsDetails {
+        display: grid;
+        margin-top: 15px;
+        /* gap: 20px; */
+    }
+    
+    .aboutDetails>div,
+    .helpDetails>div,
+    .legalDetails>div,
+    .contactUsDetails>div {
+        padding-top: 5px;
+        height: 38px;
+        /* border: 1px solid black; */
+    }
+    
+    #thirdFoot {
+        height: 27%;
+        width: 100%;
+        border-top: 1px solid #999999;
+    }
+    
+    #thirdSubFoot {
+        display: flex;
+    }
+    
+    #thirdSubFoot>div {
+        /* display: flex; */
+        /* border: 1px solid black; */
+        width: 50%;
+    }
+    
+    #thirdSubFoot>div:nth-child(1)>div:nth-child(1) {
+        /* display: flex; */
+        /* border: 1px solid black; */
+        /* width: 50%; */
+        font-size: 36px;
+        font-weight: 750;
+        word-spacing: 20px;
+        letter-spacing: 5px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    #paySecure {
+        margin-top: 15px;
+    }
+    
+    .payments {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        /* height: 80px; */
+        gap: 5px;
+    }
+    /* .payments div {
   /* border: 1px solid black; 
 } */
-
-.payments div img {
-    width: 90%;
-    height: 70%;
-}
-
-
-/* another by arun */
-
-.account,
-#check-cart-part {
-    position: relative;
-    display: inline-block;
-    padding: 12px;
-}
-
-#symbol {
-    /* background: red; */
-    margin-left: 2px;
-}
-
-.account:hover,
-#check-cart-part:hover {
-    background: rgb(223, 217, 217);
-    padding: 12px;
-    background: rgb(223, 217, 217);
-    padding: 15px;
-}
-
-.hover-down-box {
-    display: none;
-    position: absolute;
-    background: rgb(223, 217, 217);
-    /* background: #fff; */
-    width: 350px;
-    z-index: 1;
-    right: 0.1px;
-    height: 150px;
-    padding: 8px;
-}
-
-.dfsd {
-    background: #fff;
-}
-
-.hover-down-box a {
-    padding: 12px 12px;
-    display: block;
-    text-decoration: none;
-    background-color: #111;
-    color: #fff;
-    margin-bottom: 12px;
-    text-align: center;
-    margin-top: 12px;
-    border: 1px solid;
-}
-
-.hover-down-box a:last-child {
-    background-color: rgb(255, 255, 255);
-    color: #111;
-}
-
-.account a:hover,
-#check-cart-part a:hover {
-    background-color: rgb(16, 179, 211);
-}
-
-.hover-down-box a:last-child:hover {
-    background-color: rgb(226, 229, 230);
-}
-
-.account:hover .hover-down-box,
-#check-cart-part:hover .hover-down-box {
-    display: block;
-}
-
-.empty-things {
-    padding-top: 25px;
-}
-
-#check-cart-part {
-    position: relative;
-}
-
-#add-count-items {
-    position: absolute;
-    top: -8px;
-    left: 1.5em;
-    background: #111;
-    color: #fff;
-    width: 19px;
-    border-radius: 55%;
-    text-align: center;
-}
-
-#secondFirst {
-    cursor: pointer;
-}
-
-.login-then-show-name {
-    /* display: none; */
-    background: red;
-}
-
-
-/* user details show  */
-
-#style-class-improve {
-    padding: 0;
-    display: flex;
-    border: none;
-    font-size: 25px;
-    background: #d9d7d7;
-}
-
-#logoutuser {
-    display: none;
-}
-
-
-/* car section */
-
-
-/* cart section */
-
-.giving-items-some-flexing-for-management {
-    display: flex;
-    justify-content: space-between;
-}
-
-.items-availble-then-show {
-    background-color: rgb(230, 224, 224);
-}
-
-.giving-some-style-as-you-wnat {
-    padding: 12px;
-}
-
-.btn-view-cart {
-    margin-top: 12px;
-}
-
-.btn-view-cart button {
-    padding: 8px 12px 8px 12px;
-    background-color: #111;
-    color: #fff;
-    border: none;
-    padding: 8px 12px 8px 12px;
-    background-color: #111;
-    color: #fff;
-    border: none;
-}
-
-.btn-view-cart button:hover {
-    background-color: #28bdb7;
-    color: #111;
-}
-
-.scroll-able-items-container {
-    overflow-y: scroll;
-    height: auto !important;
-    padding: 12px;
-    max-height: 480px;
-    background: #fff;
-    display: none;
-}
-
-.scroll-able-items-container>div img {
-    width: 80px;
-}
-
+    
+    .payments div img {
+        width: 90%;
+        height: 70%;
+    }
+    /* another by arun */
+    
+    .account,
+    #check-cart-part {
+        position: relative;
+        display: inline-block;
+        padding: 12px;
+    }
+    
+    #symbol {
+        /* background: red; */
+        margin-left: 2px;
+    }
+    
+    .account:hover,
+    #check-cart-part:hover {
+        background: rgb(223, 217, 217);
+        padding: 12px;
+        background: rgb(223, 217, 217);
+        padding: 15px;
+    }
+    
+    .hover-down-box {
+        display: none;
+        position: absolute;
+        background: rgb(223, 217, 217);
+        /* background: #fff; */
+        width: 350px;
+        z-index: 1;
+        right: 0.1px;
+        height: 150px;
+        padding: 8px;
+    }
+    
+    .dfsd {
+        background: #fff;
+    }
+    
+    .hover-down-box a {
+        padding: 12px 12px;
+        display: block;
+        text-decoration: none;
+        background-color: #111;
+        color: #fff;
+        margin-bottom: 12px;
+        text-align: center;
+        margin-top: 12px;
+        border: 1px solid;
+    }
+    
+    .hover-down-box a:last-child {
+        background-color: rgb(255, 255, 255);
+        color: #111;
+    }
+    
+    .account a:hover,
+    #check-cart-part a:hover {
+        background-color: rgb(16, 179, 211);
+    }
+    
+    .hover-down-box a:last-child:hover {
+        background-color: rgb(226, 229, 230);
+    }
+    
+    .account:hover .hover-down-box,
+    #check-cart-part:hover .hover-down-box {
+        display: block;
+    }
+    
+    .empty-things {
+        padding-top: 25px;
+    }
+    
+    #check-cart-part {
+        position: relative;
+    }
+    
+    #add-count-items {
+        position: absolute;
+        top: -8px;
+        left: 1.5em;
+        background: #111;
+        color: #fff;
+        width: 19px;
+        border-radius: 55%;
+        text-align: center;
+    }
+    
+    #secondFirst {
+        cursor: pointer;
+    }
+    
+    .login-then-show-name {
+        /* display: none; */
+        background: red;
+    }
+    /* user details show  */
+    
+    #style-class-improve {
+        padding: 0;
+        display: flex;
+        border: none;
+        font-size: 25px;
+        background: #d9d7d7;
+    }
+    
+    #logoutuser {
+        display: none;
+    }
+    /* car section */
+    /* cart section */
+    
+    .giving-items-some-flexing-for-management {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .items-availble-then-show {
+        background-color: rgb(230, 224, 224);
+    }
+    
+    .giving-some-style-as-you-wnat {
+        padding: 12px;
+    }
+    
+    .btn-view-cart {
+        margin-top: 12px;
+    }
+    
+    .btn-view-cart button {
+        padding: 8px 12px 8px 12px;
+        background-color: #111;
+        color: #fff;
+        border: none;
+        padding: 8px 12px 8px 12px;
+        background-color: #111;
+        color: #fff;
+        border: none;
+    }
+    
+    .btn-view-cart button:hover {
+        background-color: #28bdb7;
+        color: #111;
+    }
+    
+    .scroll-able-items-container {
+        overflow-y: scroll;
+        height: auto !important;
+        padding: 12px;
+        max-height: 480px;
+        background: #fff;
+        display: none;
+    }
+    
+    .scroll-able-items-container>div img {
+        width: 80px;
+    }
+    
     body {
-      font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
     }
+    
     .head {
-      font-size: 14px;
-      height: 50px;
-      width: 70%;
-      line-height: 19.6px;
-      font-weight: 300;
-      font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        height: 50px;
+        width: 70%;
+        line-height: 19.6px;
+        font-weight: 300;
+        font-family: Arial, Helvetica, sans-serif;
     }
-    .head{
-        
-  white-space:normal;
-  overflow:hidden;
-  text-overflow:inherit;
-
+    
+    .head {
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: inherit;
     }
+    
     hr {
-      margin-top: 40px;
+        margin-top: 40px;
     }
+    
     #top {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 1px;
-      margin-top: 50px;
-      margin-left: 30px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1px;
+        margin-top: 50px;
+        margin-left: 30px;
     }
+    
     #top select {
-      height: 35px;
-      width: 180px;
-      margin-right: 30px;
+        height: 35px;
+        width: 180px;
+        margin-right: 30px;
     }
     /* #top div{
        height: 35px;
        width: 180px;
        margin-right: 30px;
     } */
+    
     .search input[type="text"] {
-      float: right;
-      padding: 6px;
-      border: 1 px solid black;
-      width: 180px;
-      margin-right: 50px;
-      margin-left: 40px;
-      font-size: 17px;
+        float: right;
+        padding: 6px;
+        border: 1 px solid black;
+        width: 180px;
+        margin-right: 50px;
+        margin-left: 40px;
+        font-size: 17px;
     }
+    
     #container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-      margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-bottom: 40px;
     }
     /* div{
         height: 100px;
     } */
+    
     #bord {
-      height: 60px;
-      width: auto;
-      border: 1px solid red;
+        height: 60px;
+        width: auto;
+        border: 1px solid red;
     }
+    
     .btn {
-      border: 0px;
-      background-color: #333333;
-      text-align: center;
-      padding: 5px 105px;
-      color: white;
-      font-size: 130%;
-      height: 42px;
+        border: 0px;
+        background-color: #333333;
+        text-align: center;
+        padding: 5px 105px;
+        color: white;
+        font-size: 130%;
+        height: 42px;
     }
+    
     .btn:hover {
-      border: 0px;
-      background-color: #28bdb7;
+        border: 0px;
+        background-color: #28bdb7;
     }
     /* #img:hover{
         
     } */
+    
     h4 {
-      font-size: 14px;
-      line-height: 19.6px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 700;
-      text-decoration: none solid;
+        font-size: 14px;
+        line-height: 19.6px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        text-decoration: none solid;
     }
-  </style>
-  <body>
+</style>
+
+<body>
     <!-- HEADER STARTS HERE -->
-   <!-- HEADER STARTS HERE -->
-   <div id="first">
-    <div id="firstSub">
-        <div id="country">us - USD</div>
-        <div id="help">Help</div>
+    <!-- HEADER STARTS HERE -->
+    <div id="first">
+        <div id="firstSub">
+            <div id="country">us - USD</div>
+            <div id="help">Help</div>
+        </div>
     </div>
-</div>
-<div class="sticky">
-    <div id="navBar">
-        <div id="second">
-            <div id="secondFirst" class="goToHomepage">
-                <svg class="headerLogo" viewBox="0 0 280 79">
+    <div class="sticky">
+        <div id="navBar">
+            <div id="second">
+                <div id="secondFirst" class="goToHomepage">
+                    <svg class="headerLogo" viewBox="0 0 280 79">
           <defs>
             <path id="a" d="M18.834.144H.06v48.337h37.549V.144z"></path>
             <path id="c" d="M0 13h158V0H0z"></path>
@@ -860,12 +843,12 @@
             </g>
           </g>
         </svg>
-            </div>
-            <div id="secondSecond">
-                <div id="searchBoxSub">
-                    <input type="text" id="input" name="search" class="headerSearch_input" placeholder="Search for a product or brand..." />
+                </div>
+                <div id="secondSecond">
+                    <div id="searchBoxSub">
+                        <input type="text" id="input" name="search" class="headerSearch_input" placeholder="Search for a product or brand..." />
 
-                    <button type="submit" class="headerSearch_button" data-js-element="headerSearch_button" aria-label="Start search" title="Start search">
+                        <button type="submit" class="headerSearch_button" data-js-element="headerSearch_button" aria-label="Start search" title="Start search">
             <svg
               class="searchGlass"
               width="24px"
@@ -883,66 +866,66 @@
               </path>
             </svg>
           </button>
-                </div>
-            </div>
-            <div id="secondThird">
-                <div class="account">
-                    <span id="symbol"><i class="fa-regular fa-user"></i></span>
-                    <span>Account</span>
-                    <div class="hover-down-box">
-                        <div class="conditional-thin-if-not-login">
-                            <a href="../login/login.html">Login</a>
-                            <a href="../register/register.html">Register</a>
-                        </div>
-                        <div class="login-then-show-name-div">
-                            <a class="login-then-show-name" id="style-class-improve">
-                                <a id="logoutuser">Logout</a>
-                            </a>
-                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="secondFourth">
-                <div class="cart" id="check-cart-part">
-                    <span id="symbol"><i class="fa-solid fa-cart-arrow-down"></i
-          ></span>
-                    <span>Cart</span>
-                    <div id="add-count-items"></div>
-                    <div class="hover-down-box dfsd">
-                        <div class="empty-things">
-                            There are currently no items in your cart.
-                        </div>
-                        <div class="items-availble-then-show">
-                            <div class="giving-some-style-as-you-wnat">
-                                <div class="giving-items-some-flexing-for-management">
-                                    <div class="total-of-items"></div>
-                                    <div class="price-of-items-total"></div>
-                                </div>
-                                <div class="btn-view-cart">
-                                    <button>VIEW CART</button>
-                                </div>
+                <div id="secondThird">
+                    <div class="account">
+                        <span id="symbol"><i class="fa-regular fa-user"></i></span>
+                        <span>Account</span>
+                        <div class="hover-down-box">
+                            <div class="conditional-thin-if-not-login">
+                                <a href="../login/login.html">Login</a>
+                                <a href="../register/register.html">Register</a>
                             </div>
-                            <div class="scroll-able-items-container"></div>
-
+                            <div class="login-then-show-name-div">
+                                <a class="login-then-show-name" id="style-class-improve">
+                                    <a id="logoutuser">Logout</a>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div id="secondFourth">
+                    <div class="cart" id="check-cart-part">
+                        <span id="symbol"><i class="fa-solid fa-cart-arrow-down"></i
+          ></span>
+                        <span>Cart</span>
+                        <div id="add-count-items"></div>
+                        <div class="hover-down-box dfsd">
+                            <div class="empty-things">
+                                There are currently no items in your cart.
+                            </div>
+                            <div class="items-availble-then-show">
+                                <div class="giving-some-style-as-you-wnat">
+                                    <div class="giving-items-some-flexing-for-management">
+                                        <div class="total-of-items"></div>
+                                        <div class="price-of-items-total"></div>
+                                    </div>
+                                    <div class="btn-view-cart">
+                                        <button>VIEW CART</button>
+                                    </div>
+                                </div>
+                                <div class="scroll-able-items-container"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
             </div>
-            <!-- </div> -->
         </div>
+        <!-- </div> -->
     </div>
-    <!-- </div> -->
-</div>
-<div id="border"></div>
-<!-- 
+    <div id="border"></div>
+    <!-- 
 
      -->
-<!-- <div id="third">
+    <!-- <div id="third">
       <div id="thirdInneer">
         <div class="brandLink">Brands</div>
         <div>Anniversary Edit</div>
         <div>Sale</div> -->
-<!-- <div class="BAR">
+    <!-- <div class="BAR">
           Build a Routine
           <div class="drop">
             <div class="outside">
@@ -954,502 +937,502 @@
                 <div><a href="">Combination Skin Routine</a></div>
                 <div><a href="">Sensitive Skin Routine</a></div>
               </div> -->
-<!-- <div id="border"></div> -->
-<div id="third">
-    <div id="thirdInneer">
-        <div id="brand-link">Brands</div>
-        <div class="anniversaryLink">Anniversary Edit</div>
-        <div>Sale</div>
-        <div class="BAR">
-            Build a Routine
-            <div class="drop">
-                <div class="outside">
-                    <div class="inside">
-                        <div><a href="">Skin Type Routines</a></div>
-                        <div><a href="">Dry Skin Routine</a></div>
-                        <div><a href="">Normal Skin Routine</a></div>
-                        <div><a href="">Oily Skin Routine</a></div>
-                        <div><a href="">Combination Skin Routine</a></div>
-                        <div><a href="">Sensitive Skin Routine</a></div>
-                    </div>
+    <!-- <div id="border"></div> -->
+    <div id="third">
+        <div id="thirdInneer">
+            <div id="brand-link">Brands</div>
+            <div class="anniversaryLink">Anniversary Edit</div>
+            <div>Sale</div>
+            <div class="BAR">
+                Build a Routine
+                <div class="drop">
+                    <div class="outside">
+                        <div class="inside">
+                            <div><a href="">Skin Type Routines</a></div>
+                            <div><a href="">Dry Skin Routine</a></div>
+                            <div><a href="">Normal Skin Routine</a></div>
+                            <div><a href="">Oily Skin Routine</a></div>
+                            <div><a href="">Combination Skin Routine</a></div>
+                            <div><a href="">Sensitive Skin Routine</a></div>
+                        </div>
 
-                    <div class="inside">
-                        <div><a href="">Skin Concern Routines</a></div>
-                        <div><a href="">Acne Routine</a></div>
-                        <div><a href="">Fine Lines & Wrinkles Routine</a></div>
-                        <div><a href="">Dark Spots & Discoloration Routine</a></div>
-                        <div><a href="">Redness & Rosacea Routine</a></div>
-                        <div><a href="">Dullness & Brightening Routine</a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="">Build a Hair Routine</a></div>
-                        <div><a href="">Fine, Thinning Hair Routine</a></div>
-                        <div><a href="">Healthy Scalp Routine</a></div>
-                        <div><a href="">Colored Hair Routine</a></div>
-                        <div><a href="">Dry, Damaged Hair Routine</a></div>
-                        <div><a href="">Oily Hair Routine</a></div>
-                        <div><a href="">Hair Styling Routine</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="BAR">
-            Skin Care
-            <div class="drop">
-                <div class="outsideSkin">
-                    <div class="inside">
-                        <div><a href="">Popular Categories </a></div>
-                        <div><a href="">View All Skin Care </a></div>
-                        <div><a href="">New In </a></div>
-                        <div><a href="">Clean Skincare </a></div>
-                        <div><a href="">5* Rated Products </a></div>
-                        <div><a href="">Gifts & Sets </a></div>
-                        <div><a href="">Supersizes & Duo </a></div>
-                        <div><a href="">Travel Sizes </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="">By Product Type </a></div>
-                        <div><a href="">Cleansers </a></div>
-                        <div><a href="">Moisturizers </a></div>
-                        <div><a href="">Serums </a></div>
-                        <div><a href="">Exfoliators </a></div>
-                        <div><a href="">Masks </a></div>
-                        <div><a href="">Eye Care </a></div>
-                        <div><a href="">Toners </a></div>
-                        <div><a href="">Lip Care </a></div>
-                        <div><a href="">Oils </a></div>
-                        <div><a href="">Treatments </a></div>
-                        <div><a href="">Mists </a></div>
-                        <div><a href="">Peels </a></div>
-                        <div><a href="">Tools </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="">By Ingredient </a></div>
-                        <div><a href="">Vitamin C </a></div>
-                        <div><a href="">AHA </a></div>
-                        <div><a href="">Caffeine </a></div>
-                        <div><a href="">Retinol </a></div>
-                        <div><a href="">Hyaluronic Acid </a></div>
-                        <div><a href="">Niacinamide </a></div>
-                        <div><a href="">Lactic Acid </a></div>
-                        <div><a href="">Salicylic Acid </a></div>
-                        <div><a href="">Glycolic Acid </a></div>
-                        <div><a href="">Azelaic Acid </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">By Specific Concern </a></div>
-                        <div><a href="#">Acne & Blemishes </a></div>
-                        <div><a href="#">Fine Lines & Wrinkles </a></div>
-                        <div><a href="#"> Dark Circles </a></div>
-                        <div><a href="#">Dry Skin </a></div>
-                        <div><a href="#">Dullness </a></div>
-                        <div><a href="#">Lack of Firmness </a></div>
-                        <div><a href="#"> Pigmentation </a></div>
-                        <div><a href="#">Pregnancy Skincare </a></div>
-                        <div><a href="#">Redness & Rosacea </a></div>
-                        <div><a href="#">Sensitive Skin </a></div>
-                        <div><a href="#">Visible Pores </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">Sunscreen & Suncare </a></div>
-                        <div><a href="#">Take The SPF Quiz </a></div>
-                        <div><a href="#">SPF 30 and over </a></div>
-                        <div><a href="#">SPF 50 and over </a></div>
-                        <div><a href="#">After Sun </a></div>
-                        <div><a href="#">Tinted </a></div>
-                        <div><a href="#">Mineral </a></div>
-                        <div><a href="#">Eye Protection</a></div>
+                        <div class="inside">
+                            <div><a href="">Skin Concern Routines</a></div>
+                            <div><a href="">Acne Routine</a></div>
+                            <div><a href="">Fine Lines & Wrinkles Routine</a></div>
+                            <div><a href="">Dark Spots & Discoloration Routine</a></div>
+                            <div><a href="">Redness & Rosacea Routine</a></div>
+                            <div><a href="">Dullness & Brightening Routine</a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="">Build a Hair Routine</a></div>
+                            <div><a href="">Fine, Thinning Hair Routine</a></div>
+                            <div><a href="">Healthy Scalp Routine</a></div>
+                            <div><a href="">Colored Hair Routine</a></div>
+                            <div><a href="">Dry, Damaged Hair Routine</a></div>
+                            <div><a href="">Oily Hair Routine</a></div>
+                            <div><a href="">Hair Styling Routine</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="BAR">
-            Hair
-            <div class="drop">
-                <div class="outsideHair">
-                    <div class="inside">
-                        <div><a href="#">Popular Categories </a></div>
-                        <div><a href="#">View All Hair Care </a></div>
-                        <div><a href="#">New In </a></div>
-                        <div><a href="#"> Clean Hair Care </a></div>
-                        <div><a href="#">5* Rated Products </a></div>
-                        <div><a href="#">Gifts & Sets </a></div>
-                        <div><a href="#">Travel Sizes </a></div>
-                        <div><a href="#">Supersize & Duos </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">Product Type </a></div>
-                        <div><a href="#">Shampoo </a></div>
-                        <div><a href="#">Conditioners </a></div>
-                        <div><a href="#"> Hair Treatments </a></div>
-                        <div><a href="#">Hair Masks </a></div>
-                        <div><a href="#">Hair Oils </a></div>
-                        <div><a href="#">Hair Sprays </a></div>
-                        <div><a href="#"> Hair Styling </a></div>
-                        <div><a href="#">Hair Thinning & Loss </a></div>
-                        <div><a href="#"> Hair Color Treatments </a></div>
-                        <div><a href="#">Hair Supplements </a></div>
-                        <div><a href="#">Hair Brushes & Combs </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">Hair Type </a></div>
-                        <div><a href="#"> Anti-Dandruff & Scalp Care </a></div>
-                        <div><a href="#">Coarse & Textured Hair </a></div>
-                        <div><a href="#">Colored Hair </a></div>
-                        <div><a href="#">Curly & Wavy Hair </a></div>
-                        <div><a href="#">Damaged Hair </a></div>
-                        <div><a href="#">Dry Hair </a></div>
-                        <div><a href="#">Fine Hair </a></div>
-                        <div><a href="#">Oily Hair </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">Electrical </a></div>
-                        <div><a href="#">Flat Irons </a></div>
-                        <div><a href="#">Hair Dryers </a></div>
-                        <div><a href="#"> Rollers & Curling Tongs </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">Hair Removal </a></div>
-                        <div><a href="#">Hair Removal Devices </a></div>
-                        <div><a href="#"> Hair Removal Products </a></div>
-                        <div><a href="#">Men's Shaving Products</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="BAR">
-            Makeup
-            <div class="drop">
-                <div class="outsideMakeup">
-                    <div class="inside">
-                        <div><a href="#">Popular Categories</a></div>
-                        <div><a href="#">View All Cosmetics</a></div>
-                        <div><a href="#"> New In</a></div>
-                        <div><a href="#"> Clean Makeup</a></div>
-                        <div><a href="#"> 5* Rated Products</a></div>
-                        <div><a href="#">Gifts & Sets</a></div>
-                        <div><a href="#">Brushes & Applicators</a></div>
-                        <div><a href="#">Makeup palettes</a></div>
-                        <div><a href="#"> Nails</a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">Eyes</a></div>
-                        <div><a href="#">Eye Liners</a></div>
-                        <div><a href="#">Lash & Brow Enhancers</a></div>
-                        <div><a href="#">Eye Shadows</a></div>
-                        <div><a href="#">Mascaras</a></div>
-                        <div><a href="#">Brow Pencils</a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">Face</a></div>
-                        <div><a href="#">BB & CC Cream</a></div>
-                        <div><a href="#"> Blushers</a></div>
-                        <div><a href="#">Bronzers</a></div>
-                        <div><a href="#">Color Correctors</a></div>
-                        <div><a href="#">Concealers</a></div>
-                        <div><a href="#">Contour</a></div>
-                        <div><a href="#">Face Powders </a></div>
-                        <div><a href="#">Foundations </a></div>
-                        <div><a href="#">Highlighters </a></div>
-                        <div><a href="#">Makeup Removers </a></div>
-                        <div><a href="#">Makeup Setting Spray</a></div>
-                        <div><a href="#">Primers</a></div>
-                        <div><a href="#">Tinted Moisturizer</a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">Lips</a></div>
-                        <div><a href="#">Lipsticks</a></div>
-                        <div><a href="#">Lip Balms</a></div>
-                        <div><a href="#">Lip Glosses</a></div>
-                        <div><a href="#">Lip Liners</a></div>
-                        <div><a href="#">Lip Plumpers</a></div>
-                        <div><a href="#">Liquid Lipsticks</a></div>
+            <div class="BAR">
+                Skin Care
+                <div class="drop">
+                    <div class="outsideSkin">
+                        <div class="inside">
+                            <div><a href="">Popular Categories </a></div>
+                            <div><a href="">View All Skin Care </a></div>
+                            <div><a href="">New In </a></div>
+                            <div><a href="">Clean Skincare </a></div>
+                            <div><a href="">5* Rated Products </a></div>
+                            <div><a href="">Gifts & Sets </a></div>
+                            <div><a href="">Supersizes & Duo </a></div>
+                            <div><a href="">Travel Sizes </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="">By Product Type </a></div>
+                            <div><a href="">Cleansers </a></div>
+                            <div><a href="">Moisturizers </a></div>
+                            <div><a href="">Serums </a></div>
+                            <div><a href="">Exfoliators </a></div>
+                            <div><a href="">Masks </a></div>
+                            <div><a href="">Eye Care </a></div>
+                            <div><a href="">Toners </a></div>
+                            <div><a href="">Lip Care </a></div>
+                            <div><a href="">Oils </a></div>
+                            <div><a href="">Treatments </a></div>
+                            <div><a href="">Mists </a></div>
+                            <div><a href="">Peels </a></div>
+                            <div><a href="">Tools </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="">By Ingredient </a></div>
+                            <div><a href="">Vitamin C </a></div>
+                            <div><a href="">AHA </a></div>
+                            <div><a href="">Caffeine </a></div>
+                            <div><a href="">Retinol </a></div>
+                            <div><a href="">Hyaluronic Acid </a></div>
+                            <div><a href="">Niacinamide </a></div>
+                            <div><a href="">Lactic Acid </a></div>
+                            <div><a href="">Salicylic Acid </a></div>
+                            <div><a href="">Glycolic Acid </a></div>
+                            <div><a href="">Azelaic Acid </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">By Specific Concern </a></div>
+                            <div><a href="#">Acne & Blemishes </a></div>
+                            <div><a href="#">Fine Lines & Wrinkles </a></div>
+                            <div><a href="#"> Dark Circles </a></div>
+                            <div><a href="#">Dry Skin </a></div>
+                            <div><a href="#">Dullness </a></div>
+                            <div><a href="#">Lack of Firmness </a></div>
+                            <div><a href="#"> Pigmentation </a></div>
+                            <div><a href="#">Pregnancy Skincare </a></div>
+                            <div><a href="#">Redness & Rosacea </a></div>
+                            <div><a href="#">Sensitive Skin </a></div>
+                            <div><a href="#">Visible Pores </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">Sunscreen & Suncare </a></div>
+                            <div><a href="#">Take The SPF Quiz </a></div>
+                            <div><a href="#">SPF 30 and over </a></div>
+                            <div><a href="#">SPF 50 and over </a></div>
+                            <div><a href="#">After Sun </a></div>
+                            <div><a href="#">Tinted </a></div>
+                            <div><a href="#">Mineral </a></div>
+                            <div><a href="#">Eye Protection</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="BAR">
-            Tools
-            <div class="drop">
-                <div class="outsideTools">
-                    <div class="inside">
-                        <div><a href="">Popular Categories </a></div>
-                        <div><a href="">View All Tools </a></div>
-                        <div><a href="">Makeup Brushes & Accessories </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="">Hair Care </a></div>
-                        <div><a href=""> Hair Dryers </a></div>
-                        <div><a href="">Flat Irons </a></div>
-                        <div><a href="">Rollers & Curling Irons </a></div>
-                        <div><a href="">Hair Brushes </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="">Skincare </a></div>
-                        <div><a href="">LED Light Therapy </a></div>
-                        <div><a href="">Facial Toning </a></div>
-                        <div><a href="">Cleansing </a></div>
-                        <div><a href="">Dermabrasion</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="BAR">
-            Bath & Body
-            <div class="drop">
-                <div class="outsideBath">
-                    <div class="inside">
-                        <div><a href="#"> Popular Categories </a></div>
-                        <div><a href="#"> View All Bath & Body </a></div>
-                        <div><a href="#">New In </a></div>
-                        <div><a href="#"> Clean Bath & Body </a></div>
-                        <div><a href="#">5* Rated Products </a></div>
-                        <div><a href="#">Travel Sizes </a></div>
-                        <div><a href="#"> At Home Spa </a></div>
-                        <div><a href="#">Deodorants </a></div>
-                        <div><a href="#">Gifts & Sets </a></div>
-                        <div><a href="#">Oral Care </a></div>
-                        <div><a href="#">Mom & Baby </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">Bath & Shower </a></div>
-                        <div><a href="#">Baths Oils/Soak </a></div>
-                        <div><a href="#">Bath Salts </a></div>
-                        <div><a href="#">Body Washes </a></div>
-                        <div><a href="#">Cleansing Bars </a></div>
-                        <div><a href="#">Exfoliators </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">Self Tanners </a></div>
-                        <div><a href="#">Accessories </a></div>
-                        <div><a href="#">Pre-Tan Preparation </a></div>
-                        <div><a href="#">Body Tanners </a></div>
-                        <div><a href="#">Post Tanning </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">Moisturizers </a></div>
-                        <div><a href="#">Balms </a></div>
-                        <div><a href="#">Butters </a></div>
-                        <div><a href="#">Creams </a></div>
-                        <div><a href="#">Lotions </a></div>
-                        <div><a href="#">Oils </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">Targeted Care </a></div>
-                        <div><a href="#">Bust </a></div>
-                        <div><a href="#">Cellulite </a></div>
-                        <div><a href="#">Dry Skin </a></div>
-                        <div><a href="#">Hair Removal </a></div>
-                        <div><a href="#">Hand & Foot Care </a></div>
-                        <div><a href="#">Hand Soap, Sanitizers & Creams </a></div>
-                        <div><a href="#">Legs </a></div>
-                        <div><a href="#">Slimming & Sculpting </a></div>
-                        <div><a href="#"> Stretch Marks </a></div>
-                        <div><a href="#">Sunscreen</a></div>
+            <div class="BAR">
+                Hair
+                <div class="drop">
+                    <div class="outsideHair">
+                        <div class="inside">
+                            <div><a href="#">Popular Categories </a></div>
+                            <div><a href="#">View All Hair Care </a></div>
+                            <div><a href="#">New In </a></div>
+                            <div><a href="#"> Clean Hair Care </a></div>
+                            <div><a href="#">5* Rated Products </a></div>
+                            <div><a href="#">Gifts & Sets </a></div>
+                            <div><a href="#">Travel Sizes </a></div>
+                            <div><a href="#">Supersize & Duos </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">Product Type </a></div>
+                            <div><a href="#">Shampoo </a></div>
+                            <div><a href="#">Conditioners </a></div>
+                            <div><a href="#"> Hair Treatments </a></div>
+                            <div><a href="#">Hair Masks </a></div>
+                            <div><a href="#">Hair Oils </a></div>
+                            <div><a href="#">Hair Sprays </a></div>
+                            <div><a href="#"> Hair Styling </a></div>
+                            <div><a href="#">Hair Thinning & Loss </a></div>
+                            <div><a href="#"> Hair Color Treatments </a></div>
+                            <div><a href="#">Hair Supplements </a></div>
+                            <div><a href="#">Hair Brushes & Combs </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">Hair Type </a></div>
+                            <div><a href="#"> Anti-Dandruff & Scalp Care </a></div>
+                            <div><a href="#">Coarse & Textured Hair </a></div>
+                            <div><a href="#">Colored Hair </a></div>
+                            <div><a href="#">Curly & Wavy Hair </a></div>
+                            <div><a href="#">Damaged Hair </a></div>
+                            <div><a href="#">Dry Hair </a></div>
+                            <div><a href="#">Fine Hair </a></div>
+                            <div><a href="#">Oily Hair </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">Electrical </a></div>
+                            <div><a href="#">Flat Irons </a></div>
+                            <div><a href="#">Hair Dryers </a></div>
+                            <div><a href="#"> Rollers & Curling Tongs </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">Hair Removal </a></div>
+                            <div><a href="#">Hair Removal Devices </a></div>
+                            <div><a href="#"> Hair Removal Products </a></div>
+                            <div><a href="#">Men's Shaving Products</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="BAR">
-            Self-Care
-            <div class="drop">
-                <div class="outsideSelf">
-                    <div class="inside">
-                        <div><a href="">Popular Categories </a></div>
-                        <div><a href="">Self Care </a></div>
-                        <div><a href="">New In </a></div>
-                        <div><a href="">5* Rated Products </a></div>
-                        <div><a href="">At-Home Spa </a></div>
-                        <div><a href="">View All Wellness Products </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="">Sexual Wellness </a></div>
-                        <div><a href="">Devices </a></div>
-                        <div><a href="">Skin Care </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="">Supplements </a></div>
-                        <div><a href="">Skin </a></div>
-                        <div><a href=""> Hair </a></div>
-                        <div><a href="">Immune Boosting </a></div>
-                        <div><a href="">Health & Wellbeing </a></div>
-                        <div><a href="">Weight Loss </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="">Clean Beauty </a></div>
-                        <div><a href="">Clean Skincare </a></div>
-                        <div><a href=""> Clean Haircare </a></div>
-                        <div><a href="">Clean Makeup </a></div>
-                        <div><a href="">Clean Bath & Body</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="BAR">
-            Fragrance
-            <div class="drop">
-                <div class="outsideFragrance">
-                    <div class="inside">
-                        <div><a href="">Popular Categories </a></div>
-                        <div><a href="">View All Fragrance </a></div>
-                        <div><a href="">New In </a></div>
-                        <div><a href="">5* Rated Products </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="">Top Brands </a></div>
-                        <div><a href="">NEOM Organics </a></div>
-                        <div><a href="">Glasshouse Fragrances </a></div>
-                        <div><a href="">KORRES </a></div>
-                        <div><a href="">NEST Fragrances </a></div>
-                        <div><a href="">Molton Brown </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="">Personal Fragrance </a></div>
-                        <div><a href="">Perfume </a></div>
-                        <div><a href="">Eau de Toilette </a></div>
-                        <div><a href="">Body Spray </a></div>
-                        <div><a href="">For Her </a></div>
-                        <div><a href="">For Him </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href=""> Home Fragrance </a></div>
-                        <div><a href="">Scented Candles </a></div>
-                        <div><a href="">Diffusers </a></div>
-                        <div><a href="">Aromatherapy </a></div>
-                        <div><a href="">Pillow Mists </a></div>
-                        <div><a href="">Room Sprays</a></div>
+            <div class="BAR">
+                Makeup
+                <div class="drop">
+                    <div class="outsideMakeup">
+                        <div class="inside">
+                            <div><a href="#">Popular Categories</a></div>
+                            <div><a href="#">View All Cosmetics</a></div>
+                            <div><a href="#"> New In</a></div>
+                            <div><a href="#"> Clean Makeup</a></div>
+                            <div><a href="#"> 5* Rated Products</a></div>
+                            <div><a href="#">Gifts & Sets</a></div>
+                            <div><a href="#">Brushes & Applicators</a></div>
+                            <div><a href="#">Makeup palettes</a></div>
+                            <div><a href="#"> Nails</a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">Eyes</a></div>
+                            <div><a href="#">Eye Liners</a></div>
+                            <div><a href="#">Lash & Brow Enhancers</a></div>
+                            <div><a href="#">Eye Shadows</a></div>
+                            <div><a href="#">Mascaras</a></div>
+                            <div><a href="#">Brow Pencils</a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">Face</a></div>
+                            <div><a href="#">BB & CC Cream</a></div>
+                            <div><a href="#"> Blushers</a></div>
+                            <div><a href="#">Bronzers</a></div>
+                            <div><a href="#">Color Correctors</a></div>
+                            <div><a href="#">Concealers</a></div>
+                            <div><a href="#">Contour</a></div>
+                            <div><a href="#">Face Powders </a></div>
+                            <div><a href="#">Foundations </a></div>
+                            <div><a href="#">Highlighters </a></div>
+                            <div><a href="#">Makeup Removers </a></div>
+                            <div><a href="#">Makeup Setting Spray</a></div>
+                            <div><a href="#">Primers</a></div>
+                            <div><a href="#">Tinted Moisturizer</a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">Lips</a></div>
+                            <div><a href="#">Lipsticks</a></div>
+                            <div><a href="#">Lip Balms</a></div>
+                            <div><a href="#">Lip Glosses</a></div>
+                            <div><a href="#">Lip Liners</a></div>
+                            <div><a href="#">Lip Plumpers</a></div>
+                            <div><a href="#">Liquid Lipsticks</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="BAR">
-            New
-            <div class="drop">
-                <div class="outsideNew">
-                    <div class="inside">
-                        <div><a href="#">Trophy Skin </a></div>
-                        <div><a href="#">Alpha-H </a></div>
-                        <div><a href="#">Alo </a></div>
-                        <div><a href="#">Foria </a></div>
-                        <div><a href="#">Nion </a></div>
-                        <div><a href="#">Sulwhasoo </a></div>
-                        <div><a href="#">Cowshed </a></div>
-                        <div><a href="#">Patricks </a></div>
-                        <div><a href="#">Marvis </a></div>
-                        <div><a href="#">Medik8 </a></div>
-                        <div><a href="#">Nurse Jamie </a></div>
+            <div class="BAR">
+                Tools
+                <div class="drop">
+                    <div class="outsideTools">
+                        <div class="inside">
+                            <div><a href="">Popular Categories </a></div>
+                            <div><a href="">View All Tools </a></div>
+                            <div><a href="">Makeup Brushes & Accessories </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="">Hair Care </a></div>
+                            <div><a href=""> Hair Dryers </a></div>
+                            <div><a href="">Flat Irons </a></div>
+                            <div><a href="">Rollers & Curling Irons </a></div>
+                            <div><a href="">Hair Brushes </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="">Skincare </a></div>
+                            <div><a href="">LED Light Therapy </a></div>
+                            <div><a href="">Facial Toning </a></div>
+                            <div><a href="">Cleansing </a></div>
+                            <div><a href="">Dermabrasion</a></div>
+                        </div>
                     </div>
-                    <div class="inside">
-                        <div><a href="#">View All New </a></div>
-                        <div><a href="#">New Skin Care </a></div>
-                        <div><a href="#">New Makeup </a></div>
-                        <div><a href="#"> New Hair Care </a></div>
-                        <div><a href="#"> New Bath & Body </a></div>
-                    </div>
-                    <div class="inside">
-                        <div><a href="#">New Fragrance</a></div>
-                    </div>
-                    <!-- Latest brands -->
                 </div>
             </div>
-        </div>
-        <div>Advice</div>
-
-
+            <div class="BAR">
+                Bath & Body
+                <div class="drop">
+                    <div class="outsideBath">
+                        <div class="inside">
+                            <div><a href="#"> Popular Categories </a></div>
+                            <div><a href="#"> View All Bath & Body </a></div>
+                            <div><a href="#">New In </a></div>
+                            <div><a href="#"> Clean Bath & Body </a></div>
+                            <div><a href="#">5* Rated Products </a></div>
+                            <div><a href="#">Travel Sizes </a></div>
+                            <div><a href="#"> At Home Spa </a></div>
+                            <div><a href="#">Deodorants </a></div>
+                            <div><a href="#">Gifts & Sets </a></div>
+                            <div><a href="#">Oral Care </a></div>
+                            <div><a href="#">Mom & Baby </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">Bath & Shower </a></div>
+                            <div><a href="#">Baths Oils/Soak </a></div>
+                            <div><a href="#">Bath Salts </a></div>
+                            <div><a href="#">Body Washes </a></div>
+                            <div><a href="#">Cleansing Bars </a></div>
+                            <div><a href="#">Exfoliators </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">Self Tanners </a></div>
+                            <div><a href="#">Accessories </a></div>
+                            <div><a href="#">Pre-Tan Preparation </a></div>
+                            <div><a href="#">Body Tanners </a></div>
+                            <div><a href="#">Post Tanning </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">Moisturizers </a></div>
+                            <div><a href="#">Balms </a></div>
+                            <div><a href="#">Butters </a></div>
+                            <div><a href="#">Creams </a></div>
+                            <div><a href="#">Lotions </a></div>
+                            <div><a href="#">Oils </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">Targeted Care </a></div>
+                            <div><a href="#">Bust </a></div>
+                            <div><a href="#">Cellulite </a></div>
+                            <div><a href="#">Dry Skin </a></div>
+                            <div><a href="#">Hair Removal </a></div>
+                            <div><a href="#">Hand & Foot Care </a></div>
+                            <div><a href="#">Hand Soap, Sanitizers & Creams </a></div>
+                            <div><a href="#">Legs </a></div>
+                            <div><a href="#">Slimming & Sculpting </a></div>
+                            <div><a href="#"> Stretch Marks </a></div>
+                            <div><a href="#">Sunscreen</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="BAR">
+                Self-Care
+                <div class="drop">
+                    <div class="outsideSelf">
+                        <div class="inside">
+                            <div><a href="">Popular Categories </a></div>
+                            <div><a href="">Self Care </a></div>
+                            <div><a href="">New In </a></div>
+                            <div><a href="">5* Rated Products </a></div>
+                            <div><a href="">At-Home Spa </a></div>
+                            <div><a href="">View All Wellness Products </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="">Sexual Wellness </a></div>
+                            <div><a href="">Devices </a></div>
+                            <div><a href="">Skin Care </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="">Supplements </a></div>
+                            <div><a href="">Skin </a></div>
+                            <div><a href=""> Hair </a></div>
+                            <div><a href="">Immune Boosting </a></div>
+                            <div><a href="">Health & Wellbeing </a></div>
+                            <div><a href="">Weight Loss </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="">Clean Beauty </a></div>
+                            <div><a href="">Clean Skincare </a></div>
+                            <div><a href=""> Clean Haircare </a></div>
+                            <div><a href="">Clean Makeup </a></div>
+                            <div><a href="">Clean Bath & Body</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="BAR">
+                Fragrance
+                <div class="drop">
+                    <div class="outsideFragrance">
+                        <div class="inside">
+                            <div><a href="">Popular Categories </a></div>
+                            <div><a href="">View All Fragrance </a></div>
+                            <div><a href="">New In </a></div>
+                            <div><a href="">5* Rated Products </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="">Top Brands </a></div>
+                            <div><a href="">NEOM Organics </a></div>
+                            <div><a href="">Glasshouse Fragrances </a></div>
+                            <div><a href="">KORRES </a></div>
+                            <div><a href="">NEST Fragrances </a></div>
+                            <div><a href="">Molton Brown </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="">Personal Fragrance </a></div>
+                            <div><a href="">Perfume </a></div>
+                            <div><a href="">Eau de Toilette </a></div>
+                            <div><a href="">Body Spray </a></div>
+                            <div><a href="">For Her </a></div>
+                            <div><a href="">For Him </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href=""> Home Fragrance </a></div>
+                            <div><a href="">Scented Candles </a></div>
+                            <div><a href="">Diffusers </a></div>
+                            <div><a href="">Aromatherapy </a></div>
+                            <div><a href="">Pillow Mists </a></div>
+                            <div><a href="">Room Sprays</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="BAR">
+                New
+                <div class="drop">
+                    <div class="outsideNew">
+                        <div class="inside">
+                            <div><a href="#">Trophy Skin </a></div>
+                            <div><a href="#">Alpha-H </a></div>
+                            <div><a href="#">Alo </a></div>
+                            <div><a href="#">Foria </a></div>
+                            <div><a href="#">Nion </a></div>
+                            <div><a href="#">Sulwhasoo </a></div>
+                            <div><a href="#">Cowshed </a></div>
+                            <div><a href="#">Patricks </a></div>
+                            <div><a href="#">Marvis </a></div>
+                            <div><a href="#">Medik8 </a></div>
+                            <div><a href="#">Nurse Jamie </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">View All New </a></div>
+                            <div><a href="#">New Skin Care </a></div>
+                            <div><a href="#">New Makeup </a></div>
+                            <div><a href="#"> New Hair Care </a></div>
+                            <div><a href="#"> New Bath & Body </a></div>
+                        </div>
+                        <div class="inside">
+                            <div><a href="#">New Fragrance</a></div>
+                        </div>
+                        <!-- Latest brands -->
+                    </div>
+                </div>
+            </div>
+            <div>Advice</div>
 
 
 
-    </div>
-</div>
-</div>
-<div id="fourth">
-    <div id="fourthSub">
-        <div>
-            <span><i class="fa-solid fa-truck"></i></span> FREE US Shipping Over $49
-        </div>
-        <div>
-            <span><i class="fa-solid fa-dollar-sign"></i></span> Refer a Friend, Get $15
-        </div>
-        <div>
-            <span><i class="fa-solid fa-dollar-sign"></i></span> New Customers Save 20% - Use Code NEWBIE
-        </div>
-        <div>
-            <span><i class="fa-solid fa-check"></i></span> Free Beauty Consultations
+
+
         </div>
     </div>
-</div>
+    </div>
+    <div id="fourth">
+        <div id="fourthSub">
+            <div>
+                <span><i class="fa-solid fa-truck"></i></span> FREE US Shipping Over $49
+            </div>
+            <div>
+                <span><i class="fa-solid fa-dollar-sign"></i></span> Refer a Friend, Get $15
+            </div>
+            <div>
+                <span><i class="fa-solid fa-dollar-sign"></i></span> New Customers Save 20% - Use Code NEWBIE
+            </div>
+            <div>
+                <span><i class="fa-solid fa-check"></i></span> Free Beauty Consultations
+            </div>
+        </div>
+    </div>
 
-<div class="offer">
-    15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22) @ $130 | Shop now
-</div>
+    <div class="offer">
+        15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22) @ $130 | Shop now
+    </div>
 
 
     <h1>Bath and Shower</h1>
     <div class="head">
-        Indulge in a luxury bathing experience with our bath and shower selection. Create your spa at home with a wide range of scrubs, shower gels, and bath milk, as well as salt, bath foam, and oil. Bath salt, for example, will help create a beautiful atmosphere with a fantastic smell and relax your body after a long day. Westlab Sleep Epsom and Dead Sea Bathing Salts with Lavender, Jasmine, and Valerian would be ideal to use before going to bed, as lavender calms, reduces joint tension, and provides a restful night's sleep.
-
-        Bath foam will not only help you relax, but it can also bring your warm childhood memories back. As soon as the bath foam gets into the water it gets playful, creating lots of bubbles and thinning out the pleasant aroma. L'Occitane Shea Bubble Bath, for example, will transport you to a moment of pure comfort. Treat your body every day because you deserve it!
-        Read more
+        Indulge in a luxury bathing experience with our bath and shower selection. Create your spa at home with a wide range of scrubs, shower gels, and bath milk, as well as salt, bath foam, and oil. Bath salt, for example, will help create a beautiful atmosphere
+        with a fantastic smell and relax your body after a long day. Westlab Sleep Epsom and Dead Sea Bathing Salts with Lavender, Jasmine, and Valerian would be ideal to use before going to bed, as lavender calms, reduces joint tension, and provides
+        a restful night's sleep. Bath foam will not only help you relax, but it can also bring your warm childhood memories back. As soon as the bath foam gets into the water it gets playful, creating lots of bubbles and thinning out the pleasant aroma.
+        L'Occitane Shea Bubble Bath, for example, will transport you to a moment of pure comfort. Treat your body every day because you deserve it! Read more
 
     </div>
 
     <hr />
     <div id="top">
-      <div>
-        <select>
+        <div>
+            <select>
           <option>Sort By</option>
           <option>price:low to high</option>
           <option>price:high to low</option>
         </select>
-      </div>
-      <!-- <div>
+        </div>
+        <!-- <div>
         <select>
         Brand
     </select>
     </div> -->
-      <div class="search">
-        <input type="text" placeholder="Brand" />
-      </div>
+        <div class="search">
+            <input type="text" placeholder="Brand" />
+        </div>
 
-      <div>
-        <select>
+        <div>
+            <select>
           <option>Bath & Body 
               Care</option>
         </select>
-      </div>
-      <div>
-        <select>
+        </div>
+        <div>
+            <select>
           <option>Bath & Shower</option>
         </select>
-      </div>
+        </div>
 
-      <div>
-        <select>
+        <div>
+            <select>
           <option>Bodycare Concern</option>
         </select>
-      </div>
-      <div>
-        <select>
+        </div>
+        <div>
+            <select>
           <option>Body Skin Health</option>
         </select>
-      </div>
+        </div>
     </div>
     <hr />
     <div id="container"></div>
     <div id="footer">
-      <div id="firstFoot">
-          <div id="firstSubFoot">
-              <div id="signup">
-                  <div>
-                      Sign up to our email list and receive 20% off your next order
-                  </div>
-                  <div>SIGN UP</div>
-              </div>
-              <div id="connect">
-                  <div>Connect with us</div>
-                  <div id="socialMedia">
-                      <div title="Facebook">
-                          <svg class="eastendFooterSocialIcons_listItemSvg" width="40px" height="40px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <div id="firstFoot">
+            <div id="firstSubFoot">
+                <div id="signup">
+                    <div>
+                        Sign up to our email list and receive 20% off your next order
+                    </div>
+                    <div>SIGN UP</div>
+                </div>
+                <div id="connect">
+                    <div>Connect with us</div>
+                    <div id="socialMedia">
+                        <div title="Facebook">
+                            <svg class="eastendFooterSocialIcons_listItemSvg" width="40px" height="40px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                 <circle
                   class="eastendFooter_fill_hover"
                   cx="20"
@@ -1464,9 +1447,9 @@
                   fill="white"
                 ></path>
               </svg>
-                      </div>
-                      <div title="Instagram">
-                          <svg width="40px" height="40px" viewBox="0 0 40 40">
+                        </div>
+                        <div title="Instagram">
+                            <svg width="40px" height="40px" viewBox="0 0 40 40">
                 <circle cx="20" cy="20" r="20" fill="#d93175"></circle>
                 <path
                   class="eastendFooterSocialIcons_listItemSvgPath"
@@ -1480,9 +1463,9 @@
                   fill="white"
                 ></path>
               </svg>
-                      </div>
-                      <div title="Twitter">
-                          <svg width="40px" height="40px" viewBox="0 0 40 40">
+                        </div>
+                        <div title="Twitter">
+                            <svg width="40px" height="40px" viewBox="0 0 40 40">
                 <circle cx="20" cy="20" r="20" fill="#3ab1db"></circle>
                 <path
                   class="eastendFooterSocialIcons_listItemSvgPath"
@@ -1490,9 +1473,9 @@
                   fill="#FFFFFF"
                 ></path>
               </svg>
-                      </div>
-                      <div title="Pinterest">
-                          <svg width="40" height="40" viewBox="0 0 40 40">
+                        </div>
+                        <div title="Pinterest">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
                 <g fill="none" fill-rule="evenodd">
                   <circle cx="20" cy="20" r="20" fill="#e60023"></circle>
                   <path
@@ -1503,9 +1486,9 @@
                   ></path>
                 </g>
               </svg>
-                      </div>
-                      <div title="Snapchat">
-                          <svg width="40" height="40" viewBox="0 0 40 40">
+                        </div>
+                        <div title="Snapchat">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
                 <circle cx="20" cy="20" r="20" fill="#fffc00"></circle>
                 <path
                   class="eastendFooterSocialIcons_listItemSvgPath"
@@ -1514,208 +1497,194 @@
                   d="M14.3430369,12.5616372 C13.7930369,13.8104867 14.0102869,16.0480088 14.0982869,17.6127876 C13.5042869,17.9463717 12.7416202,17.3609735 12.3098702,17.3609735 C11.8607036,17.3609735 11.3244536,17.660177 11.2401202,18.1061947 C11.1796202,18.4276991 11.3217036,18.8960177 12.3410369,19.3039381 C12.7352036,19.4619027 13.6729536,19.6477434 13.8902036,20.1662389 C14.1954536,20.8947345 12.3227036,24.2575221 9.3820369,24.7481416 C9.15195357,24.7862389 8.98787024,24.9943805 9.00070357,25.2303982 C9.0520369,26.1363717 11.0558702,26.4913274 11.9441202,26.630708 C12.0348702,26.7552212 12.1082036,27.2811504 12.2246202,27.6816372 C12.2768702,27.8609735 12.4116202,28.0756195 12.7581202,28.0756195 C13.2100369,28.0756195 13.9607869,27.7225221 15.2679536,27.9418142 C16.5494536,28.1583186 17.7539536,30 20.0667036,30 C22.2162869,30 23.4987036,28.1499558 24.7325369,27.9418142 C25.4466202,27.8219469 26.0598702,27.8600442 26.7455369,27.995708 C27.2176202,28.0895575 27.6411202,28.1415929 27.7758702,27.6714159 C27.8941202,27.265354 27.9665369,26.749646 28.0554536,26.6279204 C28.9354536,26.489469 30.9484536,26.1354425 30.9988702,25.229469 C31.0117036,24.9934513 30.8476202,24.7862389 30.6175369,24.7472124 C27.7263702,24.2640265 25.7967869,20.9114602 26.1093702,20.1653097 C26.3257036,19.6477434 27.2570369,19.4637611 27.6585369,19.3030088 C28.4047036,19.0047345 28.7787036,18.6376991 28.7704536,18.2130531 C28.7603702,17.669469 28.1150369,17.345177 27.6402036,17.345177 C27.1571202,17.345177 26.4632036,17.925 25.9012869,17.6109292 C25.9892869,16.0331416 26.2056202,13.8058407 25.6565369,12.5579204 C24.6161202,10.1949558 22.3015369,9 19.9878702,9 C17.6888702,9 15.3917036,10.1782301 14.3430369,12.5616372 Z"
                 ></path>
               </svg>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div id="secondFoot">
-          <div id="secondSubFoot">
-              <div id="help">
-                  <div class="helpTitle">Help & Information</div>
-                  <div class="helpDetails">
-                      <div>
-                          <pre><i class="fa-solid fa-phone"></i>  Customer Service </pre>
-                      </div>
-                      <div>
-                          <pre><i class="fa-solid fa-truck"></i> Delivery Information </pre>
-                      </div>
-                      <div>
-                          <pre><i class="fa-solid fa-rotate-left"></i>  Return & Refunds</pre>
-                      </div>
-                      <div>
-                          <pre><i class="fa-solid fa-question"></i>   Help Center </pre>
-                      </div>
-                      <div>COVID-19 Information</div>
-                      <div>Accessibality</div>
-                  </div>
-              </div>
-              <div id="about">
-                  <div class="aboutTitle">About SkinStore</div>
-                  <div class="aboutDetails">
-                      <div>About Us</div>
-                      <div>Affiliated Program</div>
-                      <div>Brand Directory</div>
-                      <div>Coupon Codes</div>
-                      <div>Refer a Friend</div>
-                      <div>Student Discount</div>
-                      <div>Join SkinStore Experts</div>
-                  </div>
-              </div>
-              <div id="legal">
-                  <div class="legalTitle">Legal</div>
-                  <div class="legalDetails">
-                      <div>Cookie Information</div>
-                      <div>Privacy Policy</div>
-                      <div>Terms & Conditions</div>
-                      <div>Modern Slavery Statement</div>
-                  </div>
-              </div>
-              <div id="contactUs">
-                  <div class="contactUsTitle">How to Contact Us</div>
-                  <div class="contactUsDetails">
-                      <div>Message Us</div>
-                      <div>Free Beauty Consultations</div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div id="thirdFoot">
-          <div id="thirdSubFoot">
-              <div id="THG">
-                  <div>THG</div>
-                  <div>2022 © The Hut.com Ltd.</div>
-              </div>
-              <div id="pay">
-                  <div id="paySecure">Pay securely with</div>
-                  <div class="payments">
-                      <img src="./img/pay.png" alt="">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  </body>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="secondFoot">
+            <div id="secondSubFoot">
+                <div id="help">
+                    <div class="helpTitle">Help & Information</div>
+                    <div class="helpDetails">
+                        <div>
+                            <pre><i class="fa-solid fa-phone"></i>  Customer Service </pre>
+                        </div>
+                        <div>
+                            <pre><i class="fa-solid fa-truck"></i> Delivery Information </pre>
+                        </div>
+                        <div>
+                            <pre><i class="fa-solid fa-rotate-left"></i>  Return & Refunds</pre>
+                        </div>
+                        <div>
+                            <pre><i class="fa-solid fa-question"></i>   Help Center </pre>
+                        </div>
+                        <div>COVID-19 Information</div>
+                        <div>Accessibality</div>
+                    </div>
+                </div>
+                <div id="about">
+                    <div class="aboutTitle">About SkinStore</div>
+                    <div class="aboutDetails">
+                        <div>About Us</div>
+                        <div>Affiliated Program</div>
+                        <div>Brand Directory</div>
+                        <div>Coupon Codes</div>
+                        <div>Refer a Friend</div>
+                        <div>Student Discount</div>
+                        <div>Join SkinStore Experts</div>
+                    </div>
+                </div>
+                <div id="legal">
+                    <div class="legalTitle">Legal</div>
+                    <div class="legalDetails">
+                        <div>Cookie Information</div>
+                        <div>Privacy Policy</div>
+                        <div>Terms & Conditions</div>
+                        <div>Modern Slavery Statement</div>
+                    </div>
+                </div>
+                <div id="contactUs">
+                    <div class="contactUsTitle">How to Contact Us</div>
+                    <div class="contactUsDetails">
+                        <div>Message Us</div>
+                        <div>Free Beauty Consultations</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="thirdFoot">
+            <div id="thirdSubFoot">
+                <div id="THG">
+                    <div>THG</div>
+                    <div>2022 © The Hut.com Ltd.</div>
+                </div>
+                <div id="pay">
+                    <div id="paySecure">Pay securely with</div>
+                    <div class="payments">
+                        <img src="./img/pay.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
 
 <script>
-  var flatiron = [
-    {
-      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11286762-1954822086680064.jpg",
-      name: "No7 Total Renewal Micro-Dermabrasion Exfoliato ",
-      info: "15% off with code S$ 15 -Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
-      price: "$45.00",
-    },
-    {
-      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12564808-1014935531447783.jpg",
-      name: "First Aid Beauty KP Bump Eraser Body Scrub with 10% AHA",
-      info: "EltalMD Gift",
-      price: "$55.00",
-    },
-    {
-      img: "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11289756-7365760149316208.jpg",
-      name: "Soap and Glory The Scrub of Your Life Smoothing Body Scrub 200ml",
-      info: "Save 50 %",
-      price: "$45.00",
-    },
-    {
-      img: "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11709501-3754562854298187.jpg",
-      name: "Bioderma Atoderm normal to very dry skin face and body cleanser 200ML",
-      info: "Juice Beauty Gift",
-      price: "$7.50",
-    },
-    {
-      img: "https://static.thcdn.com/images/large/webp/productimg/1600/1600/11289744-1594503184029861.jpg",
-      name: "Soap and Glory Smoothie Star Breakfast Scrub",
-      info: " Select your Gift",
-      price: "$8.99",
-    },
-    {
-      img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/12747907-1514871998779558.jpg",
-      name: "DERMAdoctor KP Duty Dermatologist Formulated Body Scrub (Various Sizes)",
-      info: "Epionce Purifying Wash 8oz",
-      price: "$8.00",
-    },
-    {
-      img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/12004943-1784871984217738.jpg",
-      name: "Molton Brown Black Peppercorn Body Wash 300ml",
-      info: "Save 30%",
-      price: "$7.75",
-    },
-    { img:"https://static.thcdn.com/images/xsmall/webp//productimg/original/10881872-7594931143816293.jpg",
-      name: "Rituals The Ritual of Ayurveda Body Scrub 300g",
-      info: "Save 50%",
-      price: "$81.38",
-    },
-    {
-      img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/11207458-1094859309051703.jpg",
-      name: "Aesop Geranium Leaf Body Scrub 170ml",
-      info: "Jan Marini Gift",
-      price: "$149.99",
-    },
-    {
-      img: "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11536577-8484530983780580.jpg",
-      name: "Murad Acne Body Wash",
-      info: "Juice Beauty Gift",
-      price: "$12.00",
-    },
-    {
-      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13175946-1904889913658701.jpg",
-      name: "Rituals The Ritual of Ayurveda Body Scrub ",
-      info: "AHAVA Gift",
-      price: "$8.00",
-    },
-    {
-      img: "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/11292030-5634830113663628.jpg",
-      name: "Embryolisse Lait Crème Fluid 16.90f. oz ",
-      info: "15% off with code $$15 - Sunday Riley C.E.O.Vitamin C Rich Hydration Cream (worth $22)",
-      price: "$149.00",
-    },
-    {
-      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11286045-9874902410736099.jpg",
-      name: "AHAVA Mineral Botanic Velvet Cream Wash-Hibiscus and Fig 500ml ",
-      info: "AHAVA Gift",
-      price: "$176.00",
-    },
-    {
-      img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11659771-1974866362012160.jpg",
-      name: "REN Clean Skincare AHA Smart Renewal Body Serum 200ml ",
-      info: "25% off Vitamin C",
-      price: "$122.00",
-    },
-    {
-      img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/13309116-6914896473834562.jpg",
-      name: "Aesop Geranium Leaf Body Cleanser Gel 500ml ",
-      info: "25% off Vitamin C",
-      price: "$19.00",
-    },
-    {
-      img: "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12226515-8054768403426340.jpg",
-      name: "ESPA Bergamot and Jasmine Bath and Shower Gel 250ml ",
-      info: "Select your Gift",
-      price: "$16.00",
-    },
-  ];
-  flatiron.map(function (ele) {
-    var box = document.createElement("div");
-    var image = document.createElement("img");
-    image.src = ele.img;
-    image.style.height = "auto";
-    image.style.width = "297px";
-    var h4 = document.createElement("p");
-    h4.textContent = ele.name;
-    var bord = document.createElement("div");
-    bord.setAttribute("id", "bord");
-    var p = document.createElement("p");
-    p.textContent = ele.info;
-    p.style.fontSize = "14.5px";
-    bord.append(p);
+    var flatiron = [{
+        img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11286762-1954822086680064.jpg",
+        name: "No7 Total Renewal Micro-Dermabrasion Exfoliato ",
+        info: "15% off with code S$ 15 -Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22)",
+        price: "$45.00",
+    }, {
+        img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12564808-1014935531447783.jpg",
+        name: "First Aid Beauty KP Bump Eraser Body Scrub with 10% AHA",
+        info: "EltalMD Gift",
+        price: "$55.00",
+    }, {
+        img: "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11289756-7365760149316208.jpg",
+        name: "Soap and Glory The Scrub of Your Life Smoothing Body Scrub 200ml",
+        info: "Save 50 %",
+        price: "$45.00",
+    }, {
+        img: "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11709501-3754562854298187.jpg",
+        name: "Bioderma Atoderm normal to very dry skin face and body cleanser 200ML",
+        info: "Juice Beauty Gift",
+        price: "$7.50",
+    }, {
+        img: "https://static.thcdn.com/images/large/webp/productimg/1600/1600/11289744-1594503184029861.jpg",
+        name: "Soap and Glory Smoothie Star Breakfast Scrub",
+        info: " Select your Gift",
+        price: "$8.99",
+    }, {
+        img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/12747907-1514871998779558.jpg",
+        name: "DERMAdoctor KP Duty Dermatologist Formulated Body Scrub (Various Sizes)",
+        info: "Epionce Purifying Wash 8oz",
+        price: "$8.00",
+    }, {
+        img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/12004943-1784871984217738.jpg",
+        name: "Molton Brown Black Peppercorn Body Wash 300ml",
+        info: "Save 30%",
+        price: "$7.75",
+    }, {
+        img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/10881872-7594931143816293.jpg",
+        name: "Rituals The Ritual of Ayurveda Body Scrub 300g",
+        info: "Save 50%",
+        price: "$81.38",
+    }, {
+        img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/11207458-1094859309051703.jpg",
+        name: "Aesop Geranium Leaf Body Scrub 170ml",
+        info: "Jan Marini Gift",
+        price: "$149.99",
+    }, {
+        img: "https://static.thcdn.com/images/xsmall/webp/productimg/1600/1600/11536577-8484530983780580.jpg",
+        name: "Murad Acne Body Wash",
+        info: "Juice Beauty Gift",
+        price: "$12.00",
+    }, {
+        img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13175946-1904889913658701.jpg",
+        name: "Rituals The Ritual of Ayurveda Body Scrub ",
+        info: "AHAVA Gift",
+        price: "$8.00",
+    }, {
+        img: "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/11292030-5634830113663628.jpg",
+        name: "Embryolisse Lait Crème Fluid 16.90f. oz ",
+        info: "15% off with code $$15 - Sunday Riley C.E.O.Vitamin C Rich Hydration Cream (worth $22)",
+        price: "$149.00",
+    }, {
+        img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11286045-9874902410736099.jpg",
+        name: "AHAVA Mineral Botanic Velvet Cream Wash-Hibiscus and Fig 500ml ",
+        info: "AHAVA Gift",
+        price: "$176.00",
+    }, {
+        img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11659771-1974866362012160.jpg",
+        name: "REN Clean Skincare AHA Smart Renewal Body Serum 200ml ",
+        info: "25% off Vitamin C",
+        price: "$122.00",
+    }, {
+        img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/13309116-6914896473834562.jpg",
+        name: "Aesop Geranium Leaf Body Cleanser Gel 500ml ",
+        info: "25% off Vitamin C",
+        price: "$19.00",
+    }, {
+        img: "https://static.thcdn.com/images/xsmall/webp//productimg/1600/1600/12226515-8054768403426340.jpg",
+        name: "ESPA Bergamot and Jasmine Bath and Shower Gel 250ml ",
+        info: "Select your Gift",
+        price: "$16.00",
+    }, ];
+    flatiron.map(function(ele) {
+        var box = document.createElement("div");
+        var image = document.createElement("img");
+        image.src = ele.img;
+        image.style.height = "auto";
+        image.style.width = "297px";
+        var h4 = document.createElement("p");
+        h4.textContent = ele.name;
+        var bord = document.createElement("div");
+        bord.setAttribute("id", "bord");
+        var p = document.createElement("p");
+        p.textContent = ele.info;
+        p.style.fontSize = "14.5px";
+        bord.append(p);
 
-    var price = document.createElement("h2");
-    price.textContent = ele.price;
+        var price = document.createElement("h2");
+        price.textContent = ele.price;
 
-    var quick = document.createElement("button");
-    quick.textContent = "Quick Buy";
-    quick.setAttribute("class", "btn");
-    quick.addEventListener("click",function(){
-        quickBuy(ele)
-    })
+        var quick = document.createElement("button");
+        quick.textContent = "Quick Buy";
+        quick.setAttribute("class", "btn");
+        quick.addEventListener("click", function() {
+            quickBuy(ele)
+        })
 
-    box.append(image, h4, bord, price, quick);
+        box.append(image, h4, bord, price, quick);
 
-    document.querySelector("#container").append(box);
-  });
-  function quickBuy(ele){
-      console.log(ele)
-  }
+        document.querySelector("#container").append(box);
+    });
+
+    function quickBuy(ele) {
+        console.log(ele)
+    }
 </script>
