@@ -1400,21 +1400,27 @@
 </html>
 <script>
 
-var slide = document.getElementById("slider");
-    var btn1 = document.getElementById("btn1");
-    var btn2 = document.getElementById("btn2");
+document.querySelector(".goToHomepage").addEventListener("click", goToHomepage);
 
-    btn1.onclick = function() {
-        slide.style.transform = "translateX(0px)";
-        btn1.classList.add("active");
-        btn2.classList.remove("active");
-    };
+function goToHomepage() {
+    window.location = "../index.html"
+}
 
-    btn2.onclick = function() {
-        slide.style.transform = "translateX(-100%)";
-        btn2.classList.add("active");
-        btn1.classList.remove("active");
-    };
+// var slide = document.getElementById("slider");
+//     var btn1 = document.getElementById("btn1");
+//     var btn2 = document.getElementById("btn2");
+
+//     btn1.onclick = function() {
+//         slide.style.transform = "translateX(0px)";
+//         btn1.classList.add("active");
+//         btn2.classList.remove("active");
+//     };
+
+//     btn2.onclick = function() {
+//         slide.style.transform = "translateX(-100%)";
+//         btn2.classList.add("active");
+//         btn1.classList.remove("active");
+//     };
 
 document.querySelector("#check-cart-part").addEventListener("click", carthreflink);
 
@@ -1465,11 +1471,7 @@ function logoutcurrentuser() {
 }
 
 
-    document.querySelector(".goToHomepage").addEventListener("click", goToHomepage);
 
-function goToHomepage() {
-    window.location.href="../index.html"
-}
 
 
 
@@ -1522,10 +1524,10 @@ database.map(function(el, i, arr) {
     document.querySelector(".scroll-able-items-container").append(box);
 });
 
-document.querySelector(".anniversaryedit").addEventListener("click",shortfunction)
+document.querySelector(".anniversaryLink").addEventListener("click",shortfunction)
 
 function shortfunction(){
-    window.location.href="./anniversary.html"
+    window.location ="./anniversary.html"
 }
 </script>
 

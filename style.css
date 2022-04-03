@@ -629,6 +629,7 @@ html {
 .contactUsTitle {
     font-weight: 550;
     margin-top: 10px;
+    padding-left: 6px;
 }
 
 .aboutDetails,
@@ -646,7 +647,14 @@ html {
 .contactUsDetails>div {
     padding-top: 5px;
     height: 38px;
+    padding-left: 6px;
     /* border: 1px solid black; */
+}
+
+/* .FooterHoverBCColor>div:ntdiv:hover */
+.FooterHoverBCColor>div:nth-child(2)>div:hover {
+    cursor: pointer;
+    background-color: #f0ebeb;
 }
 
 #thirdFoot {
