@@ -523,7 +523,7 @@
                     </div>
                 </div>
             </div>
-            <div class="BAR">
+            <div class="BAR fraglink">
                 Fragrance
                 <div class="drop">
                     <div class="outsideFragrance">
@@ -560,7 +560,7 @@
                     </div>
                 </div>
             </div>
-            <div class="BAR">
+            <div class="BAR newlink">
                 New
                 <div class="drop">
                     <div class="outsideNew">
@@ -591,7 +591,7 @@
                     </div>
                 </div>
             </div>
-            <div class="BAR">Advice</div>
+            <div class="BAR advicelink">Advice</div>
 
 
 
@@ -1039,7 +1039,22 @@
     function bathbodyLink () {
         window.location.href = "./BodyBath/Bath & Body.html"
     }
+    document.querySelector(".advicelink").addEventListener("click", bathbodyLink)
 
+function bathbodyLink () {
+    window.location.href = "./fragrance/Advice.html"
+}
+document.querySelector(".fraglink").addEventListener("click", bathbodyLink)
+
+function bathbodyLink () {
+    window.location.href = "./fragrance/Fragrance.html"
+}
+
+document.querySelector(".newlink").addEventListener("click", bathbodyLink)
+
+function bathbodyLink () {
+    window.location.href = "./fragrance/New.html"
+}
     // Page Link Ends Here
     //arun
 
