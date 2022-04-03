@@ -1698,7 +1698,9 @@
 
     var price = document.createElement("h2");
     price.textContent = ele.price;
-
+    var anch= document.createElement("a");
+   anch.href="../cart/cart.html"
+   
     var quick = document.createElement("button");
     quick.textContent = "Quick Buy";
     quick.setAttribute("class", "btn");
@@ -1706,7 +1708,7 @@
         quickBuy(ele)
     })
 
-    box.append(image, h4, bord, price, quick);
+    box.append(image, h4, bord, price, anch);
 
     document.querySelector("#container").append(box);
   });
