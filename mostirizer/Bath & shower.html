@@ -923,8 +923,8 @@ html {
                       <span>Account</span>
                       <div class="hover-down-box">
                           <div class="conditional-thin-if-not-login">
-                              <a href="./login/login.html">Login</a>
-                              <a href="./register/register.html">Register</a>
+                              <a href="../login/login.html">Login</a>
+                              <a href="../register/register.html">Register</a>
                           </div>
                           <div class="login-then-show-name-div">
                               <a class="login-then-show-name" id="style-class-improve">
@@ -1187,6 +1187,7 @@ html {
               </div>
           </div>
       </div>
+      <a href="./Bath & shower.html"
       <div id="thirdFoot">
           <div id="thirdSubFoot">
               <div id="THG">
@@ -1321,14 +1322,17 @@ html {
     var price = document.createElement("h2");
     price.textContent = ele.price;
 
+    route=document.createElement("a")
+    route.href="../payment/payment.html"
     var quick = document.createElement("button");
     quick.textContent = "Quick Buy";
     quick.setAttribute("class", "btn");
+    route.append(quick)
     quick.addEventListener("click",function(){
         quickBuy(ele)
     })
 
-    box.append(image, h4, bord, price, quick);
+    box.append(image, h4, bord, price, route);
 
     document.querySelector("#container").append(box);
   });
