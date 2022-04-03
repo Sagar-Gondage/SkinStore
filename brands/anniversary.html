@@ -129,8 +129,8 @@
                         <span>Account</span>
                         <div class="hover-down-box">
                             <div class="conditional-thin-if-not-login">
-                                <a href="./login/login.html">Login</a>
-                                <a href="./register/register.html">Register</a>
+                                <a href="../login/login.html">Login</a>
+                                <a href="../register/register.html">Register</a>
                             </div>
                             <div class="login-then-show-name-div">
                                 <a class="login-then-show-name" id="style-class-improve">
@@ -197,7 +197,7 @@
         <div id="thirdInneer">
             <div id="brand-link"> Brands</div>
             <div class="anniversaryLink">Anniversary Edit</div>
-            <div id="productSale"><a href="/brands/sale.html">Sale</a></div>
+            <div id="linkPagesPath"><a href="/brands/sale.html">Sale</a></div>
             <div class="BAR">
                 Build a Routine
                 <div class="drop">
@@ -1085,11 +1085,11 @@ productContainers.forEach((item, i) => {
     })
 })
 
-document.querySelector(".goToHomepage").addEventListener("click", goToHomepage);
+// document.querySelector(".goToHomepage").addEventListener("click", goToHomepage);
 
-function goToHomepage() {
-    window.location = "../index.html"
-}
+// function goToHomepage() {
+//     window.location = "../index.html"
+// }
 
 
 // var slide = document.getElementById("slider");
@@ -1108,103 +1108,112 @@ function goToHomepage() {
 //         btn1.classList.remove("active");
 //     };
 
-
-
-
-document.querySelector("#check-cart-part").addEventListener("click", carthreflink);
-
-function carthreflink() {
-    window.location.href = "../cart/cart.html";
-}
-var database = JSON.parse(localStorage.getItem("cartadddatabase")) || [];
-var lengthofbagitems;
-if (database == null) {
-    lengthofbagitems = 0;
-} else {
-    lengthofbagitems = database.length;
-}
-
-document.querySelector("#add-count-items").innerText = lengthofbagitems;
-if (lengthofbagitems == 0) {
-    document.querySelector(".scroll-able-items-container").style.display = "none";
-} else {
-    document.querySelector(".scroll-able-items-container").style.display = "block";
-}
-// user details shows
-var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser")) || [];
-gettingcurrentuser.map(function(el) {
-    if (el.name == null) {
-        document.querySelector(".login-then-show-name").style.display = "none";
-        document.querySelector(".conditional-thin-if-not-login").style.display =
-            "block";
-        document.querySelector("#logoutuser").style.display = "none";
-    } else {
-        document.querySelector(
-            ".login-then-show-name"
-        ).innerText = `Welcome ${el.name}`;
-        document.querySelector(".conditional-thin-if-not-login").style.display =
-            "none";
-        document.querySelector("#logoutuser").style.display = "block";
-        console.log(el.name);
-    }
-});
-
-document.querySelector("#logoutuser").addEventListener("click", logoutcurrentuser);
-
-function logoutcurrentuser() {
-    gettingcurrentuser.map(function(el, i) {
-        gettingcurrentuser.splice(i, 10000);
-        window.location.reload();
-        localStorage.setItem("currentuser", JSON.stringify(gettingcurrentuser));
-    });
-}
-
-
-
-if (lengthofbagitems > 0) {
-    document.querySelector(".empty-things").style.display = "none";
-}
-if (lengthofbagitems == 0) {
-    document.querySelector(".total-of-items").style.display = "none";
-    document.querySelector(".btn-view-cart").style.display = "none";
-    document.querySelector(".price-of-items-total").style.display = "none";
-}
-document.querySelector(".total-of-items").innerText = `${lengthofbagitems} items in your cart`;
-var subtotal = database.reduce(function(sum, el, i, arr) {
-    sum += el.price;
-    return sum;
-}, 0);
-
-document.querySelector(".price-of-items-total").innerText = `$${subtotal}`;
-
-if (database == 0) {
-    document.querySelector(".scroll-able-items-container").style.display =
-        "none";
-} else {
-    document.querySelector(".scroll-able-items-container").style.display =
-        "block";
-}
-
 document.querySelector("#brand-link").addEventListener("click", brandLink);
 
 function brandLink() {
     window.location= "../brands/brands.html";
 }
 
-database.map(function(el, i, arr) {
-    var box = document.createElement("div");
-    var img = document.createElement("img");
-    img.src = el.img_url;
-    var para = document.createElement("p");
-    para.innerText = el.name;
-    var price = document.createElement("p");
-    price.innerText = `$${el.price}`;
-    var Qty = document.createElement("p");
-    Qty.innerText = `Quantity : 1`;
+//  document.querySelector(".btn2").addEventListener("click",goToCart)
 
-    box.append(img, para, price, Qty);
-    document.querySelector(".scroll-able-items-container").append(box);
-});
+//  function goToCart(){
+//      window.location.href="../cart/cart.html"
+//  }
+//  document.querySelector(".btn1").addEventListener("click",goToCart)
 
+// function goToCart(){
+//     window.location.href="../cart/cart.html"
+// }
+
+document.querySelector("#check-cart-part").addEventListener("click", carthreflink);
+
+    function carthreflink() {
+        window.location.href = "../cart/cart.html";
+    }
+    var database = JSON.parse(localStorage.getItem("cartadddatabase")) || [];
+    var lengthofbagitems;
+    if (database == null) {
+        lengthofbagitems = 0;
+    } else {
+        lengthofbagitems = database.length;
+    }
+
+    document.querySelector("#add-count-items").innerText = lengthofbagitems;
+    if (lengthofbagitems == 0) {
+        document.querySelector(".scroll-able-items-container").style.display = "none";
+    } else {
+        document.querySelector(".scroll-able-items-container").style.display = "block";
+    }
+    // user details shows
+    var gettingcurrentuser = JSON.parse(localStorage.getItem("currentuser")) || [];
+    gettingcurrentuser.map(function(el) {
+        if (el.name == null) {
+            document.querySelector(".login-then-show-name").style.display = "none";
+            document.querySelector(".conditional-thin-if-not-login").style.display =
+                "block";
+            document.querySelector("#logoutuser").style.display = "none";
+        } else {
+            document.querySelector(
+                ".login-then-show-name"
+            ).innerText = `Welcome ${el.name}`;
+            document.querySelector(".conditional-thin-if-not-login").style.display =
+                "none";
+            document.querySelector("#logoutuser").style.display = "block";
+            console.log(el.name);
+        }
+    });
+
+    document.querySelector("#logoutuser").addEventListener("click", logoutcurrentuser);
+
+    function logoutcurrentuser() {
+        gettingcurrentuser.map(function(el, i) {
+            gettingcurrentuser.splice(i, 10000);
+            window.location.reload();
+            localStorage.setItem("currentuser", JSON.stringify(gettingcurrentuser));
+        });
+    }
+
+
+
+    if (lengthofbagitems > 0) {
+        document.querySelector(".empty-things").style.display = "none";
+    }
+    if (lengthofbagitems == 0) {
+        document.querySelector(".total-of-items").style.display = "none";
+        document.querySelector(".btn-view-cart").style.display = "none";
+        document.querySelector(".price-of-items-total").style.display = "none";
+    }
+    document.querySelector(".total-of-items").innerText = `${lengthofbagitems} items in your cart`;
+    var subtotal = database.reduce(function(sum, el, i, arr) {
+        sum += Number(el.price);
+        return sum;
+    }, 0);
+
+    document.querySelector(".price-of-items-total").innerText = `$${subtotal}`;
+
+    if (database == 0) {
+        document.querySelector(".scroll-able-items-container").style.display =
+            "none";
+    } else {
+        document.querySelector(".scroll-able-items-container").style.display =
+            "block";
+    }
+
+   
+
+    database.map(function(el, i, arr) {
+        var box = document.createElement("div");
+        var img = document.createElement("img");
+        img.src = el.img_url;
+        var para = document.createElement("p");
+        para.innerText = el.name;
+        var price = document.createElement("p");
+        price.innerText = `$${Number(el.price)}`;
+        var Qty = document.createElement("p");
+        Qty.innerText = `Quantity : 1`;
+
+        box.append(img, para, price, Qty);
+        document.querySelector(".scroll-able-items-container").append(box);
+    });
 </script>
 </html>

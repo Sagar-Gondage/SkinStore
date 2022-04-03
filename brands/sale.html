@@ -130,8 +130,8 @@
                         <span>Account</span>
                         <div class="hover-down-box">
                             <div class="conditional-thin-if-not-login">
-                                <a href="./login/login.html">Login</a>
-                                <a href="./register/register.html">Register</a>
+                                <a href="../login/login.html">Login</a>
+                                <a href="../register/register.html">Register</a>
                             </div>
                             <div class="login-then-show-name-div">
                                 <a class="login-then-show-name" id="style-class-improve">
@@ -816,7 +816,7 @@
 <!-- <link rel="stylesheet" href="../cart/cart.html"> -->
 <!-- footer end here -->
   <!-- footer end here -->
-
+<!-- <link rel="stylesheet" href="../cart/cart.html"> -->
 </body>
 </html>
 
@@ -827,23 +827,36 @@ crossorigin="anonymous"
 ></script>
 <script>
   // ../cart/cart.html
-  var slide = document.getElementById("slider");
-    var btn1 = document.getElementById("btn1");
-    var btn2 = document.getElementById("btn2");
+//   var slide = document.getElementById("slider");
+//     var btn1 = document.getElementById("btn1");
+//     var btn2 = document.getElementById("btn2");
 
-    btn1.onclick = function() {
-        slide.style.transform = "translateX(0px)";
-        btn1.classList.add("active");
-        btn2.classList.remove("active");
-    };
+//     btn1.onclick = function() {
+//         slide.style.transform = "translateX(0px)";
+//         btn1.classList.add("active");
+//         btn2.classList.remove("active");
+//     };
 
-    btn2.onclick = function() {
-        slide.style.transform = "translateX(-100%)";
-        btn2.classList.add("active");
-        btn1.classList.remove("active");
-    };
+//     btn2.onclick = function() {
+//         slide.style.transform = "translateX(-100%)";
+//         btn2.classList.add("active");
+//         btn1.classList.remove("active");
+//     };
+    // test here
+//  document.querySelector(".btn2").addEventListener("click",goToCart)
 
-  document.querySelector("#check-cart-part").addEventListener("click", carthreflink);
+//  function goToCart(){
+//      window.location.href="../cart/cart.html"
+//  }
+
+// document.querySelector(".goToHomepage").addEventListener("click", goToHomepage);
+
+// function goToHomepage() {
+//     window.location = "../index.html"
+// }
+
+
+document.querySelector("#check-cart-part").addEventListener("click", carthreflink);
 
 function carthreflink() {
     window.location.href = "../cart/cart.html";
@@ -893,6 +906,10 @@ function logoutcurrentuser() {
 
 
 
+
+
+
+
 if (lengthofbagitems > 0) {
     document.querySelector(".empty-things").style.display = "none";
 }
@@ -922,6 +939,21 @@ document.querySelector("#brand-link").addEventListener("click", brandLink);
 function brandLink() {
     window.location.href = "./brands/brands.html";
 }
+
+
+document.querySelector(".anniversaryLink").addEventListener("click", anniversaryLink);
+
+function anniversaryLink() {
+    window.location.href = "./brands/anniversary.html"
+}
+
+
+document.querySelector("#productSale").addEventListener("click", productSale);
+
+function productSale() {
+window.location.href = "./brands/sale.html";
+}
+
 
 database.map(function(el, i, arr) {
     var box = document.createElement("div");
