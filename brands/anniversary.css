@@ -103,7 +103,7 @@
 .gap{
 margin-bottom: 80px;
 height:50%;
-
+width:55%;
 }
 
 
@@ -112,10 +112,10 @@ height:50%;
   position: relative;
   overflow: hidden;
   padding: 20px;
-  width:40%;
-  border:1px solid black;
+  width:48%;
+  /* border:1px solid black; */
   margin-top: -750px;
-  margin-left: 60%;
+  margin-left: 57%;
   padding-right: 20px;
 }
 
@@ -199,12 +199,13 @@ height:50%;
 
 .pre-btn {
   left: 0;
+  padding-left: 120px;
   transform: rotate(180deg);
 }
 
 .nxt-btn {
   right: 0;
-  padding-right:80px;
+  padding-right:250px;
 }
 
 .pre-btn img,
