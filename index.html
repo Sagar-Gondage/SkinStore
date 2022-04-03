@@ -406,7 +406,7 @@
                     </div>
                 </div>
             </div>
-            <div class="BAR">
+            <div class="BAR srk1">
                 Tools
                 <div class="drop">
                     <div class="outsideTools">
@@ -432,13 +432,13 @@
                     </div>
                 </div>
             </div>
-            <div class="BAR bathbodyLink">
+            <div class="BAR bathbodyLink srk2">
                 Bath & Body 
-                <div class="drop">
+                <div class="drop pop">
                     <div class="outsideBath">
                         <div class="inside">
-                            <div><a href="#"> Popular Categories </a></div>
-                            <div><a href="#"> View All Bath & Body </a></div>
+                            <div class=""><a href="#"> Popular Categories </a></div>
+                            <div class=""><a href="#"> View All Bath & Body </a></div>
                             <div><a href="#">New In </a></div>
                             <div><a href="#"> Clean Bath & Body </a></div>
                             <div><a href="#">5* Rated Products </a></div>
@@ -488,7 +488,7 @@
                     </div>
                 </div>
             </div>
-            <div class="BAR">
+            <div class="BAR  selfcare">
                 Self-Care
                 <div class="drop">
                     <div class="outsideSelf">
@@ -523,7 +523,7 @@
                     </div>
                 </div>
             </div>
-            <div class="BAR">
+            <div class="BAR fraglink">
                 Fragrance
                 <div class="drop">
                     <div class="outsideFragrance">
@@ -560,7 +560,7 @@
                     </div>
                 </div>
             </div>
-            <div class="BAR">
+            <div class="BAR newlink">
                 New
                 <div class="drop">
                     <div class="outsideNew">
@@ -591,7 +591,7 @@
                     </div>
                 </div>
             </div>
-            <div class="BAR">Advice</div>
+            <div class="BAR advicelink">Advice</div>
 
 
 
@@ -616,7 +616,7 @@
             </div>
         </div>
     </div>
-
+<a href="./BodyBath/papular category.html"
     <div class="offer">
         15% off with code SS15 + Sunday Riley C.E.O. Vitamin C Rich Hydration Cream (worth $22) @ $130 | Shop now
     </div>
@@ -790,6 +790,7 @@
         </div>
     </div>
 
+
     <div class="adv">
         <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/32/original-0308-STDCRE32346-SS-AH-SkinStore-Concierge-Banners-1180x200-084632.jpg" alt="" />
     </div>
@@ -940,7 +941,7 @@
                 <div id="pay">
                     <div id="paySecure">Pay securely with</div>
                     <div class="payments">
-                        <img src="./img/pay.png" alt="" />
+                        <img src="../img/pay.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -1039,7 +1040,22 @@
     function bathbodyLink () {
         window.location.href = "./BodyBath/Bath & Body.html"
     }
+    document.querySelector(".advicelink").addEventListener("click", bathbodyLink)
 
+function bathbodyLink () {
+    window.location.href = "./fragrance/Advice.html"
+}
+document.querySelector(".fraglink").addEventListener("click", bathbodyLink)
+
+function bathbodyLink () {
+    window.location.href = "./fragrance/Fragrance.html"
+}
+
+document.querySelector(".newlink").addEventListener("click", bathbodyLink)
+
+function bathbodyLink () {
+    window.location.href = "./fragrance/New.html"
+}
     // Page Link Ends Here
     //arun
 
@@ -1133,4 +1149,36 @@
         box.append(img, para, price, Qty);
         document.querySelector(".scroll-able-items-container").append(box);
     });
+
+
+    // 
+
+    // tool page link.....
+    
+    document.querySelector(".srk1").addEventListener("click", srk);
+
+function srk() {
+  window.location.href = "./TOOL/Tools/Tools.html";
+}
+
+
+  document.querySelector(".srk2").addEventListener("click", srkb);
+
+  function srkb() {
+      window.location.href = "./BodyBath/Bath & Body.html"
+  }
+  
+  
+document.querySelector(".selfcare").addEventListener("click", srks);
+
+function srks() {
+window.location.href = "./Selfcare/Self-Care.html";
+}
+document.querySelector(".pop").addEventListener("click", productSale);
+
+function productSale() {
+window.location.href = "./BodyBath/papular category.html";
+}
+
+
 </script>

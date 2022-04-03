@@ -488,7 +488,7 @@ html {
     position: sticky;
     top: 0;
     background-color: white;
-    border-bottom: .5px solid grey;
+    border-bottom: 0.5px solid grey;
 }
 
 #first {
@@ -617,7 +617,7 @@ html {
     margin-left: 30px;
 }
 
-#thirdInneer div {
+#thirdInneer>div {
     /* border: 1px solid black; */
     height: 100%;
     /* align-items: center; */
@@ -627,10 +627,109 @@ html {
     padding-right: 15px;
 }
 
-#thirdInneer div:hover {
+#thirdInneer>div:hover {
     cursor: pointer;
     background-color: #333;
     color: white;
+}
+
+
+/* Build a Routine Drop Down starts here*/
+
+.BAR {
+    position: relative;
+}
+
+.drop {
+    display: none;
+}
+
+.outside,
+.outsideSkin,
+.outsideHair,
+.outsideMakeup,
+.outsideTools,
+.outsideBath,
+.outsideSelf,
+.outsideFragrance,
+.outsideNew {
+    background-color: white;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    border: 1px solid black;
+    padding-top: 15px;
+}
+
+.inside {
+    border-top: 1px solid rgb(46, 51, 55);
+    width: 250px;
+    margin: 10px;
+}
+
+.inside div {
+    padding: 5px;
+}
+
+.inside>div>a {
+    text-decoration: none;
+    color: black;
+}
+
+.inside div:first-child>a {
+    font-weight: 550;
+}
+
+.inside div:hover {
+    background-color: rgb(240, 238, 238);
+}
+
+.inside div:nth-child(1) {
+    margin: 10px 0px;
+}
+
+.BAR:hover .drop {
+    display: block;
+}
+
+
+/* pos for other drop Downs */
+
+.outside {
+    right: -280%;
+}
+
+.outsideSkin {
+    right: -825%;
+}
+
+.outsideHair {
+    right: -1295%;
+}
+
+.outsideMakeup {
+    right: -600%;
+}
+
+.outsideTools {
+    left: -550%
+}
+
+.outsideBath {
+    left: -550%;
+}
+
+.outsideSelf {
+    left: -600%
+}
+
+.outsideFragrance {
+    left: -630%;
+}
+
+.outsideNew {
+    left: -830%;
 }
 
 
@@ -680,12 +779,6 @@ html {
 
 
 /* Middle Part start here */
-
-#navBar {
-    /* position: fixed; */
-    /* width: 100%; */
-    /* z-index: 100; */
-}
 
 .slider-box {
     width: 100%;
@@ -778,6 +871,7 @@ html {
 
 .shopNow:hover {
     background-color: #28bdb7;
+    cursor: pointer;
 }
 
 .companyLogo {
@@ -855,6 +949,7 @@ html {
 
 #shopNow:hover {
     background-color: #def5f4;
+    cursor: pointer;
 }
 
 
@@ -864,6 +959,7 @@ html {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 50px;
+    cursor: pointer;
     /* border: 1px solid blue; */
 }
 
@@ -950,6 +1046,7 @@ html {
 #socialMedia {
     display: flex;
     gap: 20px;
+    cursor: pointer;
 }
 
 #connect>div:nth-child(1) {
@@ -1086,7 +1183,9 @@ html {
 .account:hover,
 #check-cart-part:hover {
     background: rgb(223, 217, 217);
-    padding: 12px
+    padding: 12px;
+    background: rgb(223, 217, 217);
+    padding: 15px;
 }
 
 .hover-down-box {
@@ -1160,7 +1259,7 @@ html {
 }
 
 .login-then-show-name {
-    display: none;
+    /* display: none; */
     background: red;
 }
 
@@ -1174,6 +1273,62 @@ html {
     font-size: 25px;
     background: #d9d7d7;
 }
+
+#logoutuser {
+    display: none;
+}
+
+
+/* car section */
+
+
+/* cart section */
+
+.giving-items-some-flexing-for-management {
+    display: flex;
+    justify-content: space-between;
+}
+
+.items-availble-then-show {
+    background-color: rgb(230, 224, 224);
+}
+
+.giving-some-style-as-you-wnat {
+    padding: 12px;
+}
+
+.btn-view-cart {
+    margin-top: 12px;
+}
+
+.btn-view-cart button {
+    padding: 8px 12px 8px 12px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 8px 12px 8px 12px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+}
+
+.btn-view-cart button:hover {
+    background-color: #28bdb7;
+    color: #111;
+}
+
+.scroll-able-items-container {
+    overflow-y: scroll;
+    height: auto !important;
+    padding: 12px;
+    max-height: 480px;
+    background: #fff;
+    display: none;
+}
+
+.scroll-able-items-container>div img {
+    width: 80px;
+}
 /* header css end here */
 
 
@@ -1185,3 +1340,15 @@ html {
 /* footer css start here */
 
 /* footer css end here */
+
+
+.forpath>a{
+    text-decoration: none;
+    color: #1d1b17;
+}
+.forpath>a:hover{
+    color: white;
+    /* background-color: #111; */
+    
+}
+
