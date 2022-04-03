@@ -14,7 +14,7 @@
 
 <body>
     <!-- HEADER STARTS HERE -->
-    
+
     <div id="first">
         <div id="firstSub">
             <div id="country">us - USD</div>
@@ -197,7 +197,7 @@
     <div id="third">
         <div id="thirdInneer">
             <div id="brand-link" class="BAR">Brands</div>
-            <div class="anniversaryLink BAR" >Anniversary Edit</div>
+            <div class="anniversaryLink BAR">Anniversary Edit</div>
             <div id="productSale" class="BAR">Sale</div>
             <div class="BAR">
                 Build a Routine
@@ -221,7 +221,7 @@
                             <div><a href="">Dullness & Brightening Routine</a></div>
                         </div>
                         <div class="inside">
-                            <div><a href="">Build a Hair Routine</a></div>
+                            <div><a href="./hair page/navigation bar/hair.html">Build a Hair Routine</a></div>
                             <div><a href="">Fine, Thinning Hair Routine</a></div>
                             <div><a href="">Healthy Scalp Routine</a></div>
                             <div><a href="">Colored Hair Routine</a></div>
@@ -303,7 +303,7 @@
                 </div>
             </div>
             <div class="BAR">
-                Hair
+                <p class="hair-part">Hair</p>
                 <div class="drop">
                     <div class="outsideHair">
                         <div class="inside">
@@ -434,7 +434,7 @@
                 </div>
             </div>
             <div class="BAR bathbodyLink srk2">
-                Bath & Body 
+                Bath & Body
                 <div class="drop pop">
                     <div class="outsideBath">
                         <div class="inside">
@@ -947,8 +947,8 @@
             </div>
         </div>
     </div>
- <!-- <link rel="stylesheet" href="./brands/sale.html"> -->
-   
+    <!-- <link rel="stylesheet" href="./brands/sale.html"> -->
+
     <!-- Footer Ends Here -->
 </body>
 
@@ -978,84 +978,84 @@
         btn1.classList.remove("active");
     };
 
-        // linking of social Media starts
-        
-        document.querySelector(".facebookLink").addEventListener("click", facebookLink);
-        document.querySelector(".instaLink").addEventListener("click", instaLink);
-        document.querySelector(".twitterLink").addEventListener("click", twitterLink);
-        document.querySelector(".snapchatLink").addEventListener("click", snapchatLink)
-        document.querySelector(".PinterestLink").addEventListener("click", PinterestLink);
+    // linking of social Media starts
+
+    document.querySelector(".facebookLink").addEventListener("click", facebookLink);
+    document.querySelector(".instaLink").addEventListener("click", instaLink);
+    document.querySelector(".twitterLink").addEventListener("click", twitterLink);
+    document.querySelector(".snapchatLink").addEventListener("click", snapchatLink)
+    document.querySelector(".PinterestLink").addEventListener("click", PinterestLink);
 
 
-        function facebookLink() {
-            window.open("https://www.facebook.com/SkinStore", "_blank")
-        }
+    function facebookLink() {
+        window.open("https://www.facebook.com/SkinStore", "_blank")
+    }
 
-        function instaLink() {
-            window.open("https://www.instagram.com/skinstore", "_blank")
-        }
+    function instaLink() {
+        window.open("https://www.instagram.com/skinstore", "_blank")
+    }
 
-        function twitterLink() {
-            window.open("https://twitter.com/skinstore_cs", "_blank")
-        }
+    function twitterLink() {
+        window.open("https://twitter.com/skinstore_cs", "_blank")
+    }
 
-        function snapchatLink () {
-            window.open("https://www.snapchat.com/add/SkinStoreUS", "_blank")            
-        }
+    function snapchatLink() {
+        window.open("https://www.snapchat.com/add/SkinStoreUS", "_blank")
+    }
 
-        function PinterestLink () {
-            window.open("https://www.pinterest.com/skinstore", "_blank")
-        }
+    function PinterestLink() {
+        window.open("https://www.pinterest.com/skinstore", "_blank")
+    }
 
-        // linking of social Media Ends
-
-
+    // linking of social Media Ends
 
 
-        // page link Starts here
-        
 
-        document.querySelector("#brand-link").addEventListener("click", brandLink);
 
-      function brandLink() {
+    // page link Starts here
+
+
+    document.querySelector("#brand-link").addEventListener("click", brandLink);
+
+    function brandLink() {
         window.location.href = "./brands/brands.html";
     }
 
 
-        document.querySelector(".anniversaryLink").addEventListener("click", anniversaryLink);
+    document.querySelector(".anniversaryLink").addEventListener("click", anniversaryLink);
 
-        function anniversaryLink() {
-            window.location.href = "./brands/anniversary.html"
-        }
-        
-        
+    function anniversaryLink() {
+        window.location.href = "./brands/anniversary.html"
+    }
+
+
     document.querySelector("#productSale").addEventListener("click", productSale);
 
     function productSale() {
-    window.location.href = "./brands/sale.html";
+        window.location.href = "./brands/sale.html";
     }
 
     document.querySelector(".bathbodyLink").addEventListener("click", bathbodyLink)
 
-    function bathbodyLink () {
+    function bathbodyLink() {
         window.location.href = "./BodyBath/Bath & Body.html"
     }
     document.querySelector(".advicelink").addEventListener("click", bathbodyLink)
 
-function bathbodyLink () {
-    window.location.href = "./fragrance/Advice.html"
-}
-document.querySelector(".fraglink").addEventListener("click", bathbodyLink)
+    function bathbodyLink() {
+        window.location.href = "./fragrance/Advice.html"
+    }
+    document.querySelector(".fraglink").addEventListener("click", bathbodyLink)
 
-function bathbodyLink () {
-    window.location.href = "./fragrance/Fragrance.html"
-}
+    function bathbodyLink() {
+        window.location.href = "./fragrance/Fragrance.html"
+    }
 
-document.querySelector(".newlink").addEventListener("click", bathbodyLink)
+    document.querySelector(".newlink").addEventListener("click", bathbodyLink)
 
-function bathbodyLink () {
-    window.location.href = "./fragrance/New.html"
-}
+    function bathbodyLink() {
+        window.location.href = "./fragrance/New.html"
+    }
     // Page Link Ends Here
     //arun
 
@@ -1133,7 +1133,7 @@ function bathbodyLink () {
             "block";
     }
 
-   
+
 
     database.map(function(el, i, arr) {
         var box = document.createElement("div");
@@ -1154,31 +1154,35 @@ function bathbodyLink () {
     // 
 
     // tool page link.....
-    
+
     document.querySelector(".srk1").addEventListener("click", srk);
 
-function srk() {
-  window.location.href = "./TOOL/Tools/Tools.html";
-}
+    function srk() {
+        window.location.href = "./TOOL/Tools/Tools.html";
+    }
 
 
-  document.querySelector(".srk2").addEventListener("click", srkb);
+    document.querySelector(".srk2").addEventListener("click", srkb);
 
-  function srkb() {
-      window.location.href = "./BodyBath/Bath & Body.html"
-  }
-  
-  
-document.querySelector(".selfcare").addEventListener("click", srks);
-
-function srks() {
-window.location.href = "./Selfcare/Self-Care.html";
-}
-document.querySelector(".pop").addEventListener("click", productSale);
-
-function productSale() {
-window.location.href = "./BodyBath/papular category.html";
-}
+    function srkb() {
+        window.location.href = "./BodyBath/Bath & Body.html"
+    }
 
 
+    document.querySelector(".selfcare").addEventListener("click", srks);
+
+    function srks() {
+        window.location.href = "./Selfcare/Self-Care.html";
+    }
+    document.querySelector(".pop").addEventListener("click", productSale);
+
+    function productSale() {
+        window.location.href = "./BodyBath/papular category.html";
+    }
+
+    document.querySelector(".hair-part").addEventListener("click", hairpart);
+
+    function hairpart() {
+        window.location.href = "./hair page/navigation bar/hair.html";
+    }
 </script>
