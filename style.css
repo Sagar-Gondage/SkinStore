@@ -286,6 +286,7 @@ html {
     gap: 50px;
     height: 56px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 #fourthSub div span {
@@ -728,6 +729,7 @@ html {
     padding: 12px;
     background: rgb(223, 217, 217);
     padding: 15px;
+    cursor: pointer;
 }
 
 .hover-down-box {
@@ -841,6 +843,7 @@ html {
 
 .btn-view-cart {
     margin-top: 12px;
+    cursor: pointer;
 }
 
 .btn-view-cart button {
