@@ -945,3 +945,8 @@ width: 25%;
 .scroll-able-items-container>div img {
   width: 80px;
 }
+
+a{
+  text-decoration: none;
+  color:black;
+}
