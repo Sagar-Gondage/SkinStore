@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./new style luci/style.css" />
     <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="./brands/brands.html"> -->
+    <link rel="stylesheet" href="./Bod">
 </head>
 
 <body>
@@ -195,9 +195,9 @@
     <!-- <div id="border"></div> -->
     <div id="third">
         <div id="thirdInneer">
-            <div id="brand-link">Brands</div>
-            <div class="anniversaryLink">Anniversary Edit</div>
-            <div id="productSale">Sale</div>
+            <div id="brand-link" class="BAR">Brands</div>
+            <div class="anniversaryLink BAR" >Anniversary Edit</div>
+            <div id="productSale" class="BAR">Sale</div>
             <div class="BAR">
                 Build a Routine
                 <div class="drop">
@@ -432,8 +432,8 @@
                     </div>
                 </div>
             </div>
-            <div class="BAR">
-                Bath & Body
+            <div class="BAR bathbodyLink">
+                Bath & Body 
                 <div class="drop">
                     <div class="outsideBath">
                         <div class="inside">
@@ -591,7 +591,7 @@
                     </div>
                 </div>
             </div>
-            <div>Advice</div>
+            <div class="BAR">Advice</div>
 
 
 
@@ -1012,6 +1012,7 @@
 
 
         // page link Starts here
+        
 
         document.querySelector("#brand-link").addEventListener("click", brandLink);
 
@@ -1033,6 +1034,13 @@
     window.location.href = "./brands/sale.html";
     }
 
+    document.querySelector(".bathbodyLink").addEventListener("click", bathbodyLink)
+
+    function bathbodyLink () {
+        window.location.href = "./BodyBath/Bath & Body.html"
+    }
+
+    // Page Link Ends Here
     //arun
 
     document.querySelector("#check-cart-part").addEventListener("click", carthreflink);
