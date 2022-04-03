@@ -358,9 +358,11 @@ html {
     bottom: 200px;
 }
 
+
+
 .bodyFirstTitle {
     height: 70px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     font-size: 34px;
     font-weight: 400;
     margin-top: -100px;
@@ -374,9 +376,14 @@ html {
     width: 100%;
 }
 
+.bodyFirstDetails>div:hover, .companyLogo>div:hover, .trendingOffer>div:hover, .overTheBlogDetails>div:hover {
+    cursor: pointer;
+}
+
 .bodyFirstDetails img {
     width: 100%;
 }
+
 
 .productDetails {
     width: 90%;
